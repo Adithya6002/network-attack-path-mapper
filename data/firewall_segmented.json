@@ -1,0 +1,9 @@
+{
+  "description": "Simulated segmentation: users reach only the web server's HTTP(S); only the web server reaches the database, on PostgreSQL only.",
+  "default": "deny",
+  "rules": [
+    {"action": "allow", "src": "10.10.10.0/24", "dst": "10.10.20.10/32", "ports": [80, 443]},
+    {"action": "allow", "src": "10.10.20.10/32", "dst": "10.10.30.20/32", "ports": [5432]},
+    {"action": "deny", "src": "any", "dst": "any", "ports": "any"}
+  ]
+}

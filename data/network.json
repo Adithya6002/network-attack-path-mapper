@@ -1,0 +1,76 @@
+{
+  "description": "Sample VirtualBox lab: user LAN, DMZ and internal subnet joined by one router/firewall. Baseline policy is deliberately permissive.",
+  "subnets": [
+    {"name": "user-lan", "cidr": "10.10.10.0/24"},
+    {"name": "dmz", "cidr": "10.10.20.0/24"},
+    {"name": "internal", "cidr": "10.10.30.0/24"}
+  ],
+  "hosts": [
+    {
+      "ip": "10.10.10.5", "hostname": "kali", "role": "assessor (initial foothold)", "os": "Kali Linux",
+      "ports": []
+    },
+    {
+      "ip": "10.10.10.20", "hostname": "workstation", "role": "user workstation", "os": "Windows 10",
+      "ports": [
+        {"port": 135, "proto": "tcp", "service": "msrpc"},
+        {"port": 139, "proto": "tcp", "service": "netbios-ssn"},
+        {"port": 445, "proto": "tcp", "service": "microsoft-ds"},
+        {"port": 3389, "proto": "tcp", "service": "ms-wbt-server"}
+      ]
+    },
+    {
+      "ip": "10.10.20.10", "hostname": "web", "role": "public web server", "os": "Ubuntu Server 22.04",
+      "ports": [
+        {"port": 22, "proto": "tcp", "service": "ssh", "product": "OpenSSH 8.9p1"},
+        {"port": 80, "proto": "tcp", "service": "http", "product": "nginx 1.18.0"},
+        {"port": 443, "proto": "tcp", "service": "https", "product": "nginx 1.18.0"}
+      ]
+    },
+    {
+      "ip": "10.10.20.11", "hostname": "mail", "role": "mail / DNS", "os": "Ubuntu Server 22.04",
+      "ports": [
+        {"port": 22, "proto": "tcp", "service": "ssh"},
+        {"port": 25, "proto": "tcp", "service": "smtp"},
+        {"port": 53, "proto": "tcp", "service": "domain"}
+      ]
+    },
+    {
+      "ip": "10.10.30.15", "hostname": "metasploitable", "role": "legacy app server", "os": "Metasploitable 2 (Ubuntu 8.04)",
+      "ports": [
+        {"port": 21, "proto": "tcp", "service": "ftp", "product": "vsftpd 2.3.4"},
+        {"port": 22, "proto": "tcp", "service": "ssh"},
+        {"port": 23, "proto": "tcp", "service": "telnet"},
+        {"port": 80, "proto": "tcp", "service": "http"},
+        {"port": 139, "proto": "tcp", "service": "netbios-ssn"},
+        {"port": 445, "proto": "tcp", "service": "microsoft-ds"},
+        {"port": 3306, "proto": "tcp", "service": "mysql"},
+        {"port": 5432, "proto": "tcp", "service": "postgresql"}
+      ]
+    },
+    {
+      "ip": "10.10.30.20", "hostname": "db", "role": "database", "os": "Ubuntu Server 22.04", "critical": true,
+      "ports": [
+        {"port": 22, "proto": "tcp", "service": "ssh"},
+        {"port": 5432, "proto": "tcp", "service": "postgresql"}
+      ]
+    },
+    {
+      "ip": "10.10.30.25", "hostname": "fileserver", "role": "file server", "os": "Ubuntu Server 22.04", "critical": true,
+      "ports": [
+        {"port": 22, "proto": "tcp", "service": "ssh"},
+        {"port": 139, "proto": "tcp", "service": "netbios-ssn"},
+        {"port": 445, "proto": "tcp", "service": "microsoft-ds"}
+      ]
+    }
+  ],
+  "firewall": {
+    "default": "deny",
+    "rules": [
+      {"action": "allow", "src": "10.10.10.0/24", "dst": "10.10.20.0/24", "ports": "any"},
+      {"action": "allow", "src": "10.10.10.0/24", "dst": "10.10.30.0/24", "ports": [22, 445]},
+      {"action": "allow", "src": "10.10.20.0/24", "dst": "10.10.30.0/24", "ports": "any"},
+      {"action": "allow", "src": "10.10.30.0/24", "dst": "any", "ports": "any"}
+    ]
+  }
+}

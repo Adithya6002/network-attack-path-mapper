@@ -1,0 +1,4 @@
+# Keep LF everywhere: the .sh scripts run on Linux VMs, and a test compares the
+# router firewall scripts byte-for-byte with what the policy JSON generates.
+* text=auto eol=lf
+*.png binary

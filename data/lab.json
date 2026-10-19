@@ -1,0 +1,38 @@
+{
+  "description": "The real VirtualBox lab used for TRL 3 validation. Services taken from `ss -tln` on each VM after setup (localhost-only listeners excluded). Firewall = data/network.json baseline policy, applied on lab-router by lab/router/firewall-baseline.sh.",
+  "subnets": [
+    {"name": "user-lan", "cidr": "10.10.10.0/24"},
+    {"name": "dmz", "cidr": "10.10.20.0/24"},
+    {"name": "internal", "cidr": "10.10.30.0/24"}
+  ],
+  "hosts": [
+    {
+      "ip": "10.10.10.5", "hostname": "kali", "role": "start host", "os": "Kali Linux 2026.2",
+      "ports": []
+    },
+    {
+      "ip": "10.10.20.10", "hostname": "web", "role": "web server", "os": "Ubuntu Server 26.04.1",
+      "ports": [
+        {"port": 22, "proto": "tcp", "service": "ssh"},
+        {"port": 80, "proto": "tcp", "service": "http", "product": "nginx 1.28.3"},
+        {"port": 443, "proto": "tcp", "service": "https", "product": "nginx 1.28.3"}
+      ]
+    },
+    {
+      "ip": "10.10.30.20", "hostname": "db", "role": "database", "os": "Ubuntu Server 26.04.1", "critical": true,
+      "ports": [
+        {"port": 22, "proto": "tcp", "service": "ssh"},
+        {"port": 5432, "proto": "tcp", "service": "postgresql", "product": "PostgreSQL 18"}
+      ]
+    }
+  ],
+  "firewall": {
+    "default": "deny",
+    "rules": [
+      {"action": "allow", "src": "10.10.10.0/24", "dst": "10.10.20.0/24", "ports": "any"},
+      {"action": "allow", "src": "10.10.10.0/24", "dst": "10.10.30.0/24", "ports": [22, 445]},
+      {"action": "allow", "src": "10.10.20.0/24", "dst": "10.10.30.0/24", "ports": "any"},
+      {"action": "allow", "src": "10.10.30.0/24", "dst": "any", "ports": "any"}
+    ]
+  }
+}

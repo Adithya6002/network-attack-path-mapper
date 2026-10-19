@@ -1,0 +1,10 @@
+seed,before,after,edges_before,edges_after,reachable_before,reachable_after,critical_reachable_before,critical_reachable_after,hosts_lost,hosts_gained
+0,flat,permissive,55029,31463,221,221,38,38,0,0
+0,permissive,tiered+misconfig,31463,15832,221,177,38,38,44,0
+0,tiered+misconfig,tiered,15832,14600,177,152,38,38,25,0
+1,flat,permissive,56274,32053,225,225,38,38,0,0
+1,permissive,tiered+misconfig,32053,16457,225,184,38,38,41,0
+1,tiered+misconfig,tiered,16457,15225,184,159,38,38,25,0
+2,flat,permissive,56274,32053,225,225,38,38,0,0
+2,permissive,tiered+misconfig,32053,16069,225,181,38,38,44,0
+2,tiered+misconfig,tiered,16069,14725,181,156,38,38,25,0
