@@ -76,6 +76,20 @@ def test_exact_ci_known_values():
     assert abs(lo - 0.1871) < 1e-3 and abs(hi - 0.8129) < 1e-3
 
 
+def test_predict_connection_matches_all_lab_measurements():
+    """The predict command's function reproduces all 72 measured lab results."""
+    from analyzer.graph import predict_connection
+
+    lab = json.loads((ROOT / "data" / "lab.json").read_text(encoding="utf-8"))
+    policies = {"baseline": lab["firewall"],
+                "segmented": json.loads((ROOT / "data" / "firewall_segmented.json").read_text(encoding="utf-8"))}
+    rows = (ROOT / "evidence" / "measurements.csv").read_text(encoding="utf-8").splitlines()[1:]
+    assert len(rows) == 72
+    for row in rows:
+        policy, src, dst, port, measured = row.split(",")
+        assert predict_connection(lab, policies[policy], src, dst, int(port)) == measured, row
+
+
 def test_recorded_lab_validation_is_72_of_72():
     out = subprocess.run(
         [sys.executable, str(ROOT / "lab" / "compare_results.py"),

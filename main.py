@@ -9,7 +9,7 @@ import json
 import sys
 from pathlib import Path
 
-from analyzer.graph import build_graph, service_label
+from analyzer.graph import build_graph, predict_connection, service_label
 from analyzer.paths import PATH_LIMIT, analyze, compare
 
 
@@ -128,6 +128,40 @@ def cmd_compare(args):
         print(f"\nVisualizations: {out / 'before.html'}, {out / 'after.html'}")
 
 
+# Same ports, in the same order, as lab/measure.sh, so both lists line up row by row.
+MEASURE_PORTS = [22, 80, 443, 445, 5432, 8080]
+
+
+def cmd_predict(args):
+    network = load_json(args.data)
+    firewall = load_json(args.firewall) if args.firewall else network.get("firewall", {})
+    firewall = firewall.get("firewall", firewall)  # accept a network file or a bare policy
+    hosts = [h["ip"] for h in network["hosts"]]
+    names = {h["ip"]: h.get("hostname") or h["ip"] for h in network["hosts"]}
+    sources = args.sources or hosts
+
+    rows = [
+        (src, dst, port, predict_connection(network, firewall, src, dst, port))
+        for src in sources
+        for dst in hosts if dst != src
+        for port in args.ports
+    ]
+    current = None
+    for src, dst, port, result in rows:
+        if src != current:
+            current = src
+            print(f"\nFrom {names[src]} ({src})   [compare with: bash ~/measure.sh on {names[src]}]")
+        print(f"  -> {names[dst]:<12} {dst:<15} port {port:<5} PREDICT {result}")
+    counts = {r: sum(1 for *_, x in rows if x == r) for r in ("open", "refused", "timeout")}
+    print(f"\n{len(rows)} predictions: {counts['open']} open, {counts['refused']} refused, {counts['timeout']} timeout")
+
+    if args.csv:
+        lines = ["policy,source,destination,port,result"]
+        lines += [f"{args.label},{s},{d},{p},{r}" for s, d, p, r in rows]
+        Path(args.csv).write_text("\n".join(lines) + "\n", encoding="utf-8")
+        print(f"Saved: {args.csv}")
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Graph-based analysis of potential attack paths.")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -156,6 +190,15 @@ def main(argv=None):
     cmp_.add_argument("--max-hops", type=int, default=4)
     cmp_.add_argument("--html-dir", default="output")
     cmp_.set_defaults(func=cmd_compare)
+
+    pr = sub.add_parser("predict", help="Predict open/refused/timeout for every connection, as lab/measure.sh tests them")
+    pr.add_argument("--data", default="data/lab.json")
+    pr.add_argument("--firewall", help="Policy JSON to apply (default: the one inside --data)")
+    pr.add_argument("--sources", nargs="+", help="Only predict from these source IPs")
+    pr.add_argument("--ports", nargs="+", type=int, default=MEASURE_PORTS)
+    pr.add_argument("--csv", help="Also save the predictions as CSV (same format as measure.sh)")
+    pr.add_argument("--label", default="custom", help="Policy label for the CSV rows")
+    pr.set_defaults(func=cmd_predict)
 
     args = parser.parse_args(argv)
     try:

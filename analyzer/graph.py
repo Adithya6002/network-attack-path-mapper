@@ -74,6 +74,25 @@ def subnet_of(ip, subnets):
     return None
 
 
+def predict_connection(network, firewall, src_ip, dst_ip, port, proto="tcp"):
+    """Predicted outcome of one connection attempt, as the lab measures it.
+
+    timeout = the firewall drops it; refused = allowed, but nothing listens on
+    that port; open = allowed, and the destination runs a service there.
+    """
+    subnets = network.get("subnets", [])
+    src_net, dst_net = subnet_of(src_ip, subnets), subnet_of(dst_ip, subnets)
+    same_segment = src_net is not None and src_net == dst_net
+    if not (same_segment or is_allowed(firewall, src_ip, dst_ip, port, proto)):
+        return "timeout"
+    listening = any(
+        p["port"] == port and p.get("proto", "tcp") == proto
+        for h in network["hosts"] if h["ip"] == dst_ip
+        for p in h.get("ports", [])
+    )
+    return "open" if listening else "refused"
+
+
 def build_graph(network, firewall=None):
     """Return a networkx.DiGraph of hosts and reachable-service edges.
 

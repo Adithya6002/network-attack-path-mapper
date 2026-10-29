@@ -1,0 +1,8 @@
+{
+  "description": "Example custom policy for the live 15-minute demo. Edit the rules freely (keep \"proto\": \"tcp\" to keep the router commands short).",
+  "default": "deny",
+  "rules": [
+    {"action": "allow", "src": "10.10.10.0/24", "dst": "10.10.20.10/32", "ports": [22, 8080], "proto": "tcp"},
+    {"action": "allow", "src": "10.10.20.10/32", "dst": "10.10.30.20/32", "ports": [22, 5432], "proto": "tcp"}
+  ]
+}
