@@ -35,9 +35,9 @@ Create a 10-slide presentation for a university project review in Computer Netwo
 
 **Slide 4: Capabilities**
 - Reachable hosts and hop count
-- All routes to critical servers
+- Up to 50 shortest-first paths per critical server within a chosen hop limit
 - Choke points: hosts every route must pass through
-- Before/after comparison of firewall changes
+- Before/after service comparison, host-inbound policies and advisory hardening
 
 **Slide 5: Sample Result**
 - After segmentation:
@@ -50,36 +50,35 @@ Create a 10-slide presentation for a university project review in Computer Netwo
 **Slide 6: Progress: Implementation**
 - Python tool for graph building, route analysis and choke-point detection
 - Interactive before/after network visualisations
-- 41 automated tests, all passing
-- Code version-controlled on GitHub
+- 115 automated tests, all passing; Windows/Linux CI workflow included
+- Restricted scanner arguments, validated policy inputs and offline reports
 
 **Slide 7: Progress: Lab Validation**
-- 4 virtual machines, 3 subnets, real iptables firewall
-- One policy file drives both the model and the lab firewall
-- 72 of 72 measured connections matched the model (95% CI: 95.0–100%)
-- [Image placeholder: lab measurement screenshot]
+- Original VM experiment: 72/72 TCP observations matched
+- Expanded experiment: 12 endpoint namespaces, 4 subnets, 3 policies
+- 1,980/1,980 measured TCP/UDP connections matched, including host-inbound controls
+- One shared Linux kernel; generic TCP listeners and UDP echo; no exploit testing
+- [Image placeholder: expanded validation table; retain original VM screenshot separately]
 
 **Slide 8: Progress: Large-Scale Evaluation**
-- Simulated networks of up to 1,000 hosts, 360 comparison runs
-- Compared with common methods:
-  - Network scan: missed 100% of multi-hop routes
-  - Zone-level rule review: 49% false alarms
-  - Only this tool detected the firewall misconfiguration
-- 1,000 hosts analysed in under 15 seconds
-- [Image placeholder: comparison chart]
+- Repeated synthetic benchmarks: 500, 1,000 and 2,000 actual hosts; four policies; three timing repeats
+- Show recorded median/min–max runtime and peak process memory, including resource limits
+- Earlier 360-run approach comparison uses this model as reference, not independent ground truth
+- Four-hop/50-path cap; sampled centrality for larger graphs; one topology seed in timing repeats
+- [Image placeholder: experiments/results/large_2026-10-28/scalability.png; read actual final figures from summary.md]
 
-**Slide 9: Novelty**
+**Slide 9: Contribution and Limits**
 - Detects multi-hop exposure, not only direct connections
-- Models traffic inside subnets, which firewalls cannot filter
+- Models local-subnet traffic and optional host-inbound firewalls
 - Validated on a real network using the same policy file as the model
-- Quantifies failure rates of existing methods
-- Identifies choke points to prioritise defence
+- Compares reimplemented approaches on stated synthetic scenarios
+- Uses established graph algorithms; paths assume intermediate-host compromise
 
 **Slide 10: Status and Next Steps**
 - Current status: TRL 3, validated analytically and in a lab
-- Next steps:
-  - Recommend the minimum firewall change to protect critical servers
-  - Validate on a larger, real network
+- Working advisory recommender preserves declared direct business flows
+- Next: coordinated policy changes, independent operator/platform validation
+- No automatic TRL upgrade from one expanded namespace experiment
 - Questions
 
 ---
@@ -89,7 +88,7 @@ Create a 10-slide presentation for a university project review in Computer Netwo
 | Slide | File (in the project folder) |
 |---|---|
 | 5 | Screenshot of `output\after.html` (open it in a browser, then press Win+Shift+S) |
-| 7 | `evidence\screenshots\09-segmented-from-kali.png` |
-| 8 | `experiments\results\fig_exposure.png` |
+| 7 | Capture `evidence\namespace_lab_2026-10-28\validation.md`; use `evidence\screenshots\09-segmented-from-kali.png` as earlier VM evidence |
+| 8 | `experiments\results\large_2026-10-28\scalability.png` |
 
 Optional extra figure for slide 8 or a backup slide: `experiments\results\fig_runtime.png`.

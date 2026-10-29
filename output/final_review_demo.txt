@@ -1,0 +1,419 @@
+........................................................................ [ 62%]
+...........................................                              [100%]
+115 passed in 8.55s
+##### BEFORE #####
+
+Start host: kali (10.10.10.5)
+Graph: 7 hosts, 34 reachable-service edges
+
+Reachable hosts (min hops):
+  1 hop(s)  workstation (10.10.10.20)  [user-lan]
+  1 hop(s)  web (10.10.20.10)  [dmz]
+  1 hop(s)  mail (10.10.20.11)  [dmz]
+  1 hop(s)  metasploitable (10.10.30.15)  [internal]
+  1 hop(s)  db (10.10.30.20)  [internal]
+  1 hop(s)  fileserver (10.10.30.25)  [internal]
+
+Paths to critical hosts:
+  db (10.10.30.20): 50+ path(s), shortest 1 hop(s)
+    kali -> db via [22/tcp ssh]
+    kali -> workstation via [135/tcp msrpc, 139/tcp netbios-ssn, 445/tcp microsoft-ds] -> db via [22/tcp ssh]
+    kali -> web via [22/tcp ssh, 80/tcp http, 443/tcp https] -> db via [22/tcp ssh, 5432/tcp postgresql]
+  fileserver (10.10.30.25): 50+ path(s), shortest 1 hop(s)
+    kali -> fileserver via [22/tcp ssh, 445/tcp microsoft-ds]
+    kali -> workstation via [135/tcp msrpc, 139/tcp netbios-ssn, 445/tcp microsoft-ds] -> fileserver via [22/tcp ssh, 445/tcp microsoft-ds]
+    kali -> web via [22/tcp ssh, 80/tcp http, 443/tcp https] -> fileserver via [22/tcp ssh, 139/tcp netbios-ssn, 445/tcp microsoft-ds]
+
+Key intermediate hosts (betweenness centrality):
+  0.022  metasploitable (10.10.30.15)
+  0.022  db (10.10.30.20)
+  0.022  fileserver (10.10.30.25)
+
+##### AFTER #####
+
+Start host: kali (10.10.10.5)
+Graph: 7 hosts, 12 reachable-service edges
+
+Reachable hosts (min hops):
+  1 hop(s)  workstation (10.10.10.20)  [user-lan]
+  1 hop(s)  web (10.10.20.10)  [dmz]
+  2 hop(s)  mail (10.10.20.11)  [dmz]
+  2 hop(s)  db (10.10.30.20)  [internal]
+  3 hop(s)  metasploitable (10.10.30.15)  [internal]
+  3 hop(s)  fileserver (10.10.30.25)  [internal]
+
+Paths to critical hosts:
+  db (10.10.30.20): 2 path(s), shortest 2 hop(s)
+    kali -> web via [80/tcp http, 443/tcp https] -> db via [5432/tcp postgresql]
+    kali -> workstation via [135/tcp msrpc, 139/tcp netbios-ssn, 445/tcp microsoft-ds] -> web via [80/tcp http, 443/tcp https] -> db via [5432/tcp postgresql]
+  fileserver (10.10.30.25): 3 path(s), shortest 3 hop(s)
+    kali -> web via [80/tcp http, 443/tcp https] -> db via [5432/tcp postgresql] -> fileserver via [22/tcp ssh, 139/tcp netbios-ssn, 445/tcp microsoft-ds]
+    kali -> workstation via [135/tcp msrpc, 139/tcp netbios-ssn, 445/tcp microsoft-ds] -> web via [80/tcp http, 443/tcp https] -> db via [5432/tcp postgresql] -> fileserver via [22/tcp ssh, 139/tcp netbios-ssn, 445/tcp microsoft-ds]
+    kali -> web via [80/tcp http, 443/tcp https] -> db via [5432/tcp postgresql] -> metasploitable via [21/tcp ftp, 22/tcp ssh, 23/tcp telnet] -> fileserver via [22/tcp ssh, 139/tcp netbios-ssn, 445/tcp microsoft-ds]
+
+Choke points (only way in to the listed hosts):
+  web (10.10.20.10) guards mail (10.10.20.11), db (10.10.30.20)
+  db (10.10.30.20) guards metasploitable (10.10.30.15), fileserver (10.10.30.25)
+
+Key intermediate hosts (betweenness centrality):
+  0.367  web (10.10.20.10)
+  0.267  db (10.10.30.20)
+
+=== Before vs after firewall change ===
+Edges:           34 -> 12
+Reachable hosts: 6 -> 6
+Hop count changed:   mail (10.10.20.11) 1 -> 2
+Hop count changed:   metasploitable (10.10.30.15) 1 -> 3
+Hop count changed:   db (10.10.30.20) 1 -> 2
+Hop count changed:   fileserver (10.10.30.25) 1 -> 3
+Paths to critical db (10.10.30.20): 50+ -> 2
+Paths to critical fileserver (10.10.30.25): 50+ -> 3
+
+Service-level changes (direct source -> destination connections):
+  10.10.10.20 -> 10.10.20.10
+    removed: 22/tcp ssh; network rule 1 (allow)
+      Now: network rule 3 (deny)
+  10.10.10.20 -> 10.10.20.11
+    removed: 22/tcp ssh; network rule 1 (allow)
+      Now: network rule 3 (deny)
+    removed: 25/tcp smtp; network rule 1 (allow)
+      Now: network rule 3 (deny)
+    removed: 53/tcp domain; network rule 1 (allow)
+      Now: network rule 3 (deny)
+  10.10.10.20 -> 10.10.30.15
+    removed: 22/tcp ssh; network rule 2 (allow)
+      Now: network rule 3 (deny)
+    removed: 445/tcp microsoft-ds; network rule 2 (allow)
+      Now: network rule 3 (deny)
+  10.10.10.20 -> 10.10.30.20
+    removed: 22/tcp ssh; network rule 2 (allow)
+      Now: network rule 3 (deny)
+  10.10.10.20 -> 10.10.30.25
+    removed: 22/tcp ssh; network rule 2 (allow)
+      Now: network rule 3 (deny)
+    removed: 445/tcp microsoft-ds; network rule 2 (allow)
+      Now: network rule 3 (deny)
+  10.10.10.5 -> 10.10.20.10
+    removed: 22/tcp ssh; network rule 1 (allow)
+      Now: network rule 3 (deny)
+  10.10.10.5 -> 10.10.20.11
+    removed: 22/tcp ssh; network rule 1 (allow)
+      Now: network rule 3 (deny)
+    removed: 25/tcp smtp; network rule 1 (allow)
+      Now: network rule 3 (deny)
+    removed: 53/tcp domain; network rule 1 (allow)
+      Now: network rule 3 (deny)
+  10.10.10.5 -> 10.10.30.15
+    removed: 22/tcp ssh; network rule 2 (allow)
+      Now: network rule 3 (deny)
+    removed: 445/tcp microsoft-ds; network rule 2 (allow)
+      Now: network rule 3 (deny)
+  10.10.10.5 -> 10.10.30.20
+    removed: 22/tcp ssh; network rule 2 (allow)
+      Now: network rule 3 (deny)
+  10.10.10.5 -> 10.10.30.25
+    removed: 22/tcp ssh; network rule 2 (allow)
+      Now: network rule 3 (deny)
+    removed: 445/tcp microsoft-ds; network rule 2 (allow)
+      Now: network rule 3 (deny)
+  10.10.20.10 -> 10.10.30.15
+    removed: 21/tcp ftp; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 22/tcp ssh; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 23/tcp telnet; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 80/tcp http; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 139/tcp netbios-ssn; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 445/tcp microsoft-ds; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 3306/tcp mysql; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 5432/tcp postgresql; network rule 3 (allow)
+      Now: network rule 3 (deny)
+  10.10.20.10 -> 10.10.30.20
+    removed: 22/tcp ssh; network rule 3 (allow)
+      Now: network rule 3 (deny)
+  10.10.20.10 -> 10.10.30.25
+    removed: 22/tcp ssh; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 139/tcp netbios-ssn; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 445/tcp microsoft-ds; network rule 3 (allow)
+      Now: network rule 3 (deny)
+  10.10.20.11 -> 10.10.30.15
+    removed: 21/tcp ftp; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 22/tcp ssh; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 23/tcp telnet; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 80/tcp http; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 139/tcp netbios-ssn; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 445/tcp microsoft-ds; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 3306/tcp mysql; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 5432/tcp postgresql; network rule 3 (allow)
+      Now: network rule 3 (deny)
+  10.10.20.11 -> 10.10.30.20
+    removed: 22/tcp ssh; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 5432/tcp postgresql; network rule 3 (allow)
+      Now: network rule 3 (deny)
+  10.10.20.11 -> 10.10.30.25
+    removed: 22/tcp ssh; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 139/tcp netbios-ssn; network rule 3 (allow)
+      Now: network rule 3 (deny)
+    removed: 445/tcp microsoft-ds; network rule 3 (allow)
+      Now: network rule 3 (deny)
+  10.10.30.15 -> 10.10.10.20
+    removed: 135/tcp msrpc; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 139/tcp netbios-ssn; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 445/tcp microsoft-ds; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 3389/tcp ms-wbt-server; network rule 4 (allow)
+      Now: network rule 3 (deny)
+  10.10.30.15 -> 10.10.20.10
+    removed: 22/tcp ssh; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 80/tcp http; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 443/tcp https; network rule 4 (allow)
+      Now: network rule 3 (deny)
+  10.10.30.15 -> 10.10.20.11
+    removed: 22/tcp ssh; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 25/tcp smtp; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 53/tcp domain; network rule 4 (allow)
+      Now: network rule 3 (deny)
+  10.10.30.20 -> 10.10.10.20
+    removed: 135/tcp msrpc; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 139/tcp netbios-ssn; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 445/tcp microsoft-ds; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 3389/tcp ms-wbt-server; network rule 4 (allow)
+      Now: network rule 3 (deny)
+  10.10.30.20 -> 10.10.20.10
+    removed: 22/tcp ssh; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 80/tcp http; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 443/tcp https; network rule 4 (allow)
+      Now: network rule 3 (deny)
+  10.10.30.20 -> 10.10.20.11
+    removed: 22/tcp ssh; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 25/tcp smtp; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 53/tcp domain; network rule 4 (allow)
+      Now: network rule 3 (deny)
+  10.10.30.25 -> 10.10.10.20
+    removed: 135/tcp msrpc; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 139/tcp netbios-ssn; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 445/tcp microsoft-ds; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 3389/tcp ms-wbt-server; network rule 4 (allow)
+      Now: network rule 3 (deny)
+  10.10.30.25 -> 10.10.20.10
+    removed: 22/tcp ssh; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 80/tcp http; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 443/tcp https; network rule 4 (allow)
+      Now: network rule 3 (deny)
+  10.10.30.25 -> 10.10.20.11
+    removed: 22/tcp ssh; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 25/tcp smtp; network rule 4 (allow)
+      Now: network rule 3 (deny)
+    removed: 53/tcp domain; network rule 4 (allow)
+      Now: network rule 3 (deny)
+
+Comparison dashboard: output\final_review\sample\comparison.html
+# Expanded Linux namespace lab validation
+
+12 endpoint namespaces, 4 subnets, 3 policies; **1980 measured connections**.
+
+These are real TCP handshakes and UDP echo probes on a single shared Linux kernel. TCP listeners simulate service ports; they do not implement SSH, HTTPS or PostgreSQL.
+UDP probes target a known running echo listener; closed UDP ports are outside this experiment.
+
+| Policy | Protocol | Check | Tests | TP | TN | FP | FN | Accuracy |
+|---|---|---|---|---|---|---|---|---|
+| flat | tcp | firewall | 528 | 528 | 0 | 0 | 0 | 100.0% |
+| flat | tcp | service | 528 | 231 | 297 | 0 | 0 | 100.0% |
+| flat | udp | firewall | 132 | 132 | 0 | 0 | 0 | 100.0% |
+| flat | udp | service | 132 | 132 | 0 | 0 | 0 | 100.0% |
+| segmented | tcp | firewall | 528 | 123 | 405 | 0 | 0 | 100.0% |
+| segmented | tcp | service | 528 | 69 | 459 | 0 | 0 | 100.0% |
+| segmented | udp | firewall | 132 | 42 | 90 | 0 | 0 | 100.0% |
+| segmented | udp | service | 132 | 42 | 90 | 0 | 0 | 100.0% |
+| hardened | tcp | firewall | 528 | 99 | 429 | 0 | 0 | 100.0% |
+| hardened | tcp | service | 528 | 57 | 471 | 0 | 0 | 100.0% |
+| hardened | udp | firewall | 132 | 36 | 96 | 0 | 0 | 100.0% |
+| hardened | udp | service | 132 | 36 | 96 | 0 | 0 | 100.0% |
+
+**Mismatched observations: 0/1980.**
+
+All expected source/destination/port/protocol combinations were present exactly once; unknown/error observations are rejected.
+This case study does not establish universal accuracy, independent operating-system behavior, exploitability or a TRL upgrade.
+The same JSON specification drives the model and deployed rules; socket measurements are observed separately from model predictions.
+Raw measurements, policy inputs, platform metadata, and interface/routing/firewall snapshots are retained in this directory.
+
+| Policy | Graph edges | Reachable hosts from first user | Reachable critical assets | Min hops to critical asset |
+|---|---|---|---|---|
+| flat | 132 | 11 | 3 | 1 |
+| segmented | 51 | 11 | 3 | 3 |
+| hardened | 45 | 11 | 3 | 3 |
+
+##### BEFORE #####
+
+Start host: users1 (10.44.10.11)
+Graph: 12 hosts, 51 reachable-service edges
+
+Reachable hosts (min hops):
+  1 hop(s)  users2 (10.44.10.12)  [users]
+  1 hop(s)  users3 (10.44.10.13)  [users]
+  1 hop(s)  dmz1 (10.44.20.11)  [dmz]
+  1 hop(s)  dmz2 (10.44.20.12)  [dmz]
+  1 hop(s)  dmz3 (10.44.20.13)  [dmz]
+  2 hop(s)  app1 (10.44.30.11)  [app]
+  2 hop(s)  app2 (10.44.30.12)  [app]
+  2 hop(s)  app3 (10.44.30.13)  [app]
+  3 hop(s)  data1 (10.44.40.11)  [data]
+  3 hop(s)  data2 (10.44.40.12)  [data]
+  3 hop(s)  data3 (10.44.40.13)  [data]
+
+Paths to critical hosts:
+  data1 (10.44.40.11): 50+ path(s), shortest 3 hop(s)
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app1 via [8443/tcp test-tcp] -> data1 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app2 via [8443/tcp test-tcp] -> data1 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app3 via [8443/tcp test-tcp] -> data1 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+  data2 (10.44.40.12): 50+ path(s), shortest 3 hop(s)
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app1 via [8443/tcp test-tcp] -> data2 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app2 via [8443/tcp test-tcp] -> data2 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app3 via [8443/tcp test-tcp] -> data2 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+  data3 (10.44.40.13): 50+ path(s), shortest 3 hop(s)
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app1 via [8443/tcp test-tcp] -> data3 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app2 via [8443/tcp test-tcp] -> data3 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app3 via [8443/tcp test-tcp] -> data3 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+
+Key intermediate hosts (betweenness centrality):
+  0.055  dmz1 (10.44.20.11)
+  0.055  dmz2 (10.44.20.12)
+  0.055  dmz3 (10.44.20.13)
+  0.055  app1 (10.44.30.11)
+  0.055  app2 (10.44.30.12)
+
+##### AFTER #####
+
+Start host: users1 (10.44.10.11)
+Graph: 12 hosts, 45 reachable-service edges
+
+Reachable hosts (min hops):
+  1 hop(s)  users2 (10.44.10.12)  [users]
+  1 hop(s)  users3 (10.44.10.13)  [users]
+  1 hop(s)  dmz1 (10.44.20.11)  [dmz]
+  1 hop(s)  dmz2 (10.44.20.12)  [dmz]
+  1 hop(s)  dmz3 (10.44.20.13)  [dmz]
+  2 hop(s)  app1 (10.44.30.11)  [app]
+  2 hop(s)  app2 (10.44.30.12)  [app]
+  2 hop(s)  app3 (10.44.30.13)  [app]
+  3 hop(s)  data1 (10.44.40.11)  [data]
+  3 hop(s)  data2 (10.44.40.12)  [data]
+  3 hop(s)  data3 (10.44.40.13)  [data]
+
+Paths to critical hosts:
+  data1 (10.44.40.11): 50+ path(s), shortest 3 hop(s)
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app1 via [8443/tcp test-tcp] -> data1 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app2 via [8443/tcp test-tcp] -> data1 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app3 via [8443/tcp test-tcp] -> data1 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+  data2 (10.44.40.12): 50+ path(s), shortest 3 hop(s)
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app1 via [8443/tcp test-tcp] -> data2 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app2 via [8443/tcp test-tcp] -> data2 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app3 via [8443/tcp test-tcp] -> data2 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+  data3 (10.44.40.13): 50+ path(s), shortest 3 hop(s)
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app1 via [8443/tcp test-tcp] -> data3 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app2 via [8443/tcp test-tcp] -> data3 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+    users1 -> dmz1 via [5353/udp test-udp-echo, 8080/tcp test-tcp] -> app3 via [8443/tcp test-tcp] -> data3 via [5353/udp test-udp-echo, 5432/tcp test-tcp]
+
+Key intermediate hosts (betweenness centrality):
+  0.055  dmz1 (10.44.20.11)
+  0.055  dmz2 (10.44.20.12)
+  0.055  dmz3 (10.44.20.13)
+  0.055  app1 (10.44.30.11)
+  0.055  app2 (10.44.30.12)
+
+=== Before vs after firewall change ===
+Edges:           51 -> 45
+Reachable hosts: 11 -> 11
+
+Service-level changes (direct source -> destination connections):
+  10.44.40.11 -> 10.44.40.12
+    removed: 22/tcp test-tcp; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+    removed: 5353/udp test-udp-echo; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+    removed: 5432/tcp test-tcp; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+  10.44.40.11 -> 10.44.40.13
+    removed: 22/tcp test-tcp; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+    removed: 5353/udp test-udp-echo; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+    removed: 5432/tcp test-tcp; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+  10.44.40.12 -> 10.44.40.11
+    removed: 22/tcp test-tcp; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+    removed: 5353/udp test-udp-echo; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+    removed: 5432/tcp test-tcp; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+  10.44.40.12 -> 10.44.40.13
+    removed: 22/tcp test-tcp; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+    removed: 5353/udp test-udp-echo; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+    removed: 5432/tcp test-tcp; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+  10.44.40.13 -> 10.44.40.11
+    removed: 22/tcp test-tcp; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+    removed: 5353/udp test-udp-echo; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+    removed: 5432/tcp test-tcp; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+  10.44.40.13 -> 10.44.40.12
+    removed: 22/tcp test-tcp; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+    removed: 5353/udp test-udp-echo; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+    removed: 5432/tcp test-tcp; same segment (router bypassed)
+      Now: same segment (router bypassed); host inbound default (deny)
+
+Comparison dashboard: output\final_review\host_firewalls\comparison.html
+Evaluated 32 of 32 candidate connection blocks.
+Suggestions are independent simulations; required direct service connections are preserved.
+
+1. network firewall: 10.10.10.5 -> 10.10.30.20
+   Critical hosts protected: none
+   Critical hosts moved farther away: 1
+   Prepend deny rule: {"action": "deny", "src": "10.10.10.5/32", "dst": "10.10.30.20/32", "ports": "any"}
+
+2. network firewall: 10.10.10.5 -> 10.10.30.25
+   Critical hosts protected: none
+   Critical hosts moved farther away: 1
+   Prepend deny rule: {"action": "deny", "src": "10.10.10.5/32", "dst": "10.10.30.25/32", "ports": "any"}

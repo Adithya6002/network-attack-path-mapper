@@ -1,0 +1,1596 @@
+{
+  "start": "10.10.10.5",
+  "host_count": 7,
+  "edge_count": 34,
+  "reachable": {
+    "10.10.10.20": 1,
+    "10.10.20.10": 1,
+    "10.10.20.11": 1,
+    "10.10.30.15": 1,
+    "10.10.30.20": 1,
+    "10.10.30.25": 1
+  },
+  "unreachable": [],
+  "critical_targets": [
+    "10.10.30.20",
+    "10.10.30.25"
+  ],
+  "target_paths": {
+    "10.10.30.20": [
+      [
+        "10.10.10.5",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.15",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.25",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.10",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.11",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.15",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.25",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.20.11",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.15",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.25",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.20.10",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.15",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.25",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.15",
+        "10.10.10.20",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.15",
+        "10.10.20.10",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.15",
+        "10.10.20.11",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.15",
+        "10.10.30.25",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.25",
+        "10.10.10.20",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.25",
+        "10.10.20.10",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.25",
+        "10.10.20.11",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.25",
+        "10.10.30.15",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.10",
+        "10.10.20.11",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.10",
+        "10.10.30.15",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.10",
+        "10.10.30.25",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.11",
+        "10.10.20.10",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.11",
+        "10.10.30.15",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.11",
+        "10.10.30.25",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.15",
+        "10.10.20.10",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.15",
+        "10.10.20.11",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.15",
+        "10.10.30.25",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.25",
+        "10.10.20.10",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.25",
+        "10.10.20.11",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.25",
+        "10.10.30.15",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.20.11",
+        "10.10.30.15",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.20.11",
+        "10.10.30.25",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.15",
+        "10.10.10.20",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.15",
+        "10.10.20.11",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.15",
+        "10.10.30.25",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.25",
+        "10.10.10.20",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.25",
+        "10.10.20.11",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.25",
+        "10.10.30.15",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.20.10",
+        "10.10.30.15",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.20.10",
+        "10.10.30.25",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.15",
+        "10.10.10.20",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.15",
+        "10.10.20.10",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.15",
+        "10.10.30.25",
+        "10.10.30.20"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.25",
+        "10.10.10.20",
+        "10.10.30.20"
+      ]
+    ],
+    "10.10.30.25": [
+      [
+        "10.10.10.5",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.15",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.10",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.11",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.15",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.20.11",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.15",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.20.10",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.15",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.15",
+        "10.10.10.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.15",
+        "10.10.20.10",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.15",
+        "10.10.20.11",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.15",
+        "10.10.30.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.20",
+        "10.10.10.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.20",
+        "10.10.20.10",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.20",
+        "10.10.20.11",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.30.20",
+        "10.10.30.15",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.10",
+        "10.10.20.11",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.10",
+        "10.10.30.15",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.10",
+        "10.10.30.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.11",
+        "10.10.20.10",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.11",
+        "10.10.30.15",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.20.11",
+        "10.10.30.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.15",
+        "10.10.20.10",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.15",
+        "10.10.20.11",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.15",
+        "10.10.30.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.20",
+        "10.10.20.10",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.20",
+        "10.10.20.11",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.10.20",
+        "10.10.30.20",
+        "10.10.30.15",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.20.11",
+        "10.10.30.15",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.20.11",
+        "10.10.30.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.15",
+        "10.10.10.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.15",
+        "10.10.20.11",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.15",
+        "10.10.30.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.20",
+        "10.10.10.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.20",
+        "10.10.20.11",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.10",
+        "10.10.30.20",
+        "10.10.30.15",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.20.10",
+        "10.10.30.15",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.20.10",
+        "10.10.30.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.15",
+        "10.10.10.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.15",
+        "10.10.20.10",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.15",
+        "10.10.30.20",
+        "10.10.30.25"
+      ],
+      [
+        "10.10.10.5",
+        "10.10.20.11",
+        "10.10.30.20",
+        "10.10.10.20",
+        "10.10.30.25"
+      ]
+    ]
+  },
+  "paths_truncated": {
+    "10.10.30.20": true,
+    "10.10.30.25": true
+  },
+  "max_hops": 4,
+  "path_limit": 50,
+  "warnings": [],
+  "choke_points": {},
+  "key_nodes": [
+    [
+      "10.10.30.15",
+      0.02222222222222222
+    ],
+    [
+      "10.10.30.20",
+      0.02222222222222222
+    ],
+    [
+      "10.10.30.25",
+      0.02222222222222222
+    ]
+  ],
+  "connections": [
+    {
+      "source": "10.10.10.5",
+      "destination": "10.10.10.20",
+      "services": [
+        {
+          "port": 135,
+          "proto": "tcp",
+          "service": "msrpc",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 139,
+          "proto": "tcp",
+          "service": "netbios-ssn",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 3389,
+          "proto": "tcp",
+          "service": "ms-wbt-server",
+          "reason": "same segment (router bypassed)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.10.5",
+      "destination": "10.10.20.10",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "product": "OpenSSH 8.9p1",
+          "reason": "network rule 1 (allow)"
+        },
+        {
+          "port": 80,
+          "proto": "tcp",
+          "service": "http",
+          "product": "nginx 1.18.0",
+          "reason": "network rule 1 (allow)"
+        },
+        {
+          "port": 443,
+          "proto": "tcp",
+          "service": "https",
+          "product": "nginx 1.18.0",
+          "reason": "network rule 1 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.10.5",
+      "destination": "10.10.20.11",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 1 (allow)"
+        },
+        {
+          "port": 25,
+          "proto": "tcp",
+          "service": "smtp",
+          "reason": "network rule 1 (allow)"
+        },
+        {
+          "port": 53,
+          "proto": "tcp",
+          "service": "domain",
+          "reason": "network rule 1 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.10.5",
+      "destination": "10.10.30.15",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 2 (allow)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "network rule 2 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.10.5",
+      "destination": "10.10.30.20",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 2 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.10.5",
+      "destination": "10.10.30.25",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 2 (allow)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "network rule 2 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.10.20",
+      "destination": "10.10.20.10",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "product": "OpenSSH 8.9p1",
+          "reason": "network rule 1 (allow)"
+        },
+        {
+          "port": 80,
+          "proto": "tcp",
+          "service": "http",
+          "product": "nginx 1.18.0",
+          "reason": "network rule 1 (allow)"
+        },
+        {
+          "port": 443,
+          "proto": "tcp",
+          "service": "https",
+          "product": "nginx 1.18.0",
+          "reason": "network rule 1 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.10.20",
+      "destination": "10.10.20.11",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 1 (allow)"
+        },
+        {
+          "port": 25,
+          "proto": "tcp",
+          "service": "smtp",
+          "reason": "network rule 1 (allow)"
+        },
+        {
+          "port": 53,
+          "proto": "tcp",
+          "service": "domain",
+          "reason": "network rule 1 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.10.20",
+      "destination": "10.10.30.15",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 2 (allow)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "network rule 2 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.10.20",
+      "destination": "10.10.30.20",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 2 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.10.20",
+      "destination": "10.10.30.25",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 2 (allow)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "network rule 2 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.20.10",
+      "destination": "10.10.20.11",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 25,
+          "proto": "tcp",
+          "service": "smtp",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 53,
+          "proto": "tcp",
+          "service": "domain",
+          "reason": "same segment (router bypassed)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.20.10",
+      "destination": "10.10.30.15",
+      "services": [
+        {
+          "port": 21,
+          "proto": "tcp",
+          "service": "ftp",
+          "product": "vsftpd 2.3.4",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 23,
+          "proto": "tcp",
+          "service": "telnet",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 80,
+          "proto": "tcp",
+          "service": "http",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 139,
+          "proto": "tcp",
+          "service": "netbios-ssn",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 3306,
+          "proto": "tcp",
+          "service": "mysql",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 5432,
+          "proto": "tcp",
+          "service": "postgresql",
+          "reason": "network rule 3 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.20.10",
+      "destination": "10.10.30.20",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 5432,
+          "proto": "tcp",
+          "service": "postgresql",
+          "reason": "network rule 3 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.20.10",
+      "destination": "10.10.30.25",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 139,
+          "proto": "tcp",
+          "service": "netbios-ssn",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "network rule 3 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.20.11",
+      "destination": "10.10.20.10",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "product": "OpenSSH 8.9p1",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 80,
+          "proto": "tcp",
+          "service": "http",
+          "product": "nginx 1.18.0",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 443,
+          "proto": "tcp",
+          "service": "https",
+          "product": "nginx 1.18.0",
+          "reason": "same segment (router bypassed)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.20.11",
+      "destination": "10.10.30.15",
+      "services": [
+        {
+          "port": 21,
+          "proto": "tcp",
+          "service": "ftp",
+          "product": "vsftpd 2.3.4",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 23,
+          "proto": "tcp",
+          "service": "telnet",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 80,
+          "proto": "tcp",
+          "service": "http",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 139,
+          "proto": "tcp",
+          "service": "netbios-ssn",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 3306,
+          "proto": "tcp",
+          "service": "mysql",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 5432,
+          "proto": "tcp",
+          "service": "postgresql",
+          "reason": "network rule 3 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.20.11",
+      "destination": "10.10.30.20",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 5432,
+          "proto": "tcp",
+          "service": "postgresql",
+          "reason": "network rule 3 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.20.11",
+      "destination": "10.10.30.25",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 139,
+          "proto": "tcp",
+          "service": "netbios-ssn",
+          "reason": "network rule 3 (allow)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "network rule 3 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.15",
+      "destination": "10.10.10.20",
+      "services": [
+        {
+          "port": 135,
+          "proto": "tcp",
+          "service": "msrpc",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 139,
+          "proto": "tcp",
+          "service": "netbios-ssn",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 3389,
+          "proto": "tcp",
+          "service": "ms-wbt-server",
+          "reason": "network rule 4 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.15",
+      "destination": "10.10.20.10",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "product": "OpenSSH 8.9p1",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 80,
+          "proto": "tcp",
+          "service": "http",
+          "product": "nginx 1.18.0",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 443,
+          "proto": "tcp",
+          "service": "https",
+          "product": "nginx 1.18.0",
+          "reason": "network rule 4 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.15",
+      "destination": "10.10.20.11",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 25,
+          "proto": "tcp",
+          "service": "smtp",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 53,
+          "proto": "tcp",
+          "service": "domain",
+          "reason": "network rule 4 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.15",
+      "destination": "10.10.30.20",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 5432,
+          "proto": "tcp",
+          "service": "postgresql",
+          "reason": "same segment (router bypassed)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.15",
+      "destination": "10.10.30.25",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 139,
+          "proto": "tcp",
+          "service": "netbios-ssn",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "same segment (router bypassed)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.20",
+      "destination": "10.10.10.20",
+      "services": [
+        {
+          "port": 135,
+          "proto": "tcp",
+          "service": "msrpc",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 139,
+          "proto": "tcp",
+          "service": "netbios-ssn",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 3389,
+          "proto": "tcp",
+          "service": "ms-wbt-server",
+          "reason": "network rule 4 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.20",
+      "destination": "10.10.20.10",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "product": "OpenSSH 8.9p1",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 80,
+          "proto": "tcp",
+          "service": "http",
+          "product": "nginx 1.18.0",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 443,
+          "proto": "tcp",
+          "service": "https",
+          "product": "nginx 1.18.0",
+          "reason": "network rule 4 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.20",
+      "destination": "10.10.20.11",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 25,
+          "proto": "tcp",
+          "service": "smtp",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 53,
+          "proto": "tcp",
+          "service": "domain",
+          "reason": "network rule 4 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.20",
+      "destination": "10.10.30.15",
+      "services": [
+        {
+          "port": 21,
+          "proto": "tcp",
+          "service": "ftp",
+          "product": "vsftpd 2.3.4",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 23,
+          "proto": "tcp",
+          "service": "telnet",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 80,
+          "proto": "tcp",
+          "service": "http",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 139,
+          "proto": "tcp",
+          "service": "netbios-ssn",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 3306,
+          "proto": "tcp",
+          "service": "mysql",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 5432,
+          "proto": "tcp",
+          "service": "postgresql",
+          "reason": "same segment (router bypassed)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.20",
+      "destination": "10.10.30.25",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 139,
+          "proto": "tcp",
+          "service": "netbios-ssn",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "same segment (router bypassed)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.25",
+      "destination": "10.10.10.20",
+      "services": [
+        {
+          "port": 135,
+          "proto": "tcp",
+          "service": "msrpc",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 139,
+          "proto": "tcp",
+          "service": "netbios-ssn",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 3389,
+          "proto": "tcp",
+          "service": "ms-wbt-server",
+          "reason": "network rule 4 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.25",
+      "destination": "10.10.20.10",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "product": "OpenSSH 8.9p1",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 80,
+          "proto": "tcp",
+          "service": "http",
+          "product": "nginx 1.18.0",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 443,
+          "proto": "tcp",
+          "service": "https",
+          "product": "nginx 1.18.0",
+          "reason": "network rule 4 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.25",
+      "destination": "10.10.20.11",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 25,
+          "proto": "tcp",
+          "service": "smtp",
+          "reason": "network rule 4 (allow)"
+        },
+        {
+          "port": 53,
+          "proto": "tcp",
+          "service": "domain",
+          "reason": "network rule 4 (allow)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.25",
+      "destination": "10.10.30.15",
+      "services": [
+        {
+          "port": 21,
+          "proto": "tcp",
+          "service": "ftp",
+          "product": "vsftpd 2.3.4",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 23,
+          "proto": "tcp",
+          "service": "telnet",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 80,
+          "proto": "tcp",
+          "service": "http",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 139,
+          "proto": "tcp",
+          "service": "netbios-ssn",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 445,
+          "proto": "tcp",
+          "service": "microsoft-ds",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 3306,
+          "proto": "tcp",
+          "service": "mysql",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 5432,
+          "proto": "tcp",
+          "service": "postgresql",
+          "reason": "same segment (router bypassed)"
+        }
+      ]
+    },
+    {
+      "source": "10.10.30.25",
+      "destination": "10.10.30.20",
+      "services": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "ssh",
+          "reason": "same segment (router bypassed)"
+        },
+        {
+          "port": 5432,
+          "proto": "tcp",
+          "service": "postgresql",
+          "reason": "same segment (router bypassed)"
+        }
+      ]
+    }
+  ]
+}

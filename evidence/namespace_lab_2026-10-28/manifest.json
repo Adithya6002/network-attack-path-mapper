@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-10-28T16:46:07.129497+00:00",
+  "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+  "endpoints": 12,
+  "subnets": 4,
+  "policies": [
+    "flat",
+    "segmented",
+    "hardened"
+  ],
+  "probes": [
+    [
+      22,
+      "tcp"
+    ],
+    [
+      8080,
+      "tcp"
+    ],
+    [
+      8443,
+      "tcp"
+    ],
+    [
+      5432,
+      "tcp"
+    ],
+    [
+      5353,
+      "udp"
+    ]
+  ],
+  "timeout_s": 1,
+  "expected_rows": 1980,
+  "listener_type": "Generic TCP listeners and UDP echo, not application protocol servers",
+  "lab_type": "Linux network namespaces sharing one kernel; not independent VMs",
+  "script_sha256": "c3b1e68a1dd81dde3c82a9bf8e24348bba637ccbcf0ecf5ffe0023bed71e6005",
+  "completed": true,
+  "namespace_prefix": "napm-139fbd17",
+  "cleanup_attempted": true
+}

@@ -1,0 +1,4 @@
+[
+  {"source": "10.10.10.5", "destination": "10.10.20.10", "port": 443, "proto": "tcp"},
+  {"source": "10.10.20.10", "destination": "10.10.30.20", "port": 5432, "proto": "tcp"}
+]

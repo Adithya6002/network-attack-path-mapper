@@ -2,7 +2,7 @@
 
 **Graph-Based Analysis of Potential Attack Paths in Computer Networks**
 
-The tool builds a directed reachability graph from a network's hosts, services, subnets and firewall rules. It reports which hosts can be reached from a chosen starting host, along which paths, and how a firewall change alters that. Status: **TRL 3**. In a 4-VM lab, the model's predictions matched 72 of 72 measured connections across two firewall policies (95% CI 95.0%–100%, section 8). Simulations of networks up to 1,000 hosts compare it with existing approaches (section 8A).
+The tool builds a directed reachability graph from a network's hosts, services, subnets and firewall rules. It reports which hosts can be reached from a chosen starting host, along which paths, and how a firewall change alters that. Status: **TRL 3**. The original 4-VM experiment matched 72/72 measured TCP connections. The expanded 28 Oct experiment matched 1,980/1,980 TCP/UDP observations across 12 Linux endpoint namespaces, four subnets and three policies, including host-inbound firewalls. The original synthetic comparison covers 360 runs through 500 hosts; current repeated scale tests extend to 2,000 hosts. See the dated evidence update below and FINAL_REVIEW.md.
 
 ---
 
@@ -24,14 +24,16 @@ Defenders can't easily see how far an intrusion on one machine could spread. Rea
 The network is modelled as a directed graph G = (V, E). Each vertex is a host. An edge u → v exists when at least one open service on v is reachable from u:
 
 ```text
-(u, v) ∈ E  ⇔  ∃ s ∈ S(v) :  subnet(u) = subnet(v)  ∨  allow_F(u, v, s)
+(u, v) ∈ E  ⇔  u ≠ v and ∃ s ∈ S(v) :
+                 (same_known_L2_segment(u, v) or allow_F(u, v, s))
+                 and allow_Hv(u, v, s)
 ```
 
-S(v) is the set of open services (port and protocol) on v. allow_F is the firewall decision under policy F.
+S(v) is the set of observed open services (port and protocol) on v. allow_F is the first-match network firewall decision. allow_Hv is the destination's inbound host policy, or true when no host policy is configured. Paths assume intermediate hosts can be compromised; network reachability does not prove that compromise.
 
 **Model rules**
 
-1. **Same subnet = same L2 segment.** Hosts in one subnet reach each other directly; the router firewall never sees that traffic.
+1. **Same subnet = same L2 segment.** Hosts in one declared subnet bypass the router firewall; a destination inbound host policy can still block them.
 2. **Between subnets, first match wins.** Rules are matched on source CIDR, destination CIDR, port and protocol. Unmatched traffic gets the default policy.
 3. **Stateful.** Replies to permitted connections are allowed, so an edge records who can *start* a connection.
 4. **Each edge keeps its services.** A path can be explained as "web via 80/tcp, then db via 5432/tcp".
@@ -41,7 +43,7 @@ S(v) is the set of open services (port and protocol) on v. allow_F is the firewa
 | Analysis | Graph method | What it tells a defender |
 |---|---|---|
 | Reachable hosts and hop count | BFS shortest paths | How far an intrusion could spread |
-| Paths to critical hosts | Simple-path enumeration with a hop limit | Every route to important assets |
+| Paths to critical hosts | Shortest-first simple-path enumeration, 4-hop/50-path defaults | Bounded potential routes to important assets, with explicit truncation |
 | Choke points | Immediate dominator tree | Hosts that every path to some other host must cross; the best places for monitoring and hardening |
 | Key intermediate hosts | Betweenness centrality | Hosts on the most shortest paths |
 | Policy comparison | Build the graph under two policies and diff them | The measured effect of a firewall change before it is deployed |
@@ -382,7 +384,7 @@ Removing the single misconfigured rule takes 25 hosts out of reach. In the mixed
 ## 10. Limitations
 
 - Reachability is **not** proof of compromise. An open, reachable port doesn't mean the host can be exploited.
-- Per-host firewalls, application-layer controls, and services bound to localhost are not modelled.
+- Optional per-host inbound firewalls are modeled; host egress policies, application-layer controls, and services bound to localhost are not modeled. The original 72-connection lab did not validate host-firewall behavior.
 - Nmap run from one vantage point only shows what that host can reach directly. Edges between other hosts come from the model, which is why section 8 measures from several source hosts.
 - Path enumeration is capped (50 paths, 4 hops by default) to keep run time bounded.
 
@@ -390,12 +392,30 @@ Removing the single misconfigured rule takes 25 hosts out of reach. In the mixed
 
 ## 11. Future work
 
-- **Segmentation recommendations:** compute the smallest set of firewall changes that cuts all paths to critical assets while keeping required services working (constrained minimum cut).
-- Model host-level firewalls and VLANs, to cover traffic inside a subnet.
-- Evaluate on larger generated networks (50–500 hosts) for scalability.
-- A web dashboard (FastAPI + React) and graph storage in Neo4j.
+- Extend the advisory single-connection recommender to coordinated policy changes and a constrained minimum cut, preserving business dependencies.
+- Validate the new host-inbound firewall model in an expanded independent lab with UDP and multiple operators; add explicit VLAN and multi-router topology.
+- Extend the repeated benchmarks to additional topology seeds and controlled machines. Synthetic comparison results remain relative to this tool's model, rather than independent ground truth.
+- Extend the offline report's filters, path inspector and synchronized before/after dashboard as real user requirements emerge.
+
+### Engineering update (27 Oct 2026)
+
+The prototype now validates inputs, restricts scanner arguments, models optional host-inbound policies, explains allow/deny decisions, compares individual services, and distinguishes exact from truncated path counts. Offline HTML reports include filters and path inspection; an advisory recommender simulates independent connection blocks while retaining declared direct business services. See README.md for commands and schema details.
+
+The expanded suite contains 100 automated tests. The historical 41-test and lab results above describe the original experiment, not new lab measurements. A Windows Python 3.12 dependency snapshot is recorded in requirements-lock.txt, with a Windows/Linux CI workflow. The new model features still require independent laboratory validation; the TRL claim remains scoped to the original experiment.
 
 ---
+
+### Expanded evaluation (28 Oct 2026)
+
+The suite now has **115 passing tests**, including generator size/capacity checks, process-isolated benchmarking, incomplete-evidence rejection and namespace-lab scenarios.
+
+The larger observed-connectivity experiment used **12 endpoint namespaces plus an isolated router, four subnets, three policies, and 1,980 distinct TCP/UDP probes**. All observations matched the modeled firewall and service decisions. The policies were flat, segmented, and segmented with data-host inbound firewalls. Their graph edge counts were **132 → 51 → 45**; all three critical hosts remained potentially reachable from the first user, at 1 → 3 → 3 minimum hops. This demonstrates reduced exposure while required application flows remain permitted.
+
+Raw evidence: `evidence/namespace_lab_2026-10-28/`. TCP listeners simulated service ports, UDP used echo responses, and all endpoint namespaces shared the WSL Linux kernel. This expands coverage to UDP and host controls without establishing universal accuracy or independent-OS behavior. No automatic TRL upgrade is claimed.
+
+Repeated synthetic benchmarks measure **500, 1,000 and 2,000 actual hosts under four policies, with three runs per configuration**. Raw timings, native peak worker memory, timeout/memory-limit statuses, input hashes and environment details are in `experiments/results/large_2026-10-28/`. Use its final `summary.md` and `scalability.png` for current performance claims; earlier ≤14-second figures above describe the historical version and machine conditions. Timing repeats use one topology seed and the capped path/centrality methods described in the code.
+
+Reproduction and review preparation: `lab/NAMESPACE_LAB.md`, `FINAL_REVIEW.md`, and `.\review_demo.ps1`. The earlier VM measurements and 360-run comparison files remain separate from the new evidence.
 
 ## 12. Ethics and safety
 

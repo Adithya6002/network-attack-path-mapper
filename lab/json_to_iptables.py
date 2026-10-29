@@ -11,6 +11,9 @@ import json
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from analyzer.validation import validate_firewall  # noqa: E402
+
 # lab-router's temporary NAT adapter (VirtualBox NIC4). Lab traffic must never be
 # forwarded through it, whatever the policy says, so it is blocked before any rule.
 UPLINK_IFACE = "enp0s10"
@@ -21,6 +24,7 @@ def _addr(flag, spec):
 
 
 def rule_lines(rule):
+    validate_firewall({"default": "deny", "rules": [rule]})
     target = "ACCEPT" if rule["action"] == "allow" else "DROP"
     base = ["iptables", "-A", "FORWARD", *_addr("-s", rule.get("src")), *_addr("-d", rule.get("dst"))]
     ports = rule.get("ports")
@@ -31,15 +35,17 @@ def rule_lines(rule):
             return [" ".join([*base, "-j", target])]
         return [" ".join([*base, "-p", proto, "-j", target])]
 
-    port_list = ",".join(str(p) for p in ports)
     protos = ["tcp", "udp"] if proto == "any" else [proto]
     return [
-        " ".join([*base, "-p", p, "-m", "multiport", "--dports", port_list, "-j", target])
+        " ".join([*base, "-p", p, "-m", "multiport", "--dports", ",".join(str(n) for n in ports[i:i + 15]), "-j", target])
         for p in protos
+        for i in range(0, len(ports), 15)
     ]
 
 
 def to_script(policy, source_name):
+    validate_firewall(policy)
+    source_name = str(source_name).replace("\n", " ").replace("\r", " ")
     default = "ACCEPT" if policy.get("default", "allow") == "allow" else "DROP"
     lines = [
         "#!/bin/sh",
