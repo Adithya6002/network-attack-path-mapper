@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-10-28T16:38:48.532054+00:00",
+  "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "cpu": "AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD",
+  "logical_cpus": 16,
+  "total_memory_mb": 32039,
+  "source_sha256": "ca27099dee8515888e774aab89d849a112f651a899d46b20c7da06a05e257375",
+  "packages": {
+    "networkx": "3.7",
+    "pyvis": "0.3.2",
+    "psutil": "7.2.2"
+  },
+  "configuration": {
+    "sizes": [
+      500,
+      1000,
+      2000
+    ],
+    "policies": [
+      "flat",
+      "permissive",
+      "tiered",
+      "tiered+misconfig"
+    ],
+    "seeds": [
+      0
+    ],
+    "repeats": 3,
+    "timeout": 180.0,
+    "max_memory_mb": 2048.0,
+    "out": "D:\\Projects\\network-attack-path-mapper\\experiments\\results\\large_2026-10-28",
+    "worker": false,
+    "subnets": 4
+  },
+  "execution_notes": [
+    "Runs took place during ordinary desktop use without CPU affinity or exclusive machine access.",
+    "Some benchmark runs overlapped test execution and Ubuntu WSL lab preparation/measurement. Treat these as practical measurements under recorded conditions, not controlled performance certification."
+  ]
+}

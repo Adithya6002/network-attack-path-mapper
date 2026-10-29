@@ -2,6 +2,8 @@
 
 Quick answers to the questions most likely to come up in the review, in the order they were discussed.
 
+**Final-review update (28 Oct):** use `FINAL_REVIEW.md` for the current demonstration. There are 115 passing tests and a new 12-endpoint, four-subnet Linux namespace experiment with **1,980/1,980** TCP/UDP observations matched. It includes host-inbound firewalls and shares one kernel. Repeated 500/1,000/2,000-host synthetic timings and memory are in `experiments/results/large_2026-10-28/summary.md`; older speed figures below are historical. The implemented recommender evaluates independent connection blocks; a globally optimal combined fix remains future work. Multi-hop paths assume compromise of intermediate hosts.
+
 ---
 
 ## 1. What does the project do?
@@ -202,6 +204,7 @@ Quick answers to the questions most likely to come up in the review, in the orde
 | Sample network | 7 hosts, 3 subnets; **34 → 12** lines; **50+ → 2** paths; db **1 → 2** hops |
 | Lab | 4 VMs, 3 subnets, **72/72** matched, 95% CI **95.0–100%** |
 | Experiments | **360** runs; scans missed **100%**; zone review **49%** false alarms |
-| Speed | 1,000 hosts in **< 15 s**; path search **217 s → 1.2 s** |
-| Tests | **41** |
+| Speed | Use current repeated timings in `experiments/results/large_2026-10-28/summary.md`; earlier figures above are historical |
+| Expanded observed lab | **12 endpoint namespaces**, 4 subnets, 3 policies, **1,980/1,980** TCP/UDP observations matched; shared kernel |
+| Tests | **115** |
 | TRL | **3** |

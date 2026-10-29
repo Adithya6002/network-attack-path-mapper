@@ -32,15 +32,23 @@ POLICY_FILES = {"segmented": ROOT / "data" / "firewall_segmented.json"}
 def load_policy(network, label):
     if label in POLICY_FILES:
         return json.loads(POLICY_FILES[label].read_text(encoding="utf-8"))
-    return network["firewall"]
+    if label == "baseline":
+        return network["firewall"]
+    raise ValueError(f"Unknown measurement policy {label!r}.")
 
 
 def predict(network, firewall, src, dst, port):
     subnets = network["subnets"]
     same = subnet_of(src, subnets) is not None and subnet_of(src, subnets) == subnet_of(dst, subnets)
     passes = same or is_allowed(firewall, src, dst, port, "tcp")
+    destination = next((h for h in network["hosts"] if h["ip"] == dst), None)
+    if destination is None or not any(h["ip"] == src for h in network["hosts"]):
+        raise ValueError("Measurement source and destination must exist in the inventory.")
+    if "firewall" in destination:
+        passes = passes and is_allowed(destination["firewall"], src, dst, port, "tcp")
     services = {
         p["port"] for h in network["hosts"] if h["ip"] == dst for p in h.get("ports", [])
+        if p.get("proto", "tcp") == "tcp"
     }
     return passes, passes and port in services
 
@@ -83,6 +91,8 @@ def main():
     by_policy = {}
     mismatches = []
     for policy, src, dst, port, result in rows:
+        if result not in ("open", "refused", "timeout"):
+            raise ValueError(f"Unknown measurement result {result!r}.")
         port = int(port)
         fw = load_policy(network, policy)
         pred_pass, pred_service = predict(network, fw, src, dst, port)

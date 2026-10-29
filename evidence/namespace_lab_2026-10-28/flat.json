@@ -1,0 +1,287 @@
+{
+  "subnets": [
+    {
+      "name": "users",
+      "cidr": "10.44.10.0/24"
+    },
+    {
+      "name": "dmz",
+      "cidr": "10.44.20.0/24"
+    },
+    {
+      "name": "app",
+      "cidr": "10.44.30.0/24"
+    },
+    {
+      "name": "data",
+      "cidr": "10.44.40.0/24"
+    }
+  ],
+  "hosts": [
+    {
+      "ip": "10.44.10.11",
+      "hostname": "users1",
+      "role": "users",
+      "critical": false,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "test-tcp"
+        },
+        {
+          "port": 5353,
+          "proto": "udp",
+          "service": "test-udp-echo"
+        }
+      ]
+    },
+    {
+      "ip": "10.44.10.12",
+      "hostname": "users2",
+      "role": "users",
+      "critical": false,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "test-tcp"
+        },
+        {
+          "port": 5353,
+          "proto": "udp",
+          "service": "test-udp-echo"
+        }
+      ]
+    },
+    {
+      "ip": "10.44.10.13",
+      "hostname": "users3",
+      "role": "users",
+      "critical": false,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "test-tcp"
+        },
+        {
+          "port": 5353,
+          "proto": "udp",
+          "service": "test-udp-echo"
+        }
+      ]
+    },
+    {
+      "ip": "10.44.20.11",
+      "hostname": "dmz1",
+      "role": "dmz",
+      "critical": false,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "test-tcp"
+        },
+        {
+          "port": 5353,
+          "proto": "udp",
+          "service": "test-udp-echo"
+        },
+        {
+          "port": 8080,
+          "proto": "tcp",
+          "service": "test-tcp"
+        }
+      ]
+    },
+    {
+      "ip": "10.44.20.12",
+      "hostname": "dmz2",
+      "role": "dmz",
+      "critical": false,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "test-tcp"
+        },
+        {
+          "port": 5353,
+          "proto": "udp",
+          "service": "test-udp-echo"
+        },
+        {
+          "port": 8080,
+          "proto": "tcp",
+          "service": "test-tcp"
+        }
+      ]
+    },
+    {
+      "ip": "10.44.20.13",
+      "hostname": "dmz3",
+      "role": "dmz",
+      "critical": false,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "test-tcp"
+        },
+        {
+          "port": 5353,
+          "proto": "udp",
+          "service": "test-udp-echo"
+        },
+        {
+          "port": 8080,
+          "proto": "tcp",
+          "service": "test-tcp"
+        }
+      ]
+    },
+    {
+      "ip": "10.44.30.11",
+      "hostname": "app1",
+      "role": "app",
+      "critical": false,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "test-tcp"
+        },
+        {
+          "port": 5353,
+          "proto": "udp",
+          "service": "test-udp-echo"
+        },
+        {
+          "port": 8443,
+          "proto": "tcp",
+          "service": "test-tcp"
+        }
+      ]
+    },
+    {
+      "ip": "10.44.30.12",
+      "hostname": "app2",
+      "role": "app",
+      "critical": false,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "test-tcp"
+        },
+        {
+          "port": 5353,
+          "proto": "udp",
+          "service": "test-udp-echo"
+        },
+        {
+          "port": 8443,
+          "proto": "tcp",
+          "service": "test-tcp"
+        }
+      ]
+    },
+    {
+      "ip": "10.44.30.13",
+      "hostname": "app3",
+      "role": "app",
+      "critical": false,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "test-tcp"
+        },
+        {
+          "port": 5353,
+          "proto": "udp",
+          "service": "test-udp-echo"
+        },
+        {
+          "port": 8443,
+          "proto": "tcp",
+          "service": "test-tcp"
+        }
+      ]
+    },
+    {
+      "ip": "10.44.40.11",
+      "hostname": "data1",
+      "role": "data",
+      "critical": true,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "test-tcp"
+        },
+        {
+          "port": 5353,
+          "proto": "udp",
+          "service": "test-udp-echo"
+        },
+        {
+          "port": 5432,
+          "proto": "tcp",
+          "service": "test-tcp"
+        }
+      ]
+    },
+    {
+      "ip": "10.44.40.12",
+      "hostname": "data2",
+      "role": "data",
+      "critical": true,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "test-tcp"
+        },
+        {
+          "port": 5353,
+          "proto": "udp",
+          "service": "test-udp-echo"
+        },
+        {
+          "port": 5432,
+          "proto": "tcp",
+          "service": "test-tcp"
+        }
+      ]
+    },
+    {
+      "ip": "10.44.40.13",
+      "hostname": "data3",
+      "role": "data",
+      "critical": true,
+      "ports": [
+        {
+          "port": 22,
+          "proto": "tcp",
+          "service": "test-tcp"
+        },
+        {
+          "port": 5353,
+          "proto": "udp",
+          "service": "test-udp-echo"
+        },
+        {
+          "port": 5432,
+          "proto": "tcp",
+          "service": "test-tcp"
+        }
+      ]
+    }
+  ],
+  "firewall": {
+    "default": "allow",
+    "rules": []
+  }
+}

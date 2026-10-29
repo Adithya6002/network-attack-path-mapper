@@ -15,7 +15,7 @@ It takes three inputs:
 From these it builds a **graph**: each computer is a node, and an arrow from A to B means "A can connect to a service on B". It then reports:
 
 - which hosts can be reached, and in how many steps (hops);
-- every route to the critical servers;
+- bounded shortest-first routes to critical servers, with truncation indicated;
 - **choke points**: hosts that every route must pass through, which are the best places to defend;
 - what changes when the firewall policy changes.
 
@@ -24,7 +24,7 @@ The tool shows **reachability only**. It does not test whether a host can actual
 ## Key networking ideas
 
 - **Different subnets:** traffic goes through the router, where the firewall checks its rules in order and the first match decides.
-- **Same subnet:** traffic goes directly through the switch and **never reaches the firewall**, so no firewall rule can block it.
+- **Same subnet:** traffic bypasses the router firewall. The implemented inbound host-firewall policy can still block it.
 - **Allowed connections chain together.** Each rule can look harmless on its own, but together they can form a route to a critical server. That's what the tool is built to find.
 
 ## Results so far
@@ -33,17 +33,18 @@ The tool shows **reachability only**. It does not test whether a host can actual
 |---|---|
 | **Sample network** (7 hosts, 3 subnets) | Stricter firewall: connections **34 → 12**, routes to the database **50+ → 2**, database **1 → 2 hops** (only through the web server). The file server stays reachable because it shares a subnet with the database. |
 | **Real lab** (4 virtual machines, real iptables firewall) | The tool's predictions matched **72 of 72** measured connections (95% confidence interval: 95.0–100%). |
-| **Large-scale tests** (up to 1,000 hosts, 360 runs) | A normal network scan **missed 100%** of multi-hop routes; zone-level rule review gave **49% false alarms**; only this tool caught a misconfigured rule. 1,000 hosts are analysed in **under 15 seconds**. |
-| **Code quality** | **41 automated tests**, all passing; one command (`.\reproduce.ps1`) regenerates every result. |
+| **Expanded Linux lab** | **1,980/1,980** TCP/UDP observations matched across 12 endpoint namespaces, four subnets and three policies. Includes host-inbound controls; namespaces share one kernel. |
+| **Larger synthetic benchmarks** | 500, 1,000 and 2,000 hosts, four policies and three timing repeats; current times/memory are in `experiments/results/large_2026-10-28/summary.md`. Earlier 360-run comparisons use reimplemented baselines and this model as reference. |
+| **Code quality** | **115 automated tests**, all passing. `review_demo.ps1` prepares the review; `lab/NAMESPACE_LAB.md` and benchmark commands reproduce new evidence separately. |
 
 **Status: TRL 3.** The idea is proven on paper and in a real lab.
 
 ## What is new (novelty)
 
 1. Finds **multi-hop** exposure, not only direct connections.
-2. Models **traffic inside subnets**, which firewalls can't filter and most rule checks ignore.
+2. Models **traffic inside subnets**, including optional inbound host-firewall controls.
 3. **Validated on a real network:** the same policy file drives both the tool and the lab firewall.
-4. **Measures how common methods fail** (100% missed, 49% false alarms).
+4. Compares modeled approaches on fixed synthetic networks, with limitations stated; the graph algorithms themselves are established methods.
 5. Finds **choke points** to show where to defend first.
 
 ## Project layout
@@ -68,7 +69,7 @@ From the project folder:
 .\.venv\Scripts\python main.py compare --start 10.10.10.5 --after data/firewall_segmented.json
 ```
 
-Then open `output\before.html` and `output\after.html` in a browser.
+Then open `output\comparison.html` for synchronized before/after panels. For the complete course demonstration, run `.\review_demo.ps1` and follow `FINAL_REVIEW.md`.
 
 **Reading the pictures:**
 
@@ -80,5 +81,6 @@ Then open `output\before.html` and `output\after.html` in a browser.
 
 ## Next steps
 
-- **Hardening recommender:** suggest the smallest firewall change that blocks every route to the critical servers.
-- **Larger validation:** test on a bigger, more realistic network (more hosts, UDP, host firewalls).
+- Rehearse the working demo, capture the updated evidence, and finish the actual presentation using `FINAL_REVIEW.md`.
+- An advisory single-connection recommender is implemented. Coordinated changes and a globally minimum cut remain future work.
+- An independent operator and a second platform/multi-VM rerun would strengthen the new namespace evidence.

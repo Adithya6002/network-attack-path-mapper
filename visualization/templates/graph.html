@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>{{ title }}</title>
+  <style>{{ vis_css | safe }}</style>
+  <style>
+    *{box-sizing:border-box} body{margin:0;background:#f4f7fb;color:#172b43;font:15px/1.5 system-ui,sans-serif}
+    header,main{padding:20px 28px} header{background:#fff;border-bottom:1px solid #dbe3ed}
+    h1{font-size:24px;margin:0} h2{font-size:17px;margin:0 0 12px} p{margin:8px 0;color:#526379}
+    .stats,.controls,.legend{display:flex;gap:16px;flex-wrap:wrap}.stats{margin-top:18px}.stat{background:#edf3fa;padding:10px 16px;border-radius:8px;min-width:125px}
+    .stat strong{display:block;font-size:23px}.stat span{font-size:12px;color:#526379}.legend{font-size:12px;margin:14px 0}
+    .swatch{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}.controls{align-items:end;margin-bottom:16px}
+    label{display:grid;gap:4px;font-size:13px}select,button{font:inherit;padding:8px;border:1px solid #b5c4d6;border-radius:6px;background:white;color:#172b43;max-width:100%}
+    select{min-width:150px}button{cursor:pointer}.panel{background:white;border:1px solid #dbe3ed;border-radius:10px;overflow:hidden}
+    #mynetwork{height:680px;width:100%}#path-panel{padding:18px;margin-top:18px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f7fb;padding:12px;border-radius:6px}
+    .warning{padding:10px 14px;background:#fff5da;border-left:3px solid #ce941f;color:#604d25}.note{font-size:13px}
+    @media(max-width:650px){header,main{padding:16px}#mynetwork{height:520px}select{min-width:120px}}
+  </style>
+  <script>{{ vis_js | safe }}</script>
+</head>
+<body>
+<header>
+  <h1>{{ title }}</h1>
+  <p>Potential pivot paths from {{ result.start }}. Each intermediate host is assumed compromised; reachability does not prove exploitability.</p>
+  <div class="stats">
+    <div class="stat"><strong>{{ result.host_count }}</strong><span>Hosts</span></div>
+    <div class="stat"><strong>{{ result.edge_count }}</strong><span>Direct connections</span></div>
+    <div class="stat"><strong>{{ result.reachable | length }}</strong><span>Reachable hosts</span></div>
+    <div class="stat"><strong>{{ result.choke_points | length }}</strong><span>Choke points</span></div>
+  </div>
+  <div class="legend"><span>★ Start host</span><span>◆ Critical asset</span><span>Red edges: sampled paths to critical assets</span><span>Dashed: crosses router</span>
+    {% for name,color in colors.items() %}<span><i class="swatch" style="background:{{ color }}"></i>{{ name }}</span>{% endfor %}
+  </div>
+</header>
+<main>
+  {% for warning in result.warnings %}<p class="warning">{{ warning }}</p>{% endfor %}
+  {% if edges | length < result.edge_count %}<p class="warning">Display limited to {{ edges | length }} of {{ result.edge_count }} connections. Filters operate on this displayed subset; analysis and path details use the full graph. Increase --max-visual-edges to display more.</p>{% endif %}
+  <div class="controls">
+    <label>Subnet<select id="subnet"><option value="">All subnets</option>{% for subnet in subnets %}<option>{{ subnet }}</option>{% endfor %}</select></label>
+    <label>Service<select id="service"><option value="">All services</option></select></label>
+    <label>Critical target<select id="target"><option value="">All targets</option>{% for target in result.critical_targets %}<option>{{ target }}</option>{% endfor %}</select></label>
+    <label>Path<select id="path"><option value="">All sampled paths</option></select></label>
+    <button id="reset" type="button">Reset filters</button><button id="fit" type="button">Fit graph</button>
+  </div>
+  <p class="note" id="visible-count" aria-live="polite"></p>
+  <div class="panel"><div id="mynetwork" aria-label="Interactive network reachability graph"></div></div>
+  <section class="panel" id="path-panel"><h2>Path inspector</h2><p id="path-status" aria-live="polite">Select a critical target to inspect its potential paths.</p><pre id="path-details" hidden></pre></section>
+</main>
+<script>
+(() => {
+  const report = {{ result | tojson }}, originals = {{ edges | tojson }};
+  const nodeData = {{ nodes | tojson }}, pathDetails = {{ path_details | tojson }};
+  const nodes = new vis.DataSet(nodeData), edges = new vis.DataSet(originals);
+  const network = new vis.Network(document.getElementById('mynetwork'), {nodes, edges}, {{ options | tojson }});
+  const controls = Object.fromEntries(['subnet','service','target','path'].map(id => [id, document.getElementById(id)]));
+  const key = (src,dst) => JSON.stringify([src,dst]);
+  const detailMap = new Map(pathDetails.map(edge => [key(edge.source,edge.destination),edge.services]));
+  const serviceKeys = [...new Set(originals.flatMap(edge => edge.services.map(s => `${s.port}/${s.proto || 'tcp'}`)))].sort();
+  serviceKeys.forEach(value => controls.service.add(new Option(value,value)));
+  function targetPaths() {return report.target_paths[controls.target.value] || [];}
+  function updatePaths() {
+    controls.path.replaceChildren(new Option('All sampled paths',''));
+    targetPaths().forEach((path,i) => controls.path.add(new Option(`Path ${i+1} (${path.length-1} hops)`,String(i))));
+  }
+  function apply(broadcast=true) {
+    const target = controls.target.value, paths = targetPaths();
+    const active = controls.path.value === '' ? paths : [paths[Number(controls.path.value)]].filter(Boolean);
+    const pathNodes = new Set(active.flat()), pathEdges = new Set(active.flatMap(path => path.slice(1).map((dst,i) => key(path[i],dst))));
+    const visible = new Set(nodeData.filter(n => (!controls.subnet.value || n.subnet === controls.subnet.value) && (!target || pathNodes.has(n.id) || n.id === target || n.id === report.start)).map(n=>n.id));
+    nodes.update(nodeData.map(n=>({id:n.id,hidden:!visible.has(n.id)})));
+    let count=0;
+    edges.update(originals.map(edge => {
+      const show=visible.has(edge.from) && visible.has(edge.to) && (!target || pathEdges.has(key(edge.from,edge.to))) && (!controls.service.value || edge.services.some(s=>`${s.port}/${s.proto || 'tcp'}`===controls.service.value));
+      if(show)count++;
+      return {id:edge.id,hidden:!show};
+    }));
+    document.getElementById('visible-count').textContent = `${visible.size} ${visible.size===1?'host':'hosts'} and ${count} ${count===1?'connection':'connections'} shown. Hover over a connection for its policy explanation.`;
+    let status='Select a critical target to inspect its potential paths.';
+    if(target===report.start) status='This critical asset is already the start host.';
+    else if(target && !(target in report.reachable)) status='No path: this target is unreachable in the full model.';
+    else if(target && !paths.length) status=`Reachable in ${report.reachable[target]} hops, beyond the ${report.max_hops}-hop display limit.`;
+    else if(target) status=`${paths.length}${report.paths_truncated[target] ? '+' : ''} paths within ${report.max_hops} hops. ${report.paths_truncated[target] ? 'Path enumeration was capped.' : ''}`;
+    document.getElementById('path-status').textContent=status;
+    const detail=document.getElementById('path-details');
+    detail.hidden=!active.length;
+    detail.textContent=active.map(path => path.slice(1).map((dst,i) => {
+      const services=detailMap.get(key(path[i],dst)) || [];
+      return `${path[i]} → ${dst}\n` + services.map(s=>`  ${s.port}/${s.proto || 'tcp'} ${s.service || '?'} — ${s.reason}`).join('\n');
+    }).join('\n')).join('\n\n');
+    if(broadcast && window.parent!==window) window.parent.postMessage({kind:'mapper-selection',subnet:controls.subnet.value,service:controls.service.value,target},'*');
+  }
+  ['subnet','service','target','path'].forEach(id => controls[id].addEventListener('change',()=>{if(id==='target')updatePaths();apply();}));
+  document.getElementById('reset').addEventListener('click',()=>{Object.values(controls).forEach(control=>control.value='');updatePaths();apply();network.fit();});
+  document.getElementById('fit').addEventListener('click',()=>network.fit());
+  window.addEventListener('message',event=>{
+    if(window.parent===window || event.source!==window.parent || event.data?.kind!=='mapper-selection')return;
+    ['subnet','service','target'].forEach(id=>{
+      const value=event.data[id];
+      if(id==='service' && typeof value==='string' && /^[0-9]+\/(tcp|udp)$/.test(value) && ![...controls[id].options].some(o=>o.value===value))controls[id].add(new Option(value,value));
+      controls[id].value=[...controls[id].options].some(o=>o.value===value)?value:'';
+    });
+    updatePaths();apply(false);
+  });
+  apply(false);
+})();
+</script>
+</body></html>

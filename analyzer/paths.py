@@ -2,6 +2,8 @@
 
 import networkx as nx
 
+from analyzer.graph import explain_connection
+
 PATH_LIMIT = 50
 
 
@@ -20,37 +22,44 @@ def paths_to(graph, start, target, max_hops=4, limit=PATH_LIMIT):
     within the remaining hops, so large segmented graphs stay fast. Paths are
     enumerated length by length, so when the cap is hit the shortest are kept.
     """
+    if type(max_hops) is not int or max_hops < 1:
+        raise ValueError("max_hops must be a positive integer.")
+    if type(limit) is not int or limit < 1:
+        raise ValueError("Path limit must be a positive integer.")
+    max_hops = min(max_hops, max(1, graph.number_of_nodes() - 1))
     to_target = nx.single_source_shortest_path_length(
         graph.reverse(copy=False), target, cutoff=max_hops
     )
     if start not in to_target:
         return []
+    if start == target:
+        return [[start]]
     paths = []
-
-    def extend(path, on_path, remaining):
-        node = path[-1]
-        if remaining == 0:
-            if node == target:
-                paths.append(list(path))
-            return
-        for nxt in graph.successors(node):
-            if len(paths) >= limit:
-                return
-            dist = to_target.get(nxt)
-            if nxt in on_path or dist is None or dist > remaining - 1:
-                continue
-            if nxt == target and remaining > 1:
-                continue  # the target may only appear as the last hop
-            path.append(nxt)
-            on_path.add(nxt)
-            extend(path, on_path, remaining - 1)
-            on_path.discard(nxt)
-            path.pop()
-
+    exhausted = object()
     for length in range(to_target[start], max_hops + 1):
         if len(paths) >= limit:
             break
-        extend([start], {start}, length)
+        # Explicit stack avoids Python's recursion limit on long valid paths.
+        path, on_path = [start], {start}
+        stack = [iter(graph.successors(start))]
+        while stack and len(paths) < limit:
+            nxt = next(stack[-1], exhausted)
+            if nxt is exhausted:
+                stack.pop()
+                on_path.remove(path.pop())
+                continue
+            remaining = length - len(path)
+            dist = to_target.get(nxt)
+            if nxt in on_path or dist is None or dist > remaining:
+                continue
+            if nxt == target:
+                if remaining == 0:
+                    paths.append([*path, nxt])
+                continue
+            if remaining > 0:
+                path.append(nxt)
+                on_path.add(nxt)
+                stack.append(iter(graph.successors(nxt)))
     return paths
 
 
@@ -92,14 +101,18 @@ def analyze(graph, start, max_hops=4):
     """Collect every result the CLI and visualizer need into one dict."""
     if start not in graph:
         raise ValueError(f"Start host {start} is not in the network data.")
+    if type(max_hops) is not int or max_hops < 1:
+        raise ValueError("max_hops must be a positive integer.")
 
     reachable = reachable_hosts(graph, start)
     targets = critical_targets(graph)
     target_paths = {
-        target: paths_to(graph, start, target, max_hops)
+        target: paths_to(graph, start, target, max_hops, limit=PATH_LIMIT + 1)
         for target in targets
         if target in reachable
     }
+    truncated = {target: len(paths) > PATH_LIMIT for target, paths in target_paths.items()}
+    target_paths = {target: paths[:PATH_LIMIT] for target, paths in target_paths.items()}
     return {
         "start": start,
         "host_count": graph.number_of_nodes(),
@@ -108,13 +121,19 @@ def analyze(graph, start, max_hops=4):
         "unreachable": sorted(set(graph.nodes) - set(reachable) - {start}),
         "critical_targets": targets,
         "target_paths": target_paths,
+        "paths_truncated": truncated,
+        "max_hops": max_hops,
+        "path_limit": PATH_LIMIT,
+        "warnings": graph.graph.get("warnings", []),
         "choke_points": choke_points(graph, start),
         "key_nodes": key_nodes(graph),
     }
 
 
-def compare(before, after):
-    """Summarize what changed between two analyze() results."""
+def compare(before, after, before_graph=None, after_graph=None):
+    """Compare analyses; supply both graphs to include per-connection service changes."""
+    if (before_graph is None) != (after_graph is None):
+        raise ValueError("Supply both before and after graphs for service comparison.")
     lost = sorted(set(before["reachable"]) - set(after["reachable"]))
     gained = sorted(set(after["reachable"]) - set(before["reachable"]))
     hop_changes = {
@@ -123,11 +142,30 @@ def compare(before, after):
         if before["reachable"][host] != after["reachable"][host]
     }
     target_changes = {}
-    for target in before["critical_targets"]:
+    for target in sorted(set(before["critical_targets"]) | set(after["critical_targets"])):
         b = len(before["target_paths"].get(target, []))
         a = len(after["target_paths"].get(target, []))
-        if a != b:
+        if a != b or before.get("paths_truncated", {}).get(target, False) != after.get("paths_truncated", {}).get(target, False):
             target_changes[target] = (b, a)
+    service_changes = []
+    if before_graph is not None:
+        for src, dst in sorted(set(before_graph.edges) | set(after_graph.edges)):
+            def services(graph):
+                edge = graph.get_edge_data(src, dst, {})
+                reasons = edge.get("reasons", [])
+                return {
+                    (p["port"], p.get("proto", "tcp")): dict(p, reason=reasons[i] if i < len(reasons) else "")
+                    for i, p in enumerate(edge.get("services", []))
+                }
+            old, new = services(before_graph), services(after_graph)
+            removed = [old[key] for key in sorted(old.keys() - new.keys())]
+            added = [new[key] for key in sorted(new.keys() - old.keys())]
+            for service in removed:
+                service["after_reason"] = explain_connection(after_graph, src, dst, service["port"], service.get("proto", "tcp"))
+            for service in added:
+                service["before_reason"] = explain_connection(before_graph, src, dst, service["port"], service.get("proto", "tcp"))
+            if added or removed:
+                service_changes.append({"source": src, "destination": dst, "added": added, "removed": removed})
     return {
         "edges": (before["edge_count"], after["edge_count"]),
         "reachable_count": (len(before["reachable"]), len(after["reachable"])),
@@ -135,4 +173,10 @@ def compare(before, after):
         "newly_reachable": gained,
         "hop_changes": dict(sorted(hop_changes.items())),
         "target_path_counts": target_changes,
+        "target_path_truncation": {
+            target: (before.get("paths_truncated", {}).get(target, False), after.get("paths_truncated", {}).get(target, False))
+            for target in target_changes
+        },
+        "service_changes": service_changes,
+        "services_compared": before_graph is not None,
     }

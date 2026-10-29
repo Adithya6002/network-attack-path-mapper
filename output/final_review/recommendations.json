@@ -1,0 +1,56 @@
+{
+  "start": "10.10.10.5",
+  "required_connections": [
+    {
+      "source": "10.10.10.5",
+      "destination": "10.10.20.10",
+      "port": 443,
+      "proto": "tcp"
+    },
+    {
+      "source": "10.10.20.10",
+      "destination": "10.10.30.20",
+      "port": 5432,
+      "proto": "tcp"
+    }
+  ],
+  "candidate_count": 32,
+  "evaluated_candidates": 32,
+  "candidates_truncated": false,
+  "recommendations": [
+    {
+      "source": "10.10.10.5",
+      "destination": "10.10.30.20",
+      "placement": "network firewall",
+      "rule": {
+        "action": "deny",
+        "src": "10.10.10.5/32",
+        "dst": "10.10.30.20/32",
+        "ports": "any"
+      },
+      "critical_hosts_protected": [],
+      "critical_hosts_farther": 1,
+      "reachable_hosts_removed": 0
+    },
+    {
+      "source": "10.10.10.5",
+      "destination": "10.10.30.25",
+      "placement": "network firewall",
+      "rule": {
+        "action": "deny",
+        "src": "10.10.10.5/32",
+        "dst": "10.10.30.25/32",
+        "ports": "any"
+      },
+      "critical_hosts_protected": [],
+      "critical_hosts_farther": 1,
+      "reachable_hosts_removed": 0
+    }
+  ],
+  "assumptions": [
+    "Each suggestion is simulated independently and blocks all services on one directed connection.",
+    "Only declared direct business connections are protected; undeclared dependencies may be disrupted.",
+    "Prepend a suggested rule to the indicated policy. Host inbound rules apply on the destination host.",
+    "Results are potential pivot reachability, assuming intermediate hosts can be compromised; they do not prove exploitability."
+  ]
+}

@@ -1,0 +1,1981 @@
+policy,source,destination,port,proto,result,detail,duration_s
+flat,10.44.10.11,10.44.10.12,22,tcp,open,,0.0029
+flat,10.44.10.11,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.11,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.11,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.11,10.44.10.12,5353,udp,open,,0.0002
+flat,10.44.10.11,10.44.10.13,22,tcp,open,,0.0001
+flat,10.44.10.11,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.11,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.10.11,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.11,10.44.10.13,5353,udp,open,,0.0003
+flat,10.44.10.11,10.44.20.11,22,tcp,open,,0.001
+flat,10.44.10.11,10.44.20.11,8080,tcp,open,,0.0008
+flat,10.44.10.11,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.11,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.11,10.44.20.11,5353,udp,open,,0.0037
+flat,10.44.10.11,10.44.20.12,22,tcp,open,,0.0001
+flat,10.44.10.11,10.44.20.12,8080,tcp,open,,0.0003
+flat,10.44.10.11,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.11,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.11,10.44.20.12,5353,udp,open,,0.0008
+flat,10.44.10.11,10.44.20.13,22,tcp,open,,0.0007
+flat,10.44.10.11,10.44.20.13,8080,tcp,open,,0.0008
+flat,10.44.10.11,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.10.11,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0007
+flat,10.44.10.11,10.44.20.13,5353,udp,open,,0.0006
+flat,10.44.10.11,10.44.30.11,22,tcp,open,,0.0001
+flat,10.44.10.11,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.10.11,10.44.30.11,8443,tcp,open,,0.0002
+flat,10.44.10.11,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.11,10.44.30.11,5353,udp,open,,0.0007
+flat,10.44.10.11,10.44.30.12,22,tcp,open,,0.0001
+flat,10.44.10.11,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.11,10.44.30.12,8443,tcp,open,,0.004
+flat,10.44.10.11,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0005
+flat,10.44.10.11,10.44.30.12,5353,udp,open,,0.0025
+flat,10.44.10.11,10.44.30.13,22,tcp,open,,0.0024
+flat,10.44.10.11,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.11,10.44.30.13,8443,tcp,open,,0.002
+flat,10.44.10.11,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.11,10.44.30.13,5353,udp,open,,0.0004
+flat,10.44.10.11,10.44.40.11,22,tcp,open,,0.0039
+flat,10.44.10.11,10.44.40.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.11,10.44.40.11,8443,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.10.11,10.44.40.11,5432,tcp,open,,0.001
+flat,10.44.10.11,10.44.40.11,5353,udp,open,,0.0014
+flat,10.44.10.11,10.44.40.12,22,tcp,open,,0.0003
+flat,10.44.10.11,10.44.40.12,8080,tcp,refused,[Errno 111] Connection refused,0.0008
+flat,10.44.10.11,10.44.40.12,8443,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.10.11,10.44.40.12,5432,tcp,open,,0.0005
+flat,10.44.10.11,10.44.40.12,5353,udp,open,,0.0012
+flat,10.44.10.11,10.44.40.13,22,tcp,open,,0.0008
+flat,10.44.10.11,10.44.40.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.11,10.44.40.13,8443,tcp,refused,[Errno 111] Connection refused,0.0005
+flat,10.44.10.11,10.44.40.13,5432,tcp,open,,0.0006
+flat,10.44.10.11,10.44.40.13,5353,udp,open,,0.0007
+flat,10.44.10.12,10.44.10.11,22,tcp,open,,0.0003
+flat,10.44.10.12,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.12,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.12,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.12,10.44.10.11,5353,udp,open,,0.0003
+flat,10.44.10.12,10.44.10.13,22,tcp,open,,0.0002
+flat,10.44.10.12,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.12,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.12,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.10.12,10.44.10.13,5353,udp,open,,0.0002
+flat,10.44.10.12,10.44.20.11,22,tcp,open,,0.0003
+flat,10.44.10.12,10.44.20.11,8080,tcp,open,,0.0002
+flat,10.44.10.12,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.10.12,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.12,10.44.20.11,5353,udp,open,,0.0036
+flat,10.44.10.12,10.44.20.12,22,tcp,open,,0.0002
+flat,10.44.10.12,10.44.20.12,8080,tcp,open,,0.0032
+flat,10.44.10.12,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.10.12,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.12,10.44.20.12,5353,udp,open,,0.0002
+flat,10.44.10.12,10.44.20.13,22,tcp,open,,0.0002
+flat,10.44.10.12,10.44.20.13,8080,tcp,open,,0.0004
+flat,10.44.10.12,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.10.12,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.10.12,10.44.20.13,5353,udp,open,,0.0005
+flat,10.44.10.12,10.44.30.11,22,tcp,open,,0.0003
+flat,10.44.10.12,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0005
+flat,10.44.10.12,10.44.30.11,8443,tcp,open,,0.0002
+flat,10.44.10.12,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.12,10.44.30.11,5353,udp,open,,0.0048
+flat,10.44.10.12,10.44.30.12,22,tcp,open,,0.0005
+flat,10.44.10.12,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.12,10.44.30.12,8443,tcp,open,,0.0002
+flat,10.44.10.12,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.12,10.44.30.12,5353,udp,open,,0.0003
+flat,10.44.10.12,10.44.30.13,22,tcp,open,,0.0009
+flat,10.44.10.12,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.12,10.44.30.13,8443,tcp,open,,0.0003
+flat,10.44.10.12,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0005
+flat,10.44.10.12,10.44.30.13,5353,udp,open,,0.0004
+flat,10.44.10.12,10.44.40.11,22,tcp,open,,0.0016
+flat,10.44.10.12,10.44.40.11,8080,tcp,refused,[Errno 111] Connection refused,0.0042
+flat,10.44.10.12,10.44.40.11,8443,tcp,refused,[Errno 111] Connection refused,0.0005
+flat,10.44.10.12,10.44.40.11,5432,tcp,open,,0.0042
+flat,10.44.10.12,10.44.40.11,5353,udp,open,,0.0003
+flat,10.44.10.12,10.44.40.12,22,tcp,open,,0.0004
+flat,10.44.10.12,10.44.40.12,8080,tcp,refused,[Errno 111] Connection refused,0.0005
+flat,10.44.10.12,10.44.40.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.12,10.44.40.12,5432,tcp,open,,0.0006
+flat,10.44.10.12,10.44.40.12,5353,udp,open,,0.0005
+flat,10.44.10.12,10.44.40.13,22,tcp,open,,0.0004
+flat,10.44.10.12,10.44.40.13,8080,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.10.12,10.44.40.13,8443,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.10.12,10.44.40.13,5432,tcp,open,,0.0007
+flat,10.44.10.12,10.44.40.13,5353,udp,open,,0.0005
+flat,10.44.10.13,10.44.10.11,22,tcp,open,,0.0003
+flat,10.44.10.13,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.13,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0037
+flat,10.44.10.13,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.13,10.44.10.11,5353,udp,open,,0.0002
+flat,10.44.10.13,10.44.10.12,22,tcp,open,,0.0001
+flat,10.44.10.13,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0039
+flat,10.44.10.13,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0033
+flat,10.44.10.13,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.10.13,10.44.10.12,5353,udp,open,,0.0002
+flat,10.44.10.13,10.44.20.11,22,tcp,open,,0.0002
+flat,10.44.10.13,10.44.20.11,8080,tcp,open,,0.0008
+flat,10.44.10.13,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0019
+flat,10.44.10.13,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.13,10.44.20.11,5353,udp,open,,0.0002
+flat,10.44.10.13,10.44.20.12,22,tcp,open,,0.0006
+flat,10.44.10.13,10.44.20.12,8080,tcp,open,,0.0001
+flat,10.44.10.13,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.13,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.10.13,10.44.20.12,5353,udp,open,,0.0058
+flat,10.44.10.13,10.44.20.13,22,tcp,open,,0.0003
+flat,10.44.10.13,10.44.20.13,8080,tcp,open,,0.0005
+flat,10.44.10.13,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.13,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.10.13,10.44.20.13,5353,udp,open,,0.0001
+flat,10.44.10.13,10.44.30.11,22,tcp,open,,0.0002
+flat,10.44.10.13,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.13,10.44.30.11,8443,tcp,open,,0.0003
+flat,10.44.10.13,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.10.13,10.44.30.11,5353,udp,open,,0.0002
+flat,10.44.10.13,10.44.30.12,22,tcp,open,,0.0005
+flat,10.44.10.13,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.13,10.44.30.12,8443,tcp,open,,0.0002
+flat,10.44.10.13,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.13,10.44.30.12,5353,udp,open,,0.0003
+flat,10.44.10.13,10.44.30.13,22,tcp,open,,0.0002
+flat,10.44.10.13,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.10.13,10.44.30.13,8443,tcp,open,,0.0003
+flat,10.44.10.13,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.10.13,10.44.30.13,5353,udp,open,,0.0097
+flat,10.44.10.13,10.44.40.11,22,tcp,open,,0.0003
+flat,10.44.10.13,10.44.40.11,8080,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.10.13,10.44.40.11,8443,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.10.13,10.44.40.11,5432,tcp,open,,0.0004
+flat,10.44.10.13,10.44.40.11,5353,udp,open,,0.0003
+flat,10.44.10.13,10.44.40.12,22,tcp,open,,0.0005
+flat,10.44.10.13,10.44.40.12,8080,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.10.13,10.44.40.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.13,10.44.40.12,5432,tcp,open,,0.0001
+flat,10.44.10.13,10.44.40.12,5353,udp,open,,0.0004
+flat,10.44.10.13,10.44.40.13,22,tcp,open,,0.0005
+flat,10.44.10.13,10.44.40.13,8080,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.10.13,10.44.40.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.10.13,10.44.40.13,5432,tcp,open,,0.0007
+flat,10.44.10.13,10.44.40.13,5353,udp,open,,0.0084
+flat,10.44.20.11,10.44.10.11,22,tcp,open,,0.0003
+flat,10.44.20.11,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.11,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.11,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.11,10.44.10.11,5353,udp,open,,0.0003
+flat,10.44.20.11,10.44.10.12,22,tcp,open,,0.0001
+flat,10.44.20.11,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.11,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.20.11,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.20.11,10.44.10.12,5353,udp,open,,0.0002
+flat,10.44.20.11,10.44.10.13,22,tcp,open,,0.0006
+flat,10.44.20.11,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.20.11,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.11,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.11,10.44.10.13,5353,udp,open,,0.0002
+flat,10.44.20.11,10.44.20.12,22,tcp,open,,0.0003
+flat,10.44.20.11,10.44.20.12,8080,tcp,open,,0.0006
+flat,10.44.20.11,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.20.11,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.20.11,10.44.20.12,5353,udp,open,,0.0003
+flat,10.44.20.11,10.44.20.13,22,tcp,open,,0.0002
+flat,10.44.20.11,10.44.20.13,8080,tcp,open,,0.0008
+flat,10.44.20.11,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.11,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.11,10.44.20.13,5353,udp,open,,0.0056
+flat,10.44.20.11,10.44.30.11,22,tcp,open,,0.0003
+flat,10.44.20.11,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.11,10.44.30.11,8443,tcp,open,,0.0001
+flat,10.44.20.11,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.11,10.44.30.11,5353,udp,open,,0.0037
+flat,10.44.20.11,10.44.30.12,22,tcp,open,,0.0078
+flat,10.44.20.11,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.11,10.44.30.12,8443,tcp,open,,0.0032
+flat,10.44.20.11,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.11,10.44.30.12,5353,udp,open,,0.0043
+flat,10.44.20.11,10.44.30.13,22,tcp,open,,0.0003
+flat,10.44.20.11,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.11,10.44.30.13,8443,tcp,open,,0.0001
+flat,10.44.20.11,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.20.11,10.44.30.13,5353,udp,open,,0.0004
+flat,10.44.20.11,10.44.40.11,22,tcp,open,,0.0003
+flat,10.44.20.11,10.44.40.11,8080,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.20.11,10.44.40.11,8443,tcp,refused,[Errno 111] Connection refused,0.0005
+flat,10.44.20.11,10.44.40.11,5432,tcp,open,,0.0005
+flat,10.44.20.11,10.44.40.11,5353,udp,open,,0.0011
+flat,10.44.20.11,10.44.40.12,22,tcp,open,,0.0006
+flat,10.44.20.11,10.44.40.12,8080,tcp,refused,[Errno 111] Connection refused,0.0031
+flat,10.44.20.11,10.44.40.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.11,10.44.40.12,5432,tcp,open,,0.0004
+flat,10.44.20.11,10.44.40.12,5353,udp,open,,0.0007
+flat,10.44.20.11,10.44.40.13,22,tcp,open,,0.0004
+flat,10.44.20.11,10.44.40.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.11,10.44.40.13,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.11,10.44.40.13,5432,tcp,open,,0.0001
+flat,10.44.20.11,10.44.40.13,5353,udp,open,,0.0003
+flat,10.44.20.12,10.44.10.11,22,tcp,open,,0.0002
+flat,10.44.20.12,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.20.12,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0035
+flat,10.44.20.12,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.12,10.44.10.11,5353,udp,open,,0.0002
+flat,10.44.20.12,10.44.10.12,22,tcp,open,,0.0004
+flat,10.44.20.12,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.12,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.12,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.12,10.44.10.12,5353,udp,open,,0.0002
+flat,10.44.20.12,10.44.10.13,22,tcp,open,,0.0002
+flat,10.44.20.12,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0036
+flat,10.44.20.12,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.12,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.12,10.44.10.13,5353,udp,open,,0.0049
+flat,10.44.20.12,10.44.20.11,22,tcp,open,,0.0001
+flat,10.44.20.12,10.44.20.11,8080,tcp,open,,0.0042
+flat,10.44.20.12,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.12,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.12,10.44.20.11,5353,udp,open,,0.0003
+flat,10.44.20.12,10.44.20.13,22,tcp,open,,0.0002
+flat,10.44.20.12,10.44.20.13,8080,tcp,open,,0.0002
+flat,10.44.20.12,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.12,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.20.12,10.44.20.13,5353,udp,open,,0.0002
+flat,10.44.20.12,10.44.30.11,22,tcp,open,,0.0008
+flat,10.44.20.12,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.12,10.44.30.11,8443,tcp,open,,0.0003
+flat,10.44.20.12,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.12,10.44.30.11,5353,udp,open,,0.0002
+flat,10.44.20.12,10.44.30.12,22,tcp,open,,0.0007
+flat,10.44.20.12,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.12,10.44.30.12,8443,tcp,open,,0.0002
+flat,10.44.20.12,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.12,10.44.30.12,5353,udp,open,,0.0003
+flat,10.44.20.12,10.44.30.13,22,tcp,open,,0.0007
+flat,10.44.20.12,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.20.12,10.44.30.13,8443,tcp,open,,0.0004
+flat,10.44.20.12,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0005
+flat,10.44.20.12,10.44.30.13,5353,udp,open,,0.0007
+flat,10.44.20.12,10.44.40.11,22,tcp,open,,0.0004
+flat,10.44.20.12,10.44.40.11,8080,tcp,refused,[Errno 111] Connection refused,0.0056
+flat,10.44.20.12,10.44.40.11,8443,tcp,refused,[Errno 111] Connection refused,0.0055
+flat,10.44.20.12,10.44.40.11,5432,tcp,open,,0.0002
+flat,10.44.20.12,10.44.40.11,5353,udp,open,,0.0003
+flat,10.44.20.12,10.44.40.12,22,tcp,open,,0.0023
+flat,10.44.20.12,10.44.40.12,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.12,10.44.40.12,8443,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.20.12,10.44.40.12,5432,tcp,open,,0.0001
+flat,10.44.20.12,10.44.40.12,5353,udp,open,,0.0007
+flat,10.44.20.12,10.44.40.13,22,tcp,open,,0.0006
+flat,10.44.20.12,10.44.40.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.12,10.44.40.13,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.12,10.44.40.13,5432,tcp,open,,0.0002
+flat,10.44.20.12,10.44.40.13,5353,udp,open,,0.0004
+flat,10.44.20.13,10.44.10.11,22,tcp,open,,0.0002
+flat,10.44.20.13,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.13,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.13,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.13,10.44.10.11,5353,udp,open,,0.0003
+flat,10.44.20.13,10.44.10.12,22,tcp,open,,0.0002
+flat,10.44.20.13,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.20.13,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.13,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0035
+flat,10.44.20.13,10.44.10.12,5353,udp,open,,0.0002
+flat,10.44.20.13,10.44.10.13,22,tcp,open,,0.0003
+flat,10.44.20.13,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.13,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.13,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.20.13,10.44.10.13,5353,udp,open,,0.0003
+flat,10.44.20.13,10.44.20.11,22,tcp,open,,0.0002
+flat,10.44.20.13,10.44.20.11,8080,tcp,open,,0.0005
+flat,10.44.20.13,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.13,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.20.13,10.44.20.11,5353,udp,open,,0.0003
+flat,10.44.20.13,10.44.20.12,22,tcp,open,,0.0002
+flat,10.44.20.13,10.44.20.12,8080,tcp,open,,0.0003
+flat,10.44.20.13,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.13,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.13,10.44.20.12,5353,udp,open,,0.0004
+flat,10.44.20.13,10.44.30.11,22,tcp,open,,0.0007
+flat,10.44.20.13,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.20.13,10.44.30.11,8443,tcp,open,,0.004
+flat,10.44.20.13,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.13,10.44.30.11,5353,udp,open,,0.0003
+flat,10.44.20.13,10.44.30.12,22,tcp,open,,0.0003
+flat,10.44.20.13,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.13,10.44.30.12,8443,tcp,open,,0.0008
+flat,10.44.20.13,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.13,10.44.30.12,5353,udp,open,,0.0004
+flat,10.44.20.13,10.44.30.13,22,tcp,open,,0.0002
+flat,10.44.20.13,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.20.13,10.44.30.13,8443,tcp,open,,0.0004
+flat,10.44.20.13,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.20.13,10.44.30.13,5353,udp,open,,0.0066
+flat,10.44.20.13,10.44.40.11,22,tcp,open,,0.0008
+flat,10.44.20.13,10.44.40.11,8080,tcp,refused,[Errno 111] Connection refused,0.0033
+flat,10.44.20.13,10.44.40.11,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.13,10.44.40.11,5432,tcp,open,,0.0001
+flat,10.44.20.13,10.44.40.11,5353,udp,open,,0.0005
+flat,10.44.20.13,10.44.40.12,22,tcp,open,,0.0004
+flat,10.44.20.13,10.44.40.12,8080,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.20.13,10.44.40.12,8443,tcp,refused,[Errno 111] Connection refused,0.0038
+flat,10.44.20.13,10.44.40.12,5432,tcp,open,,0.0004
+flat,10.44.20.13,10.44.40.12,5353,udp,open,,0.0004
+flat,10.44.20.13,10.44.40.13,22,tcp,open,,0.0002
+flat,10.44.20.13,10.44.40.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.20.13,10.44.40.13,8443,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.20.13,10.44.40.13,5432,tcp,open,,0.0005
+flat,10.44.20.13,10.44.40.13,5353,udp,open,,0.0003
+flat,10.44.30.11,10.44.10.11,22,tcp,open,,0.0003
+flat,10.44.30.11,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0028
+flat,10.44.30.11,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.30.11,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.11,10.44.10.11,5353,udp,open,,0.0016
+flat,10.44.30.11,10.44.10.12,22,tcp,open,,0.0002
+flat,10.44.30.11,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.11,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.30.11,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.30.11,10.44.10.12,5353,udp,open,,0.0002
+flat,10.44.30.11,10.44.10.13,22,tcp,open,,0.0005
+flat,10.44.30.11,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.11,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.11,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.11,10.44.10.13,5353,udp,open,,0.0004
+flat,10.44.30.11,10.44.20.11,22,tcp,open,,0.0001
+flat,10.44.30.11,10.44.20.11,8080,tcp,open,,0.0003
+flat,10.44.30.11,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.11,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.11,10.44.20.11,5353,udp,open,,0.0078
+flat,10.44.30.11,10.44.20.12,22,tcp,open,,0.0002
+flat,10.44.30.11,10.44.20.12,8080,tcp,open,,0.0003
+flat,10.44.30.11,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.30.11,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.11,10.44.20.12,5353,udp,open,,0.007
+flat,10.44.30.11,10.44.20.13,22,tcp,open,,0.0064
+flat,10.44.30.11,10.44.20.13,8080,tcp,open,,0.0003
+flat,10.44.30.11,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.11,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.11,10.44.20.13,5353,udp,open,,0.0002
+flat,10.44.30.11,10.44.30.12,22,tcp,open,,0.0008
+flat,10.44.30.11,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.30.11,10.44.30.12,8443,tcp,open,,0.0009
+flat,10.44.30.11,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.11,10.44.30.12,5353,udp,open,,0.0003
+flat,10.44.30.11,10.44.30.13,22,tcp,open,,0.0003
+flat,10.44.30.11,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.30.11,10.44.30.13,8443,tcp,open,,0.0002
+flat,10.44.30.11,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.11,10.44.30.13,5353,udp,open,,0.0002
+flat,10.44.30.11,10.44.40.11,22,tcp,open,,0.0001
+flat,10.44.30.11,10.44.40.11,8080,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.30.11,10.44.40.11,8443,tcp,refused,[Errno 111] Connection refused,0.0005
+flat,10.44.30.11,10.44.40.11,5432,tcp,open,,0.0007
+flat,10.44.30.11,10.44.40.11,5353,udp,open,,0.0024
+flat,10.44.30.11,10.44.40.12,22,tcp,open,,0.0005
+flat,10.44.30.11,10.44.40.12,8080,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.30.11,10.44.40.12,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.11,10.44.40.12,5432,tcp,open,,0.0043
+flat,10.44.30.11,10.44.40.12,5353,udp,open,,0.0045
+flat,10.44.30.11,10.44.40.13,22,tcp,open,,0.0005
+flat,10.44.30.11,10.44.40.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.11,10.44.40.13,8443,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.30.11,10.44.40.13,5432,tcp,open,,0.0002
+flat,10.44.30.11,10.44.40.13,5353,udp,open,,0.0002
+flat,10.44.30.12,10.44.10.11,22,tcp,open,,0.0007
+flat,10.44.30.12,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.12,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.30.12,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.12,10.44.10.11,5353,udp,open,,0.0002
+flat,10.44.30.12,10.44.10.12,22,tcp,open,,0.0003
+flat,10.44.30.12,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.12,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.30.12,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.12,10.44.10.12,5353,udp,open,,0.0003
+flat,10.44.30.12,10.44.10.13,22,tcp,open,,0.0003
+flat,10.44.30.12,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.12,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0068
+flat,10.44.30.12,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.12,10.44.10.13,5353,udp,open,,0.0002
+flat,10.44.30.12,10.44.20.11,22,tcp,open,,0.0002
+flat,10.44.30.12,10.44.20.11,8080,tcp,open,,0.0001
+flat,10.44.30.12,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.12,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.12,10.44.20.11,5353,udp,open,,0.0008
+flat,10.44.30.12,10.44.20.12,22,tcp,open,,0.0002
+flat,10.44.30.12,10.44.20.12,8080,tcp,open,,0.0003
+flat,10.44.30.12,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0009
+flat,10.44.30.12,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.12,10.44.20.12,5353,udp,open,,0.0007
+flat,10.44.30.12,10.44.20.13,22,tcp,open,,0.0001
+flat,10.44.30.12,10.44.20.13,8080,tcp,open,,0.0001
+flat,10.44.30.12,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.30.12,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.30.12,10.44.20.13,5353,udp,open,,0.0067
+flat,10.44.30.12,10.44.30.11,22,tcp,open,,0.0006
+flat,10.44.30.12,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.30.12,10.44.30.11,8443,tcp,open,,0.0005
+flat,10.44.30.12,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.12,10.44.30.11,5353,udp,open,,0.0004
+flat,10.44.30.12,10.44.30.13,22,tcp,open,,0.0002
+flat,10.44.30.12,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.12,10.44.30.13,8443,tcp,open,,0.0002
+flat,10.44.30.12,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.12,10.44.30.13,5353,udp,open,,0.0002
+flat,10.44.30.12,10.44.40.11,22,tcp,open,,0.0001
+flat,10.44.30.12,10.44.40.11,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.12,10.44.40.11,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.12,10.44.40.11,5432,tcp,open,,0.0004
+flat,10.44.30.12,10.44.40.11,5353,udp,open,,0.0004
+flat,10.44.30.12,10.44.40.12,22,tcp,open,,0.0004
+flat,10.44.30.12,10.44.40.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.12,10.44.40.12,8443,tcp,refused,[Errno 111] Connection refused,0.0007
+flat,10.44.30.12,10.44.40.12,5432,tcp,open,,0.0003
+flat,10.44.30.12,10.44.40.12,5353,udp,open,,0.0004
+flat,10.44.30.12,10.44.40.13,22,tcp,open,,0.0008
+flat,10.44.30.12,10.44.40.13,8080,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.30.12,10.44.40.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.12,10.44.40.13,5432,tcp,open,,0.0002
+flat,10.44.30.12,10.44.40.13,5353,udp,open,,0.0004
+flat,10.44.30.13,10.44.10.11,22,tcp,open,,0.0005
+flat,10.44.30.13,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.13,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.13,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.13,10.44.10.11,5353,udp,open,,0.0006
+flat,10.44.30.13,10.44.10.12,22,tcp,open,,0.0001
+flat,10.44.30.13,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.13,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.13,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.13,10.44.10.12,5353,udp,open,,0.0003
+flat,10.44.30.13,10.44.10.13,22,tcp,open,,0.0002
+flat,10.44.30.13,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.13,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.13,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.13,10.44.10.13,5353,udp,open,,0.004
+flat,10.44.30.13,10.44.20.11,22,tcp,open,,0.0001
+flat,10.44.30.13,10.44.20.11,8080,tcp,open,,0.0002
+flat,10.44.30.13,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.13,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.30.13,10.44.20.11,5353,udp,open,,0.0008
+flat,10.44.30.13,10.44.20.12,22,tcp,open,,0.0002
+flat,10.44.30.13,10.44.20.12,8080,tcp,open,,0.0005
+flat,10.44.30.13,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.012
+flat,10.44.30.13,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.13,10.44.20.12,5353,udp,open,,0.0006
+flat,10.44.30.13,10.44.20.13,22,tcp,open,,0.0009
+flat,10.44.30.13,10.44.20.13,8080,tcp,open,,0.0003
+flat,10.44.30.13,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.30.13,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.30.13,10.44.20.13,5353,udp,open,,0.0002
+flat,10.44.30.13,10.44.30.11,22,tcp,open,,0.0055
+flat,10.44.30.13,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.13,10.44.30.11,8443,tcp,open,,0.0002
+flat,10.44.30.13,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.13,10.44.30.11,5353,udp,open,,0.0002
+flat,10.44.30.13,10.44.30.12,22,tcp,open,,0.0005
+flat,10.44.30.13,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0007
+flat,10.44.30.13,10.44.30.12,8443,tcp,open,,0.0002
+flat,10.44.30.13,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.13,10.44.30.12,5353,udp,open,,0.0046
+flat,10.44.30.13,10.44.40.11,22,tcp,open,,0.0002
+flat,10.44.30.13,10.44.40.11,8080,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.30.13,10.44.40.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.13,10.44.40.11,5432,tcp,open,,0.0003
+flat,10.44.30.13,10.44.40.11,5353,udp,open,,0.0006
+flat,10.44.30.13,10.44.40.12,22,tcp,open,,0.0041
+flat,10.44.30.13,10.44.40.12,8080,tcp,refused,[Errno 111] Connection refused,0.0008
+flat,10.44.30.13,10.44.40.12,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.30.13,10.44.40.12,5432,tcp,open,,0.0007
+flat,10.44.30.13,10.44.40.12,5353,udp,open,,0.0003
+flat,10.44.30.13,10.44.40.13,22,tcp,open,,0.0004
+flat,10.44.30.13,10.44.40.13,8080,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.30.13,10.44.40.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.30.13,10.44.40.13,5432,tcp,open,,0.0006
+flat,10.44.30.13,10.44.40.13,5353,udp,open,,0.0002
+flat,10.44.40.11,10.44.10.11,22,tcp,open,,0.0004
+flat,10.44.40.11,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.11,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.11,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.11,10.44.10.11,5353,udp,open,,0.0003
+flat,10.44.40.11,10.44.10.12,22,tcp,open,,0.0001
+flat,10.44.40.11,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0
+flat,10.44.40.11,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.11,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0
+flat,10.44.40.11,10.44.10.12,5353,udp,open,,0.0002
+flat,10.44.40.11,10.44.10.13,22,tcp,open,,0.0002
+flat,10.44.40.11,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.11,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.11,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.11,10.44.10.13,5353,udp,open,,0.0002
+flat,10.44.40.11,10.44.20.11,22,tcp,open,,0.0001
+flat,10.44.40.11,10.44.20.11,8080,tcp,open,,0.0002
+flat,10.44.40.11,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.11,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.11,10.44.20.11,5353,udp,open,,0.0002
+flat,10.44.40.11,10.44.20.12,22,tcp,open,,0.0003
+flat,10.44.40.11,10.44.20.12,8080,tcp,open,,0.0005
+flat,10.44.40.11,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0005
+flat,10.44.40.11,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0069
+flat,10.44.40.11,10.44.20.12,5353,udp,open,,0.0003
+flat,10.44.40.11,10.44.20.13,22,tcp,open,,0.0002
+flat,10.44.40.11,10.44.20.13,8080,tcp,open,,0.0004
+flat,10.44.40.11,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.11,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0034
+flat,10.44.40.11,10.44.20.13,5353,udp,open,,0.0006
+flat,10.44.40.11,10.44.30.11,22,tcp,open,,0.0004
+flat,10.44.40.11,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.11,10.44.30.11,8443,tcp,open,,0.0069
+flat,10.44.40.11,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.11,10.44.30.11,5353,udp,open,,0.0001
+flat,10.44.40.11,10.44.30.12,22,tcp,open,,0.0005
+flat,10.44.40.11,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.11,10.44.30.12,8443,tcp,open,,0.0002
+flat,10.44.40.11,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.40.11,10.44.30.12,5353,udp,open,,0.001
+flat,10.44.40.11,10.44.30.13,22,tcp,open,,0.0002
+flat,10.44.40.11,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.40.11,10.44.30.13,8443,tcp,open,,0.0005
+flat,10.44.40.11,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.40.11,10.44.30.13,5353,udp,open,,0.0078
+flat,10.44.40.11,10.44.40.12,22,tcp,open,,0.0004
+flat,10.44.40.11,10.44.40.12,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.11,10.44.40.12,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.11,10.44.40.12,5432,tcp,open,,0.0004
+flat,10.44.40.11,10.44.40.12,5353,udp,open,,0.0007
+flat,10.44.40.11,10.44.40.13,22,tcp,open,,0.0002
+flat,10.44.40.11,10.44.40.13,8080,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.40.11,10.44.40.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.11,10.44.40.13,5432,tcp,open,,0.0004
+flat,10.44.40.11,10.44.40.13,5353,udp,open,,0.0002
+flat,10.44.40.12,10.44.10.11,22,tcp,open,,0.006
+flat,10.44.40.12,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0011
+flat,10.44.40.12,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.001
+flat,10.44.40.12,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.12,10.44.10.11,5353,udp,open,,0.0002
+flat,10.44.40.12,10.44.10.12,22,tcp,open,,0.0007
+flat,10.44.40.12,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.40.12,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.40.12,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.12,10.44.10.12,5353,udp,open,,0.0096
+flat,10.44.40.12,10.44.10.13,22,tcp,open,,0.0004
+flat,10.44.40.12,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.12,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.12,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.12,10.44.10.13,5353,udp,open,,0.0002
+flat,10.44.40.12,10.44.20.11,22,tcp,open,,0.0073
+flat,10.44.40.12,10.44.20.11,8080,tcp,open,,0.0023
+flat,10.44.40.12,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.12,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0014
+flat,10.44.40.12,10.44.20.11,5353,udp,open,,0.0051
+flat,10.44.40.12,10.44.20.12,22,tcp,open,,0.0004
+flat,10.44.40.12,10.44.20.12,8080,tcp,open,,0.0011
+flat,10.44.40.12,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0135
+flat,10.44.40.12,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.12,10.44.20.12,5353,udp,open,,0.0004
+flat,10.44.40.12,10.44.20.13,22,tcp,open,,0.0003
+flat,10.44.40.12,10.44.20.13,8080,tcp,open,,0.0003
+flat,10.44.40.12,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.12,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.12,10.44.20.13,5353,udp,open,,0.0005
+flat,10.44.40.12,10.44.30.11,22,tcp,open,,0.0002
+flat,10.44.40.12,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.12,10.44.30.11,8443,tcp,open,,0.0001
+flat,10.44.40.12,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.12,10.44.30.11,5353,udp,open,,0.0009
+flat,10.44.40.12,10.44.30.12,22,tcp,open,,0.001
+flat,10.44.40.12,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.40.12,10.44.30.12,8443,tcp,open,,0.0036
+flat,10.44.40.12,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0013
+flat,10.44.40.12,10.44.30.12,5353,udp,open,,0.0004
+flat,10.44.40.12,10.44.30.13,22,tcp,open,,0.0009
+flat,10.44.40.12,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0059
+flat,10.44.40.12,10.44.30.13,8443,tcp,open,,0.0007
+flat,10.44.40.12,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0007
+flat,10.44.40.12,10.44.30.13,5353,udp,open,,0.0036
+flat,10.44.40.12,10.44.40.11,22,tcp,open,,0.0009
+flat,10.44.40.12,10.44.40.11,8080,tcp,refused,[Errno 111] Connection refused,0.0031
+flat,10.44.40.12,10.44.40.11,8443,tcp,refused,[Errno 111] Connection refused,0.0023
+flat,10.44.40.12,10.44.40.11,5432,tcp,open,,0.0033
+flat,10.44.40.12,10.44.40.11,5353,udp,open,,0.0031
+flat,10.44.40.12,10.44.40.13,22,tcp,open,,0.0028
+flat,10.44.40.12,10.44.40.13,8080,tcp,refused,[Errno 111] Connection refused,0.0269
+flat,10.44.40.12,10.44.40.13,8443,tcp,refused,[Errno 111] Connection refused,0.0004
+flat,10.44.40.12,10.44.40.13,5432,tcp,open,,0.0005
+flat,10.44.40.12,10.44.40.13,5353,udp,open,,0.0002
+flat,10.44.40.13,10.44.10.11,22,tcp,open,,0.0005
+flat,10.44.40.13,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.13,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0005
+flat,10.44.40.13,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.13,10.44.10.11,5353,udp,open,,0.0003
+flat,10.44.40.13,10.44.10.12,22,tcp,open,,0.0001
+flat,10.44.40.13,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.13,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.13,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0052
+flat,10.44.40.13,10.44.10.12,5353,udp,open,,0.0008
+flat,10.44.40.13,10.44.10.13,22,tcp,open,,0.0002
+flat,10.44.40.13,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.13,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.13,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.13,10.44.10.13,5353,udp,open,,0.0003
+flat,10.44.40.13,10.44.20.11,22,tcp,open,,0.0004
+flat,10.44.40.13,10.44.20.11,8080,tcp,open,,0.0005
+flat,10.44.40.13,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.13,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0003
+flat,10.44.40.13,10.44.20.11,5353,udp,open,,0.0022
+flat,10.44.40.13,10.44.20.12,22,tcp,open,,0.0009
+flat,10.44.40.13,10.44.20.12,8080,tcp,open,,0.0001
+flat,10.44.40.13,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0021
+flat,10.44.40.13,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0013
+flat,10.44.40.13,10.44.20.12,5353,udp,open,,0.0348
+flat,10.44.40.13,10.44.20.13,22,tcp,open,,0.002
+flat,10.44.40.13,10.44.20.13,8080,tcp,open,,0.0015
+flat,10.44.40.13,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0014
+flat,10.44.40.13,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0012
+flat,10.44.40.13,10.44.20.13,5353,udp,open,,0.0005
+flat,10.44.40.13,10.44.30.11,22,tcp,open,,0.0063
+flat,10.44.40.13,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0053
+flat,10.44.40.13,10.44.30.11,8443,tcp,open,,0.022
+flat,10.44.40.13,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.13,10.44.30.11,5353,udp,open,,0.0337
+flat,10.44.40.13,10.44.30.12,22,tcp,open,,0.0172
+flat,10.44.40.13,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.034
+flat,10.44.40.13,10.44.30.12,8443,tcp,open,,0.0003
+flat,10.44.40.13,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0006
+flat,10.44.40.13,10.44.30.12,5353,udp,open,,0.0002
+flat,10.44.40.13,10.44.30.13,22,tcp,open,,0.0065
+flat,10.44.40.13,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.13,10.44.30.13,8443,tcp,open,,0.0001
+flat,10.44.40.13,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.13,10.44.30.13,5353,udp,open,,0.0002
+flat,10.44.40.13,10.44.40.11,22,tcp,open,,0.0001
+flat,10.44.40.13,10.44.40.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.13,10.44.40.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.13,10.44.40.11,5432,tcp,open,,0.0001
+flat,10.44.40.13,10.44.40.11,5353,udp,open,,0.0006
+flat,10.44.40.13,10.44.40.12,22,tcp,open,,0.0001
+flat,10.44.40.13,10.44.40.12,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+flat,10.44.40.13,10.44.40.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+flat,10.44.40.13,10.44.40.12,5432,tcp,open,,0.0016
+flat,10.44.40.13,10.44.40.12,5353,udp,open,,0.0002
+segmented,10.44.10.11,10.44.10.12,22,tcp,open,,0.0003
+segmented,10.44.10.11,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.10.11,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0005
+segmented,10.44.10.11,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.10.11,10.44.10.12,5353,udp,open,,0.0032
+segmented,10.44.10.11,10.44.10.13,22,tcp,open,,0.0002
+segmented,10.44.10.11,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.10.11,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.10.11,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+segmented,10.44.10.11,10.44.10.13,5353,udp,open,,0.0054
+segmented,10.44.10.11,10.44.20.11,22,tcp,timeout,,1.0013
+segmented,10.44.10.11,10.44.20.11,8080,tcp,open,,0.0003
+segmented,10.44.10.11,10.44.20.11,8443,tcp,timeout,,1.0183
+segmented,10.44.10.11,10.44.20.11,5432,tcp,timeout,,1.0277
+segmented,10.44.10.11,10.44.20.11,5353,udp,open,,0.0003
+segmented,10.44.10.11,10.44.20.12,22,tcp,timeout,,1.0012
+segmented,10.44.10.11,10.44.20.12,8080,tcp,open,,0.0001
+segmented,10.44.10.11,10.44.20.12,8443,tcp,timeout,,1.0028
+segmented,10.44.10.11,10.44.20.12,5432,tcp,timeout,,1.0012
+segmented,10.44.10.11,10.44.20.12,5353,udp,open,,0.0021
+segmented,10.44.10.11,10.44.20.13,22,tcp,timeout,,1.0317
+segmented,10.44.10.11,10.44.20.13,8080,tcp,open,,0.0003
+segmented,10.44.10.11,10.44.20.13,8443,tcp,timeout,,1.0586
+segmented,10.44.10.11,10.44.20.13,5432,tcp,timeout,,1.0509
+segmented,10.44.10.11,10.44.20.13,5353,udp,open,,0.0029
+segmented,10.44.10.11,10.44.30.11,22,tcp,timeout,,1.0467
+segmented,10.44.10.11,10.44.30.11,8080,tcp,timeout,,1.043
+segmented,10.44.10.11,10.44.30.11,8443,tcp,timeout,,1.0069
+segmented,10.44.10.11,10.44.30.11,5432,tcp,timeout,,1.0386
+segmented,10.44.10.11,10.44.30.11,5353,udp,timeout,,1.0062
+segmented,10.44.10.11,10.44.30.12,22,tcp,timeout,,1.0357
+segmented,10.44.10.11,10.44.30.12,8080,tcp,timeout,,1.003
+segmented,10.44.10.11,10.44.30.12,8443,tcp,timeout,,1.0039
+segmented,10.44.10.11,10.44.30.12,5432,tcp,timeout,,1.0025
+segmented,10.44.10.11,10.44.30.12,5353,udp,timeout,,1.0012
+segmented,10.44.10.11,10.44.30.13,22,tcp,timeout,,1.0012
+segmented,10.44.10.11,10.44.30.13,8080,tcp,timeout,,1.0049
+segmented,10.44.10.11,10.44.30.13,8443,tcp,timeout,,1.0012
+segmented,10.44.10.11,10.44.30.13,5432,tcp,timeout,,1.0009
+segmented,10.44.10.11,10.44.30.13,5353,udp,timeout,,1.0309
+segmented,10.44.10.11,10.44.40.11,22,tcp,timeout,,1.0096
+segmented,10.44.10.11,10.44.40.11,8080,tcp,timeout,,1.0015
+segmented,10.44.10.11,10.44.40.11,8443,tcp,timeout,,1.0012
+segmented,10.44.10.11,10.44.40.11,5432,tcp,timeout,,1.001
+segmented,10.44.10.11,10.44.40.11,5353,udp,timeout,,1.0042
+segmented,10.44.10.11,10.44.40.12,22,tcp,timeout,,1.0041
+segmented,10.44.10.11,10.44.40.12,8080,tcp,timeout,,1.0005
+segmented,10.44.10.11,10.44.40.12,8443,tcp,timeout,,1.0011
+segmented,10.44.10.11,10.44.40.12,5432,tcp,timeout,,1.0041
+segmented,10.44.10.11,10.44.40.12,5353,udp,timeout,,1.0012
+segmented,10.44.10.11,10.44.40.13,22,tcp,timeout,,1.0012
+segmented,10.44.10.11,10.44.40.13,8080,tcp,timeout,,1.0015
+segmented,10.44.10.11,10.44.40.13,8443,tcp,timeout,,1.0002
+segmented,10.44.10.11,10.44.40.13,5432,tcp,timeout,,1.0011
+segmented,10.44.10.11,10.44.40.13,5353,udp,timeout,,1.0051
+segmented,10.44.10.12,10.44.10.11,22,tcp,open,,0.0005
+segmented,10.44.10.12,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.10.12,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.10.12,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+segmented,10.44.10.12,10.44.10.11,5353,udp,open,,0.0002
+segmented,10.44.10.12,10.44.10.13,22,tcp,open,,0.0002
+segmented,10.44.10.12,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.10.12,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.10.12,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.10.12,10.44.10.13,5353,udp,open,,0.0004
+segmented,10.44.10.12,10.44.20.11,22,tcp,timeout,,1.0013
+segmented,10.44.10.12,10.44.20.11,8080,tcp,open,,0.003
+segmented,10.44.10.12,10.44.20.11,8443,tcp,timeout,,1.001
+segmented,10.44.10.12,10.44.20.11,5432,tcp,timeout,,1.0006
+segmented,10.44.10.12,10.44.20.11,5353,udp,open,,0.0002
+segmented,10.44.10.12,10.44.20.12,22,tcp,timeout,,1.0041
+segmented,10.44.10.12,10.44.20.12,8080,tcp,open,,0.0071
+segmented,10.44.10.12,10.44.20.12,8443,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.20.12,5432,tcp,timeout,,1.0013
+segmented,10.44.10.12,10.44.20.12,5353,udp,open,,0.0004
+segmented,10.44.10.12,10.44.20.13,22,tcp,timeout,,1.0035
+segmented,10.44.10.12,10.44.20.13,8080,tcp,open,,0.0002
+segmented,10.44.10.12,10.44.20.13,8443,tcp,timeout,,1.0011
+segmented,10.44.10.12,10.44.20.13,5432,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.20.13,5353,udp,open,,0.0041
+segmented,10.44.10.12,10.44.30.11,22,tcp,timeout,,1.0049
+segmented,10.44.10.12,10.44.30.11,8080,tcp,timeout,,1.0011
+segmented,10.44.10.12,10.44.30.11,8443,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.30.11,5432,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.30.11,5353,udp,timeout,,1.0059
+segmented,10.44.10.12,10.44.30.12,22,tcp,timeout,,1.0015
+segmented,10.44.10.12,10.44.30.12,8080,tcp,timeout,,1.0047
+segmented,10.44.10.12,10.44.30.12,8443,tcp,timeout,,1.0053
+segmented,10.44.10.12,10.44.30.12,5432,tcp,timeout,,1.0103
+segmented,10.44.10.12,10.44.30.12,5353,udp,timeout,,1.0012
+segmented,10.44.10.12,10.44.30.13,22,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.30.13,8080,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.30.13,8443,tcp,timeout,,1.0056
+segmented,10.44.10.12,10.44.30.13,5432,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.30.13,5353,udp,timeout,,1.0082
+segmented,10.44.10.12,10.44.40.11,22,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.40.11,8080,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.40.11,8443,tcp,timeout,,1.0016
+segmented,10.44.10.12,10.44.40.11,5432,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.40.11,5353,udp,timeout,,1.0118
+segmented,10.44.10.12,10.44.40.12,22,tcp,timeout,,1.001
+segmented,10.44.10.12,10.44.40.12,8080,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.40.12,8443,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.40.12,5432,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.40.12,5353,udp,timeout,,1.0012
+segmented,10.44.10.12,10.44.40.13,22,tcp,timeout,,1.0011
+segmented,10.44.10.12,10.44.40.13,8080,tcp,timeout,,1.0003
+segmented,10.44.10.12,10.44.40.13,8443,tcp,timeout,,1.0058
+segmented,10.44.10.12,10.44.40.13,5432,tcp,timeout,,1.0012
+segmented,10.44.10.12,10.44.40.13,5353,udp,timeout,,1.0012
+segmented,10.44.10.13,10.44.10.11,22,tcp,open,,0.0002
+segmented,10.44.10.13,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.10.13,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.10.13,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+segmented,10.44.10.13,10.44.10.11,5353,udp,open,,0.0002
+segmented,10.44.10.13,10.44.10.12,22,tcp,open,,0.0014
+segmented,10.44.10.13,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.10.13,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0
+segmented,10.44.10.13,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.10.13,10.44.10.12,5353,udp,open,,0.0002
+segmented,10.44.10.13,10.44.20.11,22,tcp,timeout,,1.0011
+segmented,10.44.10.13,10.44.20.11,8080,tcp,open,,0.0042
+segmented,10.44.10.13,10.44.20.11,8443,tcp,timeout,,1.0015
+segmented,10.44.10.13,10.44.20.11,5432,tcp,timeout,,1.0012
+segmented,10.44.10.13,10.44.20.11,5353,udp,open,,0.0002
+segmented,10.44.10.13,10.44.20.12,22,tcp,timeout,,1.0011
+segmented,10.44.10.13,10.44.20.12,8080,tcp,open,,0.0001
+segmented,10.44.10.13,10.44.20.12,8443,tcp,timeout,,1.002
+segmented,10.44.10.13,10.44.20.12,5432,tcp,timeout,,1.0091
+segmented,10.44.10.13,10.44.20.12,5353,udp,open,,0.0005
+segmented,10.44.10.13,10.44.20.13,22,tcp,timeout,,1.0068
+segmented,10.44.10.13,10.44.20.13,8080,tcp,open,,0.0001
+segmented,10.44.10.13,10.44.20.13,8443,tcp,timeout,,1.0012
+segmented,10.44.10.13,10.44.20.13,5432,tcp,timeout,,1.0012
+segmented,10.44.10.13,10.44.20.13,5353,udp,open,,0.0004
+segmented,10.44.10.13,10.44.30.11,22,tcp,timeout,,1.0054
+segmented,10.44.10.13,10.44.30.11,8080,tcp,timeout,,1.0049
+segmented,10.44.10.13,10.44.30.11,8443,tcp,timeout,,1.0122
+segmented,10.44.10.13,10.44.30.11,5432,tcp,timeout,,1.0077
+segmented,10.44.10.13,10.44.30.11,5353,udp,timeout,,1.0008
+segmented,10.44.10.13,10.44.30.12,22,tcp,timeout,,1.0045
+segmented,10.44.10.13,10.44.30.12,8080,tcp,timeout,,1.0039
+segmented,10.44.10.13,10.44.30.12,8443,tcp,timeout,,1.0064
+segmented,10.44.10.13,10.44.30.12,5432,tcp,timeout,,1.0011
+segmented,10.44.10.13,10.44.30.12,5353,udp,timeout,,1.0012
+segmented,10.44.10.13,10.44.30.13,22,tcp,timeout,,1.0062
+segmented,10.44.10.13,10.44.30.13,8080,tcp,timeout,,1.0014
+segmented,10.44.10.13,10.44.30.13,8443,tcp,timeout,,1.0012
+segmented,10.44.10.13,10.44.30.13,5432,tcp,timeout,,1.0014
+segmented,10.44.10.13,10.44.30.13,5353,udp,timeout,,1.001
+segmented,10.44.10.13,10.44.40.11,22,tcp,timeout,,1.0029
+segmented,10.44.10.13,10.44.40.11,8080,tcp,timeout,,1.004
+segmented,10.44.10.13,10.44.40.11,8443,tcp,timeout,,1.001
+segmented,10.44.10.13,10.44.40.11,5432,tcp,timeout,,1.004
+segmented,10.44.10.13,10.44.40.11,5353,udp,timeout,,1.0034
+segmented,10.44.10.13,10.44.40.12,22,tcp,timeout,,1.0012
+segmented,10.44.10.13,10.44.40.12,8080,tcp,timeout,,1.0011
+segmented,10.44.10.13,10.44.40.12,8443,tcp,timeout,,1.0012
+segmented,10.44.10.13,10.44.40.12,5432,tcp,timeout,,1.0051
+segmented,10.44.10.13,10.44.40.12,5353,udp,timeout,,1.0013
+segmented,10.44.10.13,10.44.40.13,22,tcp,timeout,,1.0011
+segmented,10.44.10.13,10.44.40.13,8080,tcp,timeout,,1.0003
+segmented,10.44.10.13,10.44.40.13,8443,tcp,timeout,,1.0011
+segmented,10.44.10.13,10.44.40.13,5432,tcp,timeout,,1.009
+segmented,10.44.10.13,10.44.40.13,5353,udp,timeout,,1.0094
+segmented,10.44.20.11,10.44.10.11,22,tcp,timeout,,1.0013
+segmented,10.44.20.11,10.44.10.11,8080,tcp,timeout,,1.0013
+segmented,10.44.20.11,10.44.10.11,8443,tcp,timeout,,1.0018
+segmented,10.44.20.11,10.44.10.11,5432,tcp,timeout,,1.0029
+segmented,10.44.20.11,10.44.10.11,5353,udp,timeout,,1.0041
+segmented,10.44.20.11,10.44.10.12,22,tcp,timeout,,1.0051
+segmented,10.44.20.11,10.44.10.12,8080,tcp,timeout,,1.0012
+segmented,10.44.20.11,10.44.10.12,8443,tcp,timeout,,1.0079
+segmented,10.44.20.11,10.44.10.12,5432,tcp,timeout,,1.0008
+segmented,10.44.20.11,10.44.10.12,5353,udp,timeout,,1.0012
+segmented,10.44.20.11,10.44.10.13,22,tcp,timeout,,1.0051
+segmented,10.44.20.11,10.44.10.13,8080,tcp,timeout,,1.0047
+segmented,10.44.20.11,10.44.10.13,8443,tcp,timeout,,1.0014
+segmented,10.44.20.11,10.44.10.13,5432,tcp,timeout,,1.0079
+segmented,10.44.20.11,10.44.10.13,5353,udp,timeout,,1.0064
+segmented,10.44.20.11,10.44.20.12,22,tcp,open,,0.0006
+segmented,10.44.20.11,10.44.20.12,8080,tcp,open,,0.0002
+segmented,10.44.20.11,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+segmented,10.44.20.11,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.20.11,10.44.20.12,5353,udp,open,,0.0087
+segmented,10.44.20.11,10.44.20.13,22,tcp,open,,0.0002
+segmented,10.44.20.11,10.44.20.13,8080,tcp,open,,0.0001
+segmented,10.44.20.11,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.20.11,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0
+segmented,10.44.20.11,10.44.20.13,5353,udp,open,,0.0002
+segmented,10.44.20.11,10.44.30.11,22,tcp,timeout,,1.0033
+segmented,10.44.20.11,10.44.30.11,8080,tcp,timeout,,1.0106
+segmented,10.44.20.11,10.44.30.11,8443,tcp,open,,0.0005
+segmented,10.44.20.11,10.44.30.11,5432,tcp,timeout,,1.0011
+segmented,10.44.20.11,10.44.30.11,5353,udp,timeout,,1.0012
+segmented,10.44.20.11,10.44.30.12,22,tcp,timeout,,1.0039
+segmented,10.44.20.11,10.44.30.12,8080,tcp,timeout,,1.0012
+segmented,10.44.20.11,10.44.30.12,8443,tcp,open,,0.0002
+segmented,10.44.20.11,10.44.30.12,5432,tcp,timeout,,1.0011
+segmented,10.44.20.11,10.44.30.12,5353,udp,timeout,,1.0013
+segmented,10.44.20.11,10.44.30.13,22,tcp,timeout,,1.0027
+segmented,10.44.20.11,10.44.30.13,8080,tcp,timeout,,1.0039
+segmented,10.44.20.11,10.44.30.13,8443,tcp,open,,0.0002
+segmented,10.44.20.11,10.44.30.13,5432,tcp,timeout,,1.0011
+segmented,10.44.20.11,10.44.30.13,5353,udp,timeout,,1.0013
+segmented,10.44.20.11,10.44.40.11,22,tcp,timeout,,1.0011
+segmented,10.44.20.11,10.44.40.11,8080,tcp,timeout,,1.0011
+segmented,10.44.20.11,10.44.40.11,8443,tcp,timeout,,1.012
+segmented,10.44.20.11,10.44.40.11,5432,tcp,timeout,,1.0032
+segmented,10.44.20.11,10.44.40.11,5353,udp,timeout,,1.0024
+segmented,10.44.20.11,10.44.40.12,22,tcp,timeout,,1.0051
+segmented,10.44.20.11,10.44.40.12,8080,tcp,timeout,,1.005
+segmented,10.44.20.11,10.44.40.12,8443,tcp,timeout,,1.001
+segmented,10.44.20.11,10.44.40.12,5432,tcp,timeout,,1.004
+segmented,10.44.20.11,10.44.40.12,5353,udp,timeout,,1.0067
+segmented,10.44.20.11,10.44.40.13,22,tcp,timeout,,1.0013
+segmented,10.44.20.11,10.44.40.13,8080,tcp,timeout,,1.0015
+segmented,10.44.20.11,10.44.40.13,8443,tcp,timeout,,1.0044
+segmented,10.44.20.11,10.44.40.13,5432,tcp,timeout,,1.0011
+segmented,10.44.20.11,10.44.40.13,5353,udp,timeout,,1.0012
+segmented,10.44.20.12,10.44.10.11,22,tcp,timeout,,1.004
+segmented,10.44.20.12,10.44.10.11,8080,tcp,timeout,,1.0012
+segmented,10.44.20.12,10.44.10.11,8443,tcp,timeout,,1.0074
+segmented,10.44.20.12,10.44.10.11,5432,tcp,timeout,,1.0014
+segmented,10.44.20.12,10.44.10.11,5353,udp,timeout,,1.0119
+segmented,10.44.20.12,10.44.10.12,22,tcp,timeout,,1.0013
+segmented,10.44.20.12,10.44.10.12,8080,tcp,timeout,,1.0014
+segmented,10.44.20.12,10.44.10.12,8443,tcp,timeout,,1.0008
+segmented,10.44.20.12,10.44.10.12,5432,tcp,timeout,,1.0014
+segmented,10.44.20.12,10.44.10.12,5353,udp,timeout,,1.0014
+segmented,10.44.20.12,10.44.10.13,22,tcp,timeout,,1.0076
+segmented,10.44.20.12,10.44.10.13,8080,tcp,timeout,,1.0017
+segmented,10.44.20.12,10.44.10.13,8443,tcp,timeout,,1.0011
+segmented,10.44.20.12,10.44.10.13,5432,tcp,timeout,,1.0004
+segmented,10.44.20.12,10.44.10.13,5353,udp,timeout,,1.0032
+segmented,10.44.20.12,10.44.20.11,22,tcp,open,,0.0002
+segmented,10.44.20.12,10.44.20.11,8080,tcp,open,,0.0002
+segmented,10.44.20.12,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.20.12,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.20.12,10.44.20.11,5353,udp,open,,0.0087
+segmented,10.44.20.12,10.44.20.13,22,tcp,open,,0.0004
+segmented,10.44.20.12,10.44.20.13,8080,tcp,open,,0.0001
+segmented,10.44.20.12,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.20.12,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0
+segmented,10.44.20.12,10.44.20.13,5353,udp,open,,0.0005
+segmented,10.44.20.12,10.44.30.11,22,tcp,timeout,,1.0029
+segmented,10.44.20.12,10.44.30.11,8080,tcp,timeout,,1.0012
+segmented,10.44.20.12,10.44.30.11,8443,tcp,open,,0.0004
+segmented,10.44.20.12,10.44.30.11,5432,tcp,timeout,,1.0021
+segmented,10.44.20.12,10.44.30.11,5353,udp,timeout,,1.0029
+segmented,10.44.20.12,10.44.30.12,22,tcp,timeout,,1.0012
+segmented,10.44.20.12,10.44.30.12,8080,tcp,timeout,,1.0012
+segmented,10.44.20.12,10.44.30.12,8443,tcp,open,,0.0002
+segmented,10.44.20.12,10.44.30.12,5432,tcp,timeout,,1.0011
+segmented,10.44.20.12,10.44.30.12,5353,udp,timeout,,1.0013
+segmented,10.44.20.12,10.44.30.13,22,tcp,timeout,,1.001
+segmented,10.44.20.12,10.44.30.13,8080,tcp,timeout,,1.005
+segmented,10.44.20.12,10.44.30.13,8443,tcp,open,,0.0004
+segmented,10.44.20.12,10.44.30.13,5432,tcp,timeout,,1.0011
+segmented,10.44.20.12,10.44.30.13,5353,udp,timeout,,1.0013
+segmented,10.44.20.12,10.44.40.11,22,tcp,timeout,,1.001
+segmented,10.44.20.12,10.44.40.11,8080,tcp,timeout,,1.0011
+segmented,10.44.20.12,10.44.40.11,8443,tcp,timeout,,1.0019
+segmented,10.44.20.12,10.44.40.11,5432,tcp,timeout,,1.0049
+segmented,10.44.20.12,10.44.40.11,5353,udp,timeout,,1.0012
+segmented,10.44.20.12,10.44.40.12,22,tcp,timeout,,1.0012
+segmented,10.44.20.12,10.44.40.12,8080,tcp,timeout,,1.0012
+segmented,10.44.20.12,10.44.40.12,8443,tcp,timeout,,1.0012
+segmented,10.44.20.12,10.44.40.12,5432,tcp,timeout,,1.0011
+segmented,10.44.20.12,10.44.40.12,5353,udp,timeout,,1.0008
+segmented,10.44.20.12,10.44.40.13,22,tcp,timeout,,1.0012
+segmented,10.44.20.12,10.44.40.13,8080,tcp,timeout,,1.0095
+segmented,10.44.20.12,10.44.40.13,8443,tcp,timeout,,1.0011
+segmented,10.44.20.12,10.44.40.13,5432,tcp,timeout,,1.0003
+segmented,10.44.20.12,10.44.40.13,5353,udp,timeout,,1.0012
+segmented,10.44.20.13,10.44.10.11,22,tcp,timeout,,1.0053
+segmented,10.44.20.13,10.44.10.11,8080,tcp,timeout,,1.0012
+segmented,10.44.20.13,10.44.10.11,8443,tcp,timeout,,1.0013
+segmented,10.44.20.13,10.44.10.11,5432,tcp,timeout,,1.0014
+segmented,10.44.20.13,10.44.10.11,5353,udp,timeout,,1.0038
+segmented,10.44.20.13,10.44.10.12,22,tcp,timeout,,1.0013
+segmented,10.44.20.13,10.44.10.12,8080,tcp,timeout,,1.0013
+segmented,10.44.20.13,10.44.10.12,8443,tcp,timeout,,1.0147
+segmented,10.44.20.13,10.44.10.12,5432,tcp,timeout,,1.0013
+segmented,10.44.20.13,10.44.10.12,5353,udp,timeout,,1.0014
+segmented,10.44.20.13,10.44.10.13,22,tcp,timeout,,1.0012
+segmented,10.44.20.13,10.44.10.13,8080,tcp,timeout,,1.008
+segmented,10.44.20.13,10.44.10.13,8443,tcp,timeout,,1.0013
+segmented,10.44.20.13,10.44.10.13,5432,tcp,timeout,,1.0014
+segmented,10.44.20.13,10.44.10.13,5353,udp,timeout,,1.0046
+segmented,10.44.20.13,10.44.20.11,22,tcp,open,,0.004
+segmented,10.44.20.13,10.44.20.11,8080,tcp,open,,0.0003
+segmented,10.44.20.13,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.20.13,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.20.13,10.44.20.11,5353,udp,open,,0.0001
+segmented,10.44.20.13,10.44.20.12,22,tcp,open,,0.0003
+segmented,10.44.20.13,10.44.20.12,8080,tcp,open,,0.0001
+segmented,10.44.20.13,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.20.13,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0
+segmented,10.44.20.13,10.44.20.12,5353,udp,open,,0.0001
+segmented,10.44.20.13,10.44.30.11,22,tcp,timeout,,1.0074
+segmented,10.44.20.13,10.44.30.11,8080,tcp,timeout,,1.0059
+segmented,10.44.20.13,10.44.30.11,8443,tcp,open,,0.0003
+segmented,10.44.20.13,10.44.30.11,5432,tcp,timeout,,1.0013
+segmented,10.44.20.13,10.44.30.11,5353,udp,timeout,,1.001
+segmented,10.44.20.13,10.44.30.12,22,tcp,timeout,,1.0064
+segmented,10.44.20.13,10.44.30.12,8080,tcp,timeout,,1.0064
+segmented,10.44.20.13,10.44.30.12,8443,tcp,open,,0.0002
+segmented,10.44.20.13,10.44.30.12,5432,tcp,timeout,,1.0031
+segmented,10.44.20.13,10.44.30.12,5353,udp,timeout,,1.0081
+segmented,10.44.20.13,10.44.30.13,22,tcp,timeout,,1.0012
+segmented,10.44.20.13,10.44.30.13,8080,tcp,timeout,,1.0012
+segmented,10.44.20.13,10.44.30.13,8443,tcp,open,,0.0002
+segmented,10.44.20.13,10.44.30.13,5432,tcp,timeout,,1.0011
+segmented,10.44.20.13,10.44.30.13,5353,udp,timeout,,1.0013
+segmented,10.44.20.13,10.44.40.11,22,tcp,timeout,,1.0012
+segmented,10.44.20.13,10.44.40.11,8080,tcp,timeout,,1.0006
+segmented,10.44.20.13,10.44.40.11,8443,tcp,timeout,,1.0013
+segmented,10.44.20.13,10.44.40.11,5432,tcp,timeout,,1.0012
+segmented,10.44.20.13,10.44.40.11,5353,udp,timeout,,1.0029
+segmented,10.44.20.13,10.44.40.12,22,tcp,timeout,,1.005
+segmented,10.44.20.13,10.44.40.12,8080,tcp,timeout,,1.0048
+segmented,10.44.20.13,10.44.40.12,8443,tcp,timeout,,1.0014
+segmented,10.44.20.13,10.44.40.12,5432,tcp,timeout,,1.0058
+segmented,10.44.20.13,10.44.40.12,5353,udp,timeout,,1.0047
+segmented,10.44.20.13,10.44.40.13,22,tcp,timeout,,1.001
+segmented,10.44.20.13,10.44.40.13,8080,tcp,timeout,,1.0012
+segmented,10.44.20.13,10.44.40.13,8443,tcp,timeout,,1.0012
+segmented,10.44.20.13,10.44.40.13,5432,tcp,timeout,,1.0012
+segmented,10.44.20.13,10.44.40.13,5353,udp,timeout,,1.001
+segmented,10.44.30.11,10.44.10.11,22,tcp,timeout,,1.0014
+segmented,10.44.30.11,10.44.10.11,8080,tcp,timeout,,1.0076
+segmented,10.44.30.11,10.44.10.11,8443,tcp,timeout,,1.0013
+segmented,10.44.30.11,10.44.10.11,5432,tcp,timeout,,1.0063
+segmented,10.44.30.11,10.44.10.11,5353,udp,timeout,,1.0015
+segmented,10.44.30.11,10.44.10.12,22,tcp,timeout,,1.0015
+segmented,10.44.30.11,10.44.10.12,8080,tcp,timeout,,1.0008
+segmented,10.44.30.11,10.44.10.12,8443,tcp,timeout,,1.0034
+segmented,10.44.30.11,10.44.10.12,5432,tcp,timeout,,1.0087
+segmented,10.44.30.11,10.44.10.12,5353,udp,timeout,,1.0012
+segmented,10.44.30.11,10.44.10.13,22,tcp,timeout,,1.0014
+segmented,10.44.30.11,10.44.10.13,8080,tcp,timeout,,1.0058
+segmented,10.44.30.11,10.44.10.13,8443,tcp,timeout,,1.0014
+segmented,10.44.30.11,10.44.10.13,5432,tcp,timeout,,1.0038
+segmented,10.44.30.11,10.44.10.13,5353,udp,timeout,,1.0006
+segmented,10.44.30.11,10.44.20.11,22,tcp,timeout,,1.0039
+segmented,10.44.30.11,10.44.20.11,8080,tcp,timeout,,1.0063
+segmented,10.44.30.11,10.44.20.11,8443,tcp,timeout,,1.0067
+segmented,10.44.30.11,10.44.20.11,5432,tcp,timeout,,1.0016
+segmented,10.44.30.11,10.44.20.11,5353,udp,timeout,,1.001
+segmented,10.44.30.11,10.44.20.12,22,tcp,timeout,,1.0036
+segmented,10.44.30.11,10.44.20.12,8080,tcp,timeout,,1.0006
+segmented,10.44.30.11,10.44.20.12,8443,tcp,timeout,,1.0009
+segmented,10.44.30.11,10.44.20.12,5432,tcp,timeout,,1.004
+segmented,10.44.30.11,10.44.20.12,5353,udp,timeout,,1.0012
+segmented,10.44.30.11,10.44.20.13,22,tcp,timeout,,1.0012
+segmented,10.44.30.11,10.44.20.13,8080,tcp,timeout,,1.0052
+segmented,10.44.30.11,10.44.20.13,8443,tcp,timeout,,1.0002
+segmented,10.44.30.11,10.44.20.13,5432,tcp,timeout,,1.0012
+segmented,10.44.30.11,10.44.20.13,5353,udp,timeout,,1.008
+segmented,10.44.30.11,10.44.30.12,22,tcp,open,,0.0002
+segmented,10.44.30.11,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.30.11,10.44.30.12,8443,tcp,open,,0.0001
+segmented,10.44.30.11,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.30.11,10.44.30.12,5353,udp,open,,0.0011
+segmented,10.44.30.11,10.44.30.13,22,tcp,open,,0.0034
+segmented,10.44.30.11,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.30.11,10.44.30.13,8443,tcp,open,,0.0002
+segmented,10.44.30.11,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.30.11,10.44.30.13,5353,udp,open,,0.0001
+segmented,10.44.30.11,10.44.40.11,22,tcp,timeout,,1.0031
+segmented,10.44.30.11,10.44.40.11,8080,tcp,timeout,,1.0012
+segmented,10.44.30.11,10.44.40.11,8443,tcp,timeout,,1.0056
+segmented,10.44.30.11,10.44.40.11,5432,tcp,open,,0.0003
+segmented,10.44.30.11,10.44.40.11,5353,udp,open,,0.0045
+segmented,10.44.30.11,10.44.40.12,22,tcp,timeout,,1.0018
+segmented,10.44.30.11,10.44.40.12,8080,tcp,timeout,,1.0024
+segmented,10.44.30.11,10.44.40.12,8443,tcp,timeout,,1.0042
+segmented,10.44.30.11,10.44.40.12,5432,tcp,open,,0.0002
+segmented,10.44.30.11,10.44.40.12,5353,udp,open,,0.0035
+segmented,10.44.30.11,10.44.40.13,22,tcp,timeout,,1.0011
+segmented,10.44.30.11,10.44.40.13,8080,tcp,timeout,,1.0012
+segmented,10.44.30.11,10.44.40.13,8443,tcp,timeout,,1.0012
+segmented,10.44.30.11,10.44.40.13,5432,tcp,open,,0.0002
+segmented,10.44.30.11,10.44.40.13,5353,udp,open,,0.0002
+segmented,10.44.30.12,10.44.10.11,22,tcp,timeout,,1.0013
+segmented,10.44.30.12,10.44.10.11,8080,tcp,timeout,,1.0064
+segmented,10.44.30.12,10.44.10.11,8443,tcp,timeout,,1.0217
+segmented,10.44.30.12,10.44.10.11,5432,tcp,timeout,,1.0015
+segmented,10.44.30.12,10.44.10.11,5353,udp,timeout,,1.0142
+segmented,10.44.30.12,10.44.10.12,22,tcp,timeout,,1.0014
+segmented,10.44.30.12,10.44.10.12,8080,tcp,timeout,,1.0012
+segmented,10.44.30.12,10.44.10.12,8443,tcp,timeout,,1.0063
+segmented,10.44.30.12,10.44.10.12,5432,tcp,timeout,,1.0062
+segmented,10.44.30.12,10.44.10.12,5353,udp,timeout,,1.0031
+segmented,10.44.30.12,10.44.10.13,22,tcp,timeout,,1.0152
+segmented,10.44.30.12,10.44.10.13,8080,tcp,timeout,,1.0117
+segmented,10.44.30.12,10.44.10.13,8443,tcp,timeout,,1.0012
+segmented,10.44.30.12,10.44.10.13,5432,tcp,timeout,,1.0012
+segmented,10.44.30.12,10.44.10.13,5353,udp,timeout,,1.0003
+segmented,10.44.30.12,10.44.20.11,22,tcp,timeout,,1.0018
+segmented,10.44.30.12,10.44.20.11,8080,tcp,timeout,,1.0057
+segmented,10.44.30.12,10.44.20.11,8443,tcp,timeout,,1.0038
+segmented,10.44.30.12,10.44.20.11,5432,tcp,timeout,,1.008
+segmented,10.44.30.12,10.44.20.11,5353,udp,timeout,,1.0102
+segmented,10.44.30.12,10.44.20.12,22,tcp,timeout,,1.0012
+segmented,10.44.30.12,10.44.20.12,8080,tcp,timeout,,1.0013
+segmented,10.44.30.12,10.44.20.12,8443,tcp,timeout,,1.001
+segmented,10.44.30.12,10.44.20.12,5432,tcp,timeout,,1.0284
+segmented,10.44.30.12,10.44.20.12,5353,udp,timeout,,1.0284
+segmented,10.44.30.12,10.44.20.13,22,tcp,timeout,,1.0005
+segmented,10.44.30.12,10.44.20.13,8080,tcp,timeout,,1.0067
+segmented,10.44.30.12,10.44.20.13,8443,tcp,timeout,,1.0159
+segmented,10.44.30.12,10.44.20.13,5432,tcp,timeout,,1.0157
+segmented,10.44.30.12,10.44.20.13,5353,udp,timeout,,1.0025
+segmented,10.44.30.12,10.44.30.11,22,tcp,open,,0.0002
+segmented,10.44.30.12,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.30.12,10.44.30.11,8443,tcp,open,,0.0001
+segmented,10.44.30.12,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.30.12,10.44.30.11,5353,udp,open,,0.0154
+segmented,10.44.30.12,10.44.30.13,22,tcp,open,,0.0003
+segmented,10.44.30.12,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.30.12,10.44.30.13,8443,tcp,open,,0.0001
+segmented,10.44.30.12,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.30.12,10.44.30.13,5353,udp,open,,0.0039
+segmented,10.44.30.12,10.44.40.11,22,tcp,timeout,,1.0016
+segmented,10.44.30.12,10.44.40.11,8080,tcp,timeout,,1.0012
+segmented,10.44.30.12,10.44.40.11,8443,tcp,timeout,,1.0051
+segmented,10.44.30.12,10.44.40.11,5432,tcp,open,,0.0004
+segmented,10.44.30.12,10.44.40.11,5353,udp,open,,0.0001
+segmented,10.44.30.12,10.44.40.12,22,tcp,timeout,,1.0011
+segmented,10.44.30.12,10.44.40.12,8080,tcp,timeout,,1.0012
+segmented,10.44.30.12,10.44.40.12,8443,tcp,timeout,,1.0015
+segmented,10.44.30.12,10.44.40.12,5432,tcp,open,,0.0003
+segmented,10.44.30.12,10.44.40.12,5353,udp,open,,0.0001
+segmented,10.44.30.12,10.44.40.13,22,tcp,timeout,,1.0013
+segmented,10.44.30.12,10.44.40.13,8080,tcp,timeout,,1.0012
+segmented,10.44.30.12,10.44.40.13,8443,tcp,timeout,,1.0012
+segmented,10.44.30.12,10.44.40.13,5432,tcp,open,,0.0003
+segmented,10.44.30.12,10.44.40.13,5353,udp,open,,0.0001
+segmented,10.44.30.13,10.44.10.11,22,tcp,timeout,,1.0078
+segmented,10.44.30.13,10.44.10.11,8080,tcp,timeout,,1.0011
+segmented,10.44.30.13,10.44.10.11,8443,tcp,timeout,,1.0012
+segmented,10.44.30.13,10.44.10.11,5432,tcp,timeout,,1.0012
+segmented,10.44.30.13,10.44.10.11,5353,udp,timeout,,1.0017
+segmented,10.44.30.13,10.44.10.12,22,tcp,timeout,,1.0025
+segmented,10.44.30.13,10.44.10.12,8080,tcp,timeout,,1.0014
+segmented,10.44.30.13,10.44.10.12,8443,tcp,timeout,,1.0012
+segmented,10.44.30.13,10.44.10.12,5432,tcp,timeout,,1.0112
+segmented,10.44.30.13,10.44.10.12,5353,udp,timeout,,1.0067
+segmented,10.44.30.13,10.44.10.13,22,tcp,timeout,,1.0067
+segmented,10.44.30.13,10.44.10.13,8080,tcp,timeout,,1.0102
+segmented,10.44.30.13,10.44.10.13,8443,tcp,timeout,,1.0219
+segmented,10.44.30.13,10.44.10.13,5432,tcp,timeout,,1.0012
+segmented,10.44.30.13,10.44.10.13,5353,udp,timeout,,1.0036
+segmented,10.44.30.13,10.44.20.11,22,tcp,timeout,,1.0031
+segmented,10.44.30.13,10.44.20.11,8080,tcp,timeout,,1.0012
+segmented,10.44.30.13,10.44.20.11,8443,tcp,timeout,,1.0013
+segmented,10.44.30.13,10.44.20.11,5432,tcp,timeout,,1.0142
+segmented,10.44.30.13,10.44.20.11,5353,udp,timeout,,1.0008
+segmented,10.44.30.13,10.44.20.12,22,tcp,timeout,,1.0012
+segmented,10.44.30.13,10.44.20.12,8080,tcp,timeout,,1.0012
+segmented,10.44.30.13,10.44.20.12,8443,tcp,timeout,,1.0013
+segmented,10.44.30.13,10.44.20.12,5432,tcp,timeout,,1.0012
+segmented,10.44.30.13,10.44.20.12,5353,udp,timeout,,1.0014
+segmented,10.44.30.13,10.44.20.13,22,tcp,timeout,,1.001
+segmented,10.44.30.13,10.44.20.13,8080,tcp,timeout,,1.0042
+segmented,10.44.30.13,10.44.20.13,8443,tcp,timeout,,1.0014
+segmented,10.44.30.13,10.44.20.13,5432,tcp,timeout,,1.0039
+segmented,10.44.30.13,10.44.20.13,5353,udp,timeout,,1.0038
+segmented,10.44.30.13,10.44.30.11,22,tcp,open,,0.0001
+segmented,10.44.30.13,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.30.13,10.44.30.11,8443,tcp,open,,0.0001
+segmented,10.44.30.13,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.30.13,10.44.30.11,5353,udp,open,,0.0001
+segmented,10.44.30.13,10.44.30.12,22,tcp,open,,0.0001
+segmented,10.44.30.13,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.30.13,10.44.30.12,8443,tcp,open,,0.0001
+segmented,10.44.30.13,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0
+segmented,10.44.30.13,10.44.30.12,5353,udp,open,,0.0002
+segmented,10.44.30.13,10.44.40.11,22,tcp,timeout,,1.0016
+segmented,10.44.30.13,10.44.40.11,8080,tcp,timeout,,1.0013
+segmented,10.44.30.13,10.44.40.11,8443,tcp,timeout,,1.001
+segmented,10.44.30.13,10.44.40.11,5432,tcp,open,,0.0002
+segmented,10.44.30.13,10.44.40.11,5353,udp,open,,0.0003
+segmented,10.44.30.13,10.44.40.12,22,tcp,timeout,,1.0008
+segmented,10.44.30.13,10.44.40.12,8080,tcp,timeout,,1.0019
+segmented,10.44.30.13,10.44.40.12,8443,tcp,timeout,,1.0073
+segmented,10.44.30.13,10.44.40.12,5432,tcp,open,,0.0002
+segmented,10.44.30.13,10.44.40.12,5353,udp,open,,0.0076
+segmented,10.44.30.13,10.44.40.13,22,tcp,timeout,,1.0022
+segmented,10.44.30.13,10.44.40.13,8080,tcp,timeout,,1.0011
+segmented,10.44.30.13,10.44.40.13,8443,tcp,timeout,,1.0051
+segmented,10.44.30.13,10.44.40.13,5432,tcp,open,,0.0002
+segmented,10.44.30.13,10.44.40.13,5353,udp,open,,0.0068
+segmented,10.44.40.11,10.44.10.11,22,tcp,timeout,,1.0039
+segmented,10.44.40.11,10.44.10.11,8080,tcp,timeout,,1.0012
+segmented,10.44.40.11,10.44.10.11,8443,tcp,timeout,,1.0014
+segmented,10.44.40.11,10.44.10.11,5432,tcp,timeout,,1.0142
+segmented,10.44.40.11,10.44.10.11,5353,udp,timeout,,1.0074
+segmented,10.44.40.11,10.44.10.12,22,tcp,timeout,,1.0045
+segmented,10.44.40.11,10.44.10.12,8080,tcp,timeout,,1.0012
+segmented,10.44.40.11,10.44.10.12,8443,tcp,timeout,,1.0064
+segmented,10.44.40.11,10.44.10.12,5432,tcp,timeout,,1.0078
+segmented,10.44.40.11,10.44.10.12,5353,udp,timeout,,1.0062
+segmented,10.44.40.11,10.44.10.13,22,tcp,timeout,,1.0053
+segmented,10.44.40.11,10.44.10.13,8080,tcp,timeout,,1.0018
+segmented,10.44.40.11,10.44.10.13,8443,tcp,timeout,,1.0021
+segmented,10.44.40.11,10.44.10.13,5432,tcp,timeout,,1.0049
+segmented,10.44.40.11,10.44.10.13,5353,udp,timeout,,1.0014
+segmented,10.44.40.11,10.44.20.11,22,tcp,timeout,,1.0016
+segmented,10.44.40.11,10.44.20.11,8080,tcp,timeout,,1.0018
+segmented,10.44.40.11,10.44.20.11,8443,tcp,timeout,,1.0012
+segmented,10.44.40.11,10.44.20.11,5432,tcp,timeout,,1.0013
+segmented,10.44.40.11,10.44.20.11,5353,udp,timeout,,1.0005
+segmented,10.44.40.11,10.44.20.12,22,tcp,timeout,,1.0012
+segmented,10.44.40.11,10.44.20.12,8080,tcp,timeout,,1.0107
+segmented,10.44.40.11,10.44.20.12,8443,tcp,timeout,,1.0014
+segmented,10.44.40.11,10.44.20.12,5432,tcp,timeout,,1.0012
+segmented,10.44.40.11,10.44.20.12,5353,udp,timeout,,1.0053
+segmented,10.44.40.11,10.44.20.13,22,tcp,timeout,,1.0002
+segmented,10.44.40.11,10.44.20.13,8080,tcp,timeout,,1.0011
+segmented,10.44.40.11,10.44.20.13,8443,tcp,timeout,,1.0012
+segmented,10.44.40.11,10.44.20.13,5432,tcp,timeout,,1.0057
+segmented,10.44.40.11,10.44.20.13,5353,udp,timeout,,1.0012
+segmented,10.44.40.11,10.44.30.11,22,tcp,timeout,,1.0011
+segmented,10.44.40.11,10.44.30.11,8080,tcp,timeout,,1.0026
+segmented,10.44.40.11,10.44.30.11,8443,tcp,timeout,,1.0025
+segmented,10.44.40.11,10.44.30.11,5432,tcp,timeout,,1.0012
+segmented,10.44.40.11,10.44.30.11,5353,udp,timeout,,1.002
+segmented,10.44.40.11,10.44.30.12,22,tcp,timeout,,1.0012
+segmented,10.44.40.11,10.44.30.12,8080,tcp,timeout,,1.0022
+segmented,10.44.40.11,10.44.30.12,8443,tcp,timeout,,1.0114
+segmented,10.44.40.11,10.44.30.12,5432,tcp,timeout,,1.0002
+segmented,10.44.40.11,10.44.30.12,5353,udp,timeout,,1.0011
+segmented,10.44.40.11,10.44.30.13,22,tcp,timeout,,1.0012
+segmented,10.44.40.11,10.44.30.13,8080,tcp,timeout,,1.0033
+segmented,10.44.40.11,10.44.30.13,8443,tcp,timeout,,1.0012
+segmented,10.44.40.11,10.44.30.13,5432,tcp,timeout,,1.0012
+segmented,10.44.40.11,10.44.30.13,5353,udp,timeout,,1.0013
+segmented,10.44.40.11,10.44.40.12,22,tcp,open,,0.0002
+segmented,10.44.40.11,10.44.40.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.40.11,10.44.40.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.40.11,10.44.40.12,5432,tcp,open,,0.0001
+segmented,10.44.40.11,10.44.40.12,5353,udp,open,,0.0003
+segmented,10.44.40.11,10.44.40.13,22,tcp,open,,0.0001
+segmented,10.44.40.11,10.44.40.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.40.11,10.44.40.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.40.11,10.44.40.13,5432,tcp,open,,0.0001
+segmented,10.44.40.11,10.44.40.13,5353,udp,open,,0.0003
+segmented,10.44.40.12,10.44.10.11,22,tcp,timeout,,1.0271
+segmented,10.44.40.12,10.44.10.11,8080,tcp,timeout,,1.0049
+segmented,10.44.40.12,10.44.10.11,8443,tcp,timeout,,1.0227
+segmented,10.44.40.12,10.44.10.11,5432,tcp,timeout,,1.0051
+segmented,10.44.40.12,10.44.10.11,5353,udp,timeout,,1.0065
+segmented,10.44.40.12,10.44.10.12,22,tcp,timeout,,1.0022
+segmented,10.44.40.12,10.44.10.12,8080,tcp,timeout,,1.0107
+segmented,10.44.40.12,10.44.10.12,8443,tcp,timeout,,1.0005
+segmented,10.44.40.12,10.44.10.12,5432,tcp,timeout,,1.0033
+segmented,10.44.40.12,10.44.10.12,5353,udp,timeout,,1.0109
+segmented,10.44.40.12,10.44.10.13,22,tcp,timeout,,1.0248
+segmented,10.44.40.12,10.44.10.13,8080,tcp,timeout,,1.022
+segmented,10.44.40.12,10.44.10.13,8443,tcp,timeout,,1.0097
+segmented,10.44.40.12,10.44.10.13,5432,tcp,timeout,,1.0081
+segmented,10.44.40.12,10.44.10.13,5353,udp,timeout,,1.0102
+segmented,10.44.40.12,10.44.20.11,22,tcp,timeout,,1.0059
+segmented,10.44.40.12,10.44.20.11,8080,tcp,timeout,,1.0023
+segmented,10.44.40.12,10.44.20.11,8443,tcp,timeout,,1.0028
+segmented,10.44.40.12,10.44.20.11,5432,tcp,timeout,,1.0066
+segmented,10.44.40.12,10.44.20.11,5353,udp,timeout,,1.0032
+segmented,10.44.40.12,10.44.20.12,22,tcp,timeout,,1.002
+segmented,10.44.40.12,10.44.20.12,8080,tcp,timeout,,1.0013
+segmented,10.44.40.12,10.44.20.12,8443,tcp,timeout,,1.001
+segmented,10.44.40.12,10.44.20.12,5432,tcp,timeout,,1.0008
+segmented,10.44.40.12,10.44.20.12,5353,udp,timeout,,1.0012
+segmented,10.44.40.12,10.44.20.13,22,tcp,timeout,,1.0017
+segmented,10.44.40.12,10.44.20.13,8080,tcp,timeout,,1.0035
+segmented,10.44.40.12,10.44.20.13,8443,tcp,timeout,,1.0003
+segmented,10.44.40.12,10.44.20.13,5432,tcp,timeout,,1.0006
+segmented,10.44.40.12,10.44.20.13,5353,udp,timeout,,1.0024
+segmented,10.44.40.12,10.44.30.11,22,tcp,timeout,,1.0012
+segmented,10.44.40.12,10.44.30.11,8080,tcp,timeout,,1.0011
+segmented,10.44.40.12,10.44.30.11,8443,tcp,timeout,,1.0093
+segmented,10.44.40.12,10.44.30.11,5432,tcp,timeout,,1.0004
+segmented,10.44.40.12,10.44.30.11,5353,udp,timeout,,1.0151
+segmented,10.44.40.12,10.44.30.12,22,tcp,timeout,,1.0012
+segmented,10.44.40.12,10.44.30.12,8080,tcp,timeout,,1.0083
+segmented,10.44.40.12,10.44.30.12,8443,tcp,timeout,,1.0012
+segmented,10.44.40.12,10.44.30.12,5432,tcp,timeout,,1.0011
+segmented,10.44.40.12,10.44.30.12,5353,udp,timeout,,1.0063
+segmented,10.44.40.12,10.44.30.13,22,tcp,timeout,,1.0013
+segmented,10.44.40.12,10.44.30.13,8080,tcp,timeout,,1.0021
+segmented,10.44.40.12,10.44.30.13,8443,tcp,timeout,,1.0013
+segmented,10.44.40.12,10.44.30.13,5432,tcp,timeout,,1.0013
+segmented,10.44.40.12,10.44.30.13,5353,udp,timeout,,1.004
+segmented,10.44.40.12,10.44.40.11,22,tcp,open,,0.0002
+segmented,10.44.40.12,10.44.40.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.40.12,10.44.40.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.40.12,10.44.40.11,5432,tcp,open,,0.0001
+segmented,10.44.40.12,10.44.40.11,5353,udp,open,,0.0017
+segmented,10.44.40.12,10.44.40.13,22,tcp,open,,0.0001
+segmented,10.44.40.12,10.44.40.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.40.12,10.44.40.13,8443,tcp,refused,[Errno 111] Connection refused,0.0
+segmented,10.44.40.12,10.44.40.13,5432,tcp,open,,0.0001
+segmented,10.44.40.12,10.44.40.13,5353,udp,open,,0.002
+segmented,10.44.40.13,10.44.10.11,22,tcp,timeout,,1.0012
+segmented,10.44.40.13,10.44.10.11,8080,tcp,timeout,,1.005
+segmented,10.44.40.13,10.44.10.11,8443,tcp,timeout,,1.0039
+segmented,10.44.40.13,10.44.10.11,5432,tcp,timeout,,1.0033
+segmented,10.44.40.13,10.44.10.11,5353,udp,timeout,,1.0039
+segmented,10.44.40.13,10.44.10.12,22,tcp,timeout,,1.0051
+segmented,10.44.40.13,10.44.10.12,8080,tcp,timeout,,1.0042
+segmented,10.44.40.13,10.44.10.12,8443,tcp,timeout,,1.0039
+segmented,10.44.40.13,10.44.10.12,5432,tcp,timeout,,1.0012
+segmented,10.44.40.13,10.44.10.12,5353,udp,timeout,,1.0014
+segmented,10.44.40.13,10.44.10.13,22,tcp,timeout,,1.0014
+segmented,10.44.40.13,10.44.10.13,8080,tcp,timeout,,1.0042
+segmented,10.44.40.13,10.44.10.13,8443,tcp,timeout,,1.0039
+segmented,10.44.40.13,10.44.10.13,5432,tcp,timeout,,1.004
+segmented,10.44.40.13,10.44.10.13,5353,udp,timeout,,1.0012
+segmented,10.44.40.13,10.44.20.11,22,tcp,timeout,,1.0015
+segmented,10.44.40.13,10.44.20.11,8080,tcp,timeout,,1.0008
+segmented,10.44.40.13,10.44.20.11,8443,tcp,timeout,,1.0012
+segmented,10.44.40.13,10.44.20.11,5432,tcp,timeout,,1.0014
+segmented,10.44.40.13,10.44.20.11,5353,udp,timeout,,1.001
+segmented,10.44.40.13,10.44.20.12,22,tcp,timeout,,1.0012
+segmented,10.44.40.13,10.44.20.12,8080,tcp,timeout,,1.0012
+segmented,10.44.40.13,10.44.20.12,8443,tcp,timeout,,1.0048
+segmented,10.44.40.13,10.44.20.12,5432,tcp,timeout,,1.0012
+segmented,10.44.40.13,10.44.20.12,5353,udp,timeout,,1.0017
+segmented,10.44.40.13,10.44.20.13,22,tcp,timeout,,1.0087
+segmented,10.44.40.13,10.44.20.13,8080,tcp,timeout,,1.0012
+segmented,10.44.40.13,10.44.20.13,8443,tcp,timeout,,1.0012
+segmented,10.44.40.13,10.44.20.13,5432,tcp,timeout,,1.0013
+segmented,10.44.40.13,10.44.20.13,5353,udp,timeout,,1.0012
+segmented,10.44.40.13,10.44.30.11,22,tcp,timeout,,1.0012
+segmented,10.44.40.13,10.44.30.11,8080,tcp,timeout,,1.0064
+segmented,10.44.40.13,10.44.30.11,8443,tcp,timeout,,1.0079
+segmented,10.44.40.13,10.44.30.11,5432,tcp,timeout,,1.0014
+segmented,10.44.40.13,10.44.30.11,5353,udp,timeout,,1.0012
+segmented,10.44.40.13,10.44.30.12,22,tcp,timeout,,1.001
+segmented,10.44.40.13,10.44.30.12,8080,tcp,timeout,,1.0021
+segmented,10.44.40.13,10.44.30.12,8443,tcp,timeout,,1.0012
+segmented,10.44.40.13,10.44.30.12,5432,tcp,timeout,,1.0012
+segmented,10.44.40.13,10.44.30.12,5353,udp,timeout,,1.0012
+segmented,10.44.40.13,10.44.30.13,22,tcp,timeout,,1.001
+segmented,10.44.40.13,10.44.30.13,8080,tcp,timeout,,1.0055
+segmented,10.44.40.13,10.44.30.13,8443,tcp,timeout,,1.0012
+segmented,10.44.40.13,10.44.30.13,5432,tcp,timeout,,1.0029
+segmented,10.44.40.13,10.44.30.13,5353,udp,timeout,,1.0014
+segmented,10.44.40.13,10.44.40.11,22,tcp,open,,0.0002
+segmented,10.44.40.13,10.44.40.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.40.13,10.44.40.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.40.13,10.44.40.11,5432,tcp,open,,0.0001
+segmented,10.44.40.13,10.44.40.11,5353,udp,open,,0.0003
+segmented,10.44.40.13,10.44.40.12,22,tcp,open,,0.0001
+segmented,10.44.40.13,10.44.40.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+segmented,10.44.40.13,10.44.40.12,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+segmented,10.44.40.13,10.44.40.12,5432,tcp,open,,0.0003
+segmented,10.44.40.13,10.44.40.12,5353,udp,open,,0.0001
+hardened,10.44.10.11,10.44.10.12,22,tcp,open,,0.0003
+hardened,10.44.10.11,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+hardened,10.44.10.11,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.10.11,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0004
+hardened,10.44.10.11,10.44.10.12,5353,udp,open,,0.0003
+hardened,10.44.10.11,10.44.10.13,22,tcp,open,,0.0001
+hardened,10.44.10.11,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0004
+hardened,10.44.10.11,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+hardened,10.44.10.11,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0083
+hardened,10.44.10.11,10.44.10.13,5353,udp,open,,0.0002
+hardened,10.44.10.11,10.44.20.11,22,tcp,timeout,,1.0032
+hardened,10.44.10.11,10.44.20.11,8080,tcp,open,,0.0003
+hardened,10.44.10.11,10.44.20.11,8443,tcp,timeout,,1.0011
+hardened,10.44.10.11,10.44.20.11,5432,tcp,timeout,,1.0011
+hardened,10.44.10.11,10.44.20.11,5353,udp,open,,0.0002
+hardened,10.44.10.11,10.44.20.12,22,tcp,timeout,,1.0012
+hardened,10.44.10.11,10.44.20.12,8080,tcp,open,,0.0002
+hardened,10.44.10.11,10.44.20.12,8443,tcp,timeout,,1.0012
+hardened,10.44.10.11,10.44.20.12,5432,tcp,timeout,,1.0011
+hardened,10.44.10.11,10.44.20.12,5353,udp,open,,0.0003
+hardened,10.44.10.11,10.44.20.13,22,tcp,timeout,,1.0007
+hardened,10.44.10.11,10.44.20.13,8080,tcp,open,,0.0002
+hardened,10.44.10.11,10.44.20.13,8443,tcp,timeout,,1.005
+hardened,10.44.10.11,10.44.20.13,5432,tcp,timeout,,1.003
+hardened,10.44.10.11,10.44.20.13,5353,udp,open,,0.0006
+hardened,10.44.10.11,10.44.30.11,22,tcp,timeout,,1.0044
+hardened,10.44.10.11,10.44.30.11,8080,tcp,timeout,,1.0041
+hardened,10.44.10.11,10.44.30.11,8443,tcp,timeout,,1.0012
+hardened,10.44.10.11,10.44.30.11,5432,tcp,timeout,,1.0058
+hardened,10.44.10.11,10.44.30.11,5353,udp,timeout,,1.0139
+hardened,10.44.10.11,10.44.30.12,22,tcp,timeout,,1.0012
+hardened,10.44.10.11,10.44.30.12,8080,tcp,timeout,,1.0063
+hardened,10.44.10.11,10.44.30.12,8443,tcp,timeout,,1.0027
+hardened,10.44.10.11,10.44.30.12,5432,tcp,timeout,,1.0012
+hardened,10.44.10.11,10.44.30.12,5353,udp,timeout,,1.0022
+hardened,10.44.10.11,10.44.30.13,22,tcp,timeout,,1.0012
+hardened,10.44.10.11,10.44.30.13,8080,tcp,timeout,,1.0011
+hardened,10.44.10.11,10.44.30.13,8443,tcp,timeout,,1.0012
+hardened,10.44.10.11,10.44.30.13,5432,tcp,timeout,,1.0012
+hardened,10.44.10.11,10.44.30.13,5353,udp,timeout,,1.0015
+hardened,10.44.10.11,10.44.40.11,22,tcp,timeout,,1.0028
+hardened,10.44.10.11,10.44.40.11,8080,tcp,timeout,,1.0012
+hardened,10.44.10.11,10.44.40.11,8443,tcp,timeout,,1.0064
+hardened,10.44.10.11,10.44.40.11,5432,tcp,timeout,,1.0012
+hardened,10.44.10.11,10.44.40.11,5353,udp,timeout,,1.0012
+hardened,10.44.10.11,10.44.40.12,22,tcp,timeout,,1.0012
+hardened,10.44.10.11,10.44.40.12,8080,tcp,timeout,,1.0004
+hardened,10.44.10.11,10.44.40.12,8443,tcp,timeout,,1.0056
+hardened,10.44.10.11,10.44.40.12,5432,tcp,timeout,,1.0051
+hardened,10.44.10.11,10.44.40.12,5353,udp,timeout,,1.0012
+hardened,10.44.10.11,10.44.40.13,22,tcp,timeout,,1.0012
+hardened,10.44.10.11,10.44.40.13,8080,tcp,timeout,,1.0062
+hardened,10.44.10.11,10.44.40.13,8443,tcp,timeout,,1.0013
+hardened,10.44.10.11,10.44.40.13,5432,tcp,timeout,,1.0064
+hardened,10.44.10.11,10.44.40.13,5353,udp,timeout,,1.0058
+hardened,10.44.10.12,10.44.10.11,22,tcp,open,,0.0046
+hardened,10.44.10.12,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0005
+hardened,10.44.10.12,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+hardened,10.44.10.12,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+hardened,10.44.10.12,10.44.10.11,5353,udp,open,,0.0002
+hardened,10.44.10.12,10.44.10.13,22,tcp,open,,0.0004
+hardened,10.44.10.12,10.44.10.13,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+hardened,10.44.10.12,10.44.10.13,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+hardened,10.44.10.12,10.44.10.13,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.10.12,10.44.10.13,5353,udp,open,,0.0002
+hardened,10.44.10.12,10.44.20.11,22,tcp,timeout,,1.0071
+hardened,10.44.10.12,10.44.20.11,8080,tcp,open,,0.0004
+hardened,10.44.10.12,10.44.20.11,8443,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.20.11,5432,tcp,timeout,,1.011
+hardened,10.44.10.12,10.44.20.11,5353,udp,open,,0.004
+hardened,10.44.10.12,10.44.20.12,22,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.20.12,8080,tcp,open,,0.0004
+hardened,10.44.10.12,10.44.20.12,8443,tcp,timeout,,1.0109
+hardened,10.44.10.12,10.44.20.12,5432,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.20.12,5353,udp,open,,0.0003
+hardened,10.44.10.12,10.44.20.13,22,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.20.13,8080,tcp,open,,0.0005
+hardened,10.44.10.12,10.44.20.13,8443,tcp,timeout,,1.0011
+hardened,10.44.10.12,10.44.20.13,5432,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.20.13,5353,udp,open,,0.0004
+hardened,10.44.10.12,10.44.30.11,22,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.30.11,8080,tcp,timeout,,1.0005
+hardened,10.44.10.12,10.44.30.11,8443,tcp,timeout,,1.0076
+hardened,10.44.10.12,10.44.30.11,5432,tcp,timeout,,1.0014
+hardened,10.44.10.12,10.44.30.11,5353,udp,timeout,,1.0159
+hardened,10.44.10.12,10.44.30.12,22,tcp,timeout,,1.0013
+hardened,10.44.10.12,10.44.30.12,8080,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.30.12,8443,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.30.12,5432,tcp,timeout,,1.0014
+hardened,10.44.10.12,10.44.30.12,5353,udp,timeout,,1.0038
+hardened,10.44.10.12,10.44.30.13,22,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.30.13,8080,tcp,timeout,,1.0053
+hardened,10.44.10.12,10.44.30.13,8443,tcp,timeout,,1.0049
+hardened,10.44.10.12,10.44.30.13,5432,tcp,timeout,,1.0007
+hardened,10.44.10.12,10.44.30.13,5353,udp,timeout,,1.0072
+hardened,10.44.10.12,10.44.40.11,22,tcp,timeout,,1.0014
+hardened,10.44.10.12,10.44.40.11,8080,tcp,timeout,,1.0013
+hardened,10.44.10.12,10.44.40.11,8443,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.40.11,5432,tcp,timeout,,1.0019
+hardened,10.44.10.12,10.44.40.11,5353,udp,timeout,,1.0012
+hardened,10.44.10.12,10.44.40.12,22,tcp,timeout,,1.0013
+hardened,10.44.10.12,10.44.40.12,8080,tcp,timeout,,1.0014
+hardened,10.44.10.12,10.44.40.12,8443,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.40.12,5432,tcp,timeout,,1.0073
+hardened,10.44.10.12,10.44.40.12,5353,udp,timeout,,1.0008
+hardened,10.44.10.12,10.44.40.13,22,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.40.13,8080,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.40.13,8443,tcp,timeout,,1.0013
+hardened,10.44.10.12,10.44.40.13,5432,tcp,timeout,,1.0012
+hardened,10.44.10.12,10.44.40.13,5353,udp,timeout,,1.001
+hardened,10.44.10.13,10.44.10.11,22,tcp,open,,0.0003
+hardened,10.44.10.13,10.44.10.11,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+hardened,10.44.10.13,10.44.10.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.10.13,10.44.10.11,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+hardened,10.44.10.13,10.44.10.11,5353,udp,open,,0.0015
+hardened,10.44.10.13,10.44.10.12,22,tcp,open,,0.0001
+hardened,10.44.10.13,10.44.10.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.10.13,10.44.10.12,8443,tcp,refused,[Errno 111] Connection refused,0.0002
+hardened,10.44.10.13,10.44.10.12,5432,tcp,refused,[Errno 111] Connection refused,0.0002
+hardened,10.44.10.13,10.44.10.12,5353,udp,open,,0.0001
+hardened,10.44.10.13,10.44.20.11,22,tcp,timeout,,1.0021
+hardened,10.44.10.13,10.44.20.11,8080,tcp,open,,0.0008
+hardened,10.44.10.13,10.44.20.11,8443,tcp,timeout,,1.0037
+hardened,10.44.10.13,10.44.20.11,5432,tcp,timeout,,1.0011
+hardened,10.44.10.13,10.44.20.11,5353,udp,open,,0.0002
+hardened,10.44.10.13,10.44.20.12,22,tcp,timeout,,1.0011
+hardened,10.44.10.13,10.44.20.12,8080,tcp,open,,0.0003
+hardened,10.44.10.13,10.44.20.12,8443,tcp,timeout,,1.004
+hardened,10.44.10.13,10.44.20.12,5432,tcp,timeout,,1.0011
+hardened,10.44.10.13,10.44.20.12,5353,udp,open,,0.0003
+hardened,10.44.10.13,10.44.20.13,22,tcp,timeout,,1.0046
+hardened,10.44.10.13,10.44.20.13,8080,tcp,open,,0.0002
+hardened,10.44.10.13,10.44.20.13,8443,tcp,timeout,,1.0065
+hardened,10.44.10.13,10.44.20.13,5432,tcp,timeout,,1.0008
+hardened,10.44.10.13,10.44.20.13,5353,udp,open,,0.0053
+hardened,10.44.10.13,10.44.30.11,22,tcp,timeout,,1.0085
+hardened,10.44.10.13,10.44.30.11,8080,tcp,timeout,,1.0014
+hardened,10.44.10.13,10.44.30.11,8443,tcp,timeout,,1.0012
+hardened,10.44.10.13,10.44.30.11,5432,tcp,timeout,,1.0078
+hardened,10.44.10.13,10.44.30.11,5353,udp,timeout,,1.0012
+hardened,10.44.10.13,10.44.30.12,22,tcp,timeout,,1.0098
+hardened,10.44.10.13,10.44.30.12,8080,tcp,timeout,,1.0054
+hardened,10.44.10.13,10.44.30.12,8443,tcp,timeout,,1.0059
+hardened,10.44.10.13,10.44.30.12,5432,tcp,timeout,,1.0056
+hardened,10.44.10.13,10.44.30.12,5353,udp,timeout,,1.001
+hardened,10.44.10.13,10.44.30.13,22,tcp,timeout,,1.0012
+hardened,10.44.10.13,10.44.30.13,8080,tcp,timeout,,1.0066
+hardened,10.44.10.13,10.44.30.13,8443,tcp,timeout,,1.0013
+hardened,10.44.10.13,10.44.30.13,5432,tcp,timeout,,1.0012
+hardened,10.44.10.13,10.44.30.13,5353,udp,timeout,,1.0009
+hardened,10.44.10.13,10.44.40.11,22,tcp,timeout,,1.0015
+hardened,10.44.10.13,10.44.40.11,8080,tcp,timeout,,1.0013
+hardened,10.44.10.13,10.44.40.11,8443,tcp,timeout,,1.0012
+hardened,10.44.10.13,10.44.40.11,5432,tcp,timeout,,1.0023
+hardened,10.44.10.13,10.44.40.11,5353,udp,timeout,,1.0013
+hardened,10.44.10.13,10.44.40.12,22,tcp,timeout,,1.0012
+hardened,10.44.10.13,10.44.40.12,8080,tcp,timeout,,1.004
+hardened,10.44.10.13,10.44.40.12,8443,tcp,timeout,,1.0012
+hardened,10.44.10.13,10.44.40.12,5432,tcp,timeout,,1.0012
+hardened,10.44.10.13,10.44.40.12,5353,udp,timeout,,1.0012
+hardened,10.44.10.13,10.44.40.13,22,tcp,timeout,,1.0013
+hardened,10.44.10.13,10.44.40.13,8080,tcp,timeout,,1.001
+hardened,10.44.10.13,10.44.40.13,8443,tcp,timeout,,1.0019
+hardened,10.44.10.13,10.44.40.13,5432,tcp,timeout,,1.0013
+hardened,10.44.10.13,10.44.40.13,5353,udp,timeout,,1.0092
+hardened,10.44.20.11,10.44.10.11,22,tcp,timeout,,1.0042
+hardened,10.44.20.11,10.44.10.11,8080,tcp,timeout,,1.0006
+hardened,10.44.20.11,10.44.10.11,8443,tcp,timeout,,1.0016
+hardened,10.44.20.11,10.44.10.11,5432,tcp,timeout,,1.0015
+hardened,10.44.20.11,10.44.10.11,5353,udp,timeout,,1.0014
+hardened,10.44.20.11,10.44.10.12,22,tcp,timeout,,1.0004
+hardened,10.44.20.11,10.44.10.12,8080,tcp,timeout,,1.0012
+hardened,10.44.20.11,10.44.10.12,8443,tcp,timeout,,1.0014
+hardened,10.44.20.11,10.44.10.12,5432,tcp,timeout,,1.0092
+hardened,10.44.20.11,10.44.10.12,5353,udp,timeout,,1.0012
+hardened,10.44.20.11,10.44.10.13,22,tcp,timeout,,1.0119
+hardened,10.44.20.11,10.44.10.13,8080,tcp,timeout,,1.0044
+hardened,10.44.20.11,10.44.10.13,8443,tcp,timeout,,1.0034
+hardened,10.44.20.11,10.44.10.13,5432,tcp,timeout,,1.0014
+hardened,10.44.20.11,10.44.10.13,5353,udp,timeout,,1.0061
+hardened,10.44.20.11,10.44.20.12,22,tcp,open,,0.0006
+hardened,10.44.20.11,10.44.20.12,8080,tcp,open,,0.0003
+hardened,10.44.20.11,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.20.11,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.20.11,10.44.20.12,5353,udp,open,,0.0001
+hardened,10.44.20.11,10.44.20.13,22,tcp,open,,0.0002
+hardened,10.44.20.11,10.44.20.13,8080,tcp,open,,0.0002
+hardened,10.44.20.11,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.20.11,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.20.11,10.44.20.13,5353,udp,open,,0.0001
+hardened,10.44.20.11,10.44.30.11,22,tcp,timeout,,1.0055
+hardened,10.44.20.11,10.44.30.11,8080,tcp,timeout,,1.0095
+hardened,10.44.20.11,10.44.30.11,8443,tcp,open,,0.0003
+hardened,10.44.20.11,10.44.30.11,5432,tcp,timeout,,1.0092
+hardened,10.44.20.11,10.44.30.11,5353,udp,timeout,,1.0012
+hardened,10.44.20.11,10.44.30.12,22,tcp,timeout,,1.0012
+hardened,10.44.20.11,10.44.30.12,8080,tcp,timeout,,1.0012
+hardened,10.44.20.11,10.44.30.12,8443,tcp,open,,0.0017
+hardened,10.44.20.11,10.44.30.12,5432,tcp,timeout,,1.0097
+hardened,10.44.20.11,10.44.30.12,5353,udp,timeout,,1.0013
+hardened,10.44.20.11,10.44.30.13,22,tcp,timeout,,1.0013
+hardened,10.44.20.11,10.44.30.13,8080,tcp,timeout,,1.0012
+hardened,10.44.20.11,10.44.30.13,8443,tcp,open,,0.0003
+hardened,10.44.20.11,10.44.30.13,5432,tcp,timeout,,1.0012
+hardened,10.44.20.11,10.44.30.13,5353,udp,timeout,,1.0042
+hardened,10.44.20.11,10.44.40.11,22,tcp,timeout,,1.0035
+hardened,10.44.20.11,10.44.40.11,8080,tcp,timeout,,1.0011
+hardened,10.44.20.11,10.44.40.11,8443,tcp,timeout,,1.0012
+hardened,10.44.20.11,10.44.40.11,5432,tcp,timeout,,1.0012
+hardened,10.44.20.11,10.44.40.11,5353,udp,timeout,,1.0049
+hardened,10.44.20.11,10.44.40.12,22,tcp,timeout,,1.002
+hardened,10.44.20.11,10.44.40.12,8080,tcp,timeout,,1.0012
+hardened,10.44.20.11,10.44.40.12,8443,tcp,timeout,,1.0013
+hardened,10.44.20.11,10.44.40.12,5432,tcp,timeout,,1.0101
+hardened,10.44.20.11,10.44.40.12,5353,udp,timeout,,1.0087
+hardened,10.44.20.11,10.44.40.13,22,tcp,timeout,,1.0094
+hardened,10.44.20.11,10.44.40.13,8080,tcp,timeout,,1.0013
+hardened,10.44.20.11,10.44.40.13,8443,tcp,timeout,,1.0057
+hardened,10.44.20.11,10.44.40.13,5432,tcp,timeout,,1.0012
+hardened,10.44.20.11,10.44.40.13,5353,udp,timeout,,1.0006
+hardened,10.44.20.12,10.44.10.11,22,tcp,timeout,,1.0012
+hardened,10.44.20.12,10.44.10.11,8080,tcp,timeout,,1.008
+hardened,10.44.20.12,10.44.10.11,8443,tcp,timeout,,1.0012
+hardened,10.44.20.12,10.44.10.11,5432,tcp,timeout,,1.0014
+hardened,10.44.20.12,10.44.10.11,5353,udp,timeout,,1.0057
+hardened,10.44.20.12,10.44.10.12,22,tcp,timeout,,1.0051
+hardened,10.44.20.12,10.44.10.12,8080,tcp,timeout,,1.0092
+hardened,10.44.20.12,10.44.10.12,8443,tcp,timeout,,1.0014
+hardened,10.44.20.12,10.44.10.12,5432,tcp,timeout,,1.0039
+hardened,10.44.20.12,10.44.10.12,5353,udp,timeout,,1.0008
+hardened,10.44.20.12,10.44.10.13,22,tcp,timeout,,1.0044
+hardened,10.44.20.12,10.44.10.13,8080,tcp,timeout,,1.0051
+hardened,10.44.20.12,10.44.10.13,8443,tcp,timeout,,1.0013
+hardened,10.44.20.12,10.44.10.13,5432,tcp,timeout,,1.0013
+hardened,10.44.20.12,10.44.10.13,5353,udp,timeout,,1.0064
+hardened,10.44.20.12,10.44.20.11,22,tcp,open,,0.0007
+hardened,10.44.20.12,10.44.20.11,8080,tcp,open,,0.0002
+hardened,10.44.20.12,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.20.12,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.20.12,10.44.20.11,5353,udp,open,,0.0001
+hardened,10.44.20.12,10.44.20.13,22,tcp,open,,0.0002
+hardened,10.44.20.12,10.44.20.13,8080,tcp,open,,0.0002
+hardened,10.44.20.12,10.44.20.13,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.20.12,10.44.20.13,5432,tcp,refused,[Errno 111] Connection refused,0.0
+hardened,10.44.20.12,10.44.20.13,5353,udp,open,,0.0001
+hardened,10.44.20.12,10.44.30.11,22,tcp,timeout,,1.0059
+hardened,10.44.20.12,10.44.30.11,8080,tcp,timeout,,1.0014
+hardened,10.44.20.12,10.44.30.11,8443,tcp,open,,0.0003
+hardened,10.44.20.12,10.44.30.11,5432,tcp,timeout,,1.0013
+hardened,10.44.20.12,10.44.30.11,5353,udp,timeout,,1.0002
+hardened,10.44.20.12,10.44.30.12,22,tcp,timeout,,1.0064
+hardened,10.44.20.12,10.44.30.12,8080,tcp,timeout,,1.0012
+hardened,10.44.20.12,10.44.30.12,8443,tcp,open,,0.0002
+hardened,10.44.20.12,10.44.30.12,5432,tcp,timeout,,1.0013
+hardened,10.44.20.12,10.44.30.12,5353,udp,timeout,,1.0012
+hardened,10.44.20.12,10.44.30.13,22,tcp,timeout,,1.0012
+hardened,10.44.20.12,10.44.30.13,8080,tcp,timeout,,1.0066
+hardened,10.44.20.12,10.44.30.13,8443,tcp,open,,0.0041
+hardened,10.44.20.12,10.44.30.13,5432,tcp,timeout,,1.0051
+hardened,10.44.20.12,10.44.30.13,5353,udp,timeout,,1.0011
+hardened,10.44.20.12,10.44.40.11,22,tcp,timeout,,1.0012
+hardened,10.44.20.12,10.44.40.11,8080,tcp,timeout,,1.0042
+hardened,10.44.20.12,10.44.40.11,8443,tcp,timeout,,1.0085
+hardened,10.44.20.12,10.44.40.11,5432,tcp,timeout,,1.0012
+hardened,10.44.20.12,10.44.40.11,5353,udp,timeout,,1.0039
+hardened,10.44.20.12,10.44.40.12,22,tcp,timeout,,1.0009
+hardened,10.44.20.12,10.44.40.12,8080,tcp,timeout,,1.0012
+hardened,10.44.20.12,10.44.40.12,8443,tcp,timeout,,1.0012
+hardened,10.44.20.12,10.44.40.12,5432,tcp,timeout,,1.0012
+hardened,10.44.20.12,10.44.40.12,5353,udp,timeout,,1.0009
+hardened,10.44.20.12,10.44.40.13,22,tcp,timeout,,1.0012
+hardened,10.44.20.12,10.44.40.13,8080,tcp,timeout,,1.0031
+hardened,10.44.20.12,10.44.40.13,8443,tcp,timeout,,1.0155
+hardened,10.44.20.12,10.44.40.13,5432,tcp,timeout,,1.0013
+hardened,10.44.20.12,10.44.40.13,5353,udp,timeout,,1.0106
+hardened,10.44.20.13,10.44.10.11,22,tcp,timeout,,1.0079
+hardened,10.44.20.13,10.44.10.11,8080,tcp,timeout,,1.0042
+hardened,10.44.20.13,10.44.10.11,8443,tcp,timeout,,1.0012
+hardened,10.44.20.13,10.44.10.11,5432,tcp,timeout,,1.0013
+hardened,10.44.20.13,10.44.10.11,5353,udp,timeout,,1.0014
+hardened,10.44.20.13,10.44.10.12,22,tcp,timeout,,1.0012
+hardened,10.44.20.13,10.44.10.12,8080,tcp,timeout,,1.0015
+hardened,10.44.20.13,10.44.10.12,8443,tcp,timeout,,1.0036
+hardened,10.44.20.13,10.44.10.12,5432,tcp,timeout,,1.007
+hardened,10.44.20.13,10.44.10.12,5353,udp,timeout,,1.0055
+hardened,10.44.20.13,10.44.10.13,22,tcp,timeout,,1.0012
+hardened,10.44.20.13,10.44.10.13,8080,tcp,timeout,,1.0013
+hardened,10.44.20.13,10.44.10.13,8443,tcp,timeout,,1.0024
+hardened,10.44.20.13,10.44.10.13,5432,tcp,timeout,,1.0006
+hardened,10.44.20.13,10.44.10.13,5353,udp,timeout,,1.0077
+hardened,10.44.20.13,10.44.20.11,22,tcp,open,,0.0002
+hardened,10.44.20.13,10.44.20.11,8080,tcp,open,,0.0003
+hardened,10.44.20.13,10.44.20.11,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.20.13,10.44.20.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.20.13,10.44.20.11,5353,udp,open,,0.0001
+hardened,10.44.20.13,10.44.20.12,22,tcp,open,,0.0002
+hardened,10.44.20.13,10.44.20.12,8080,tcp,open,,0.0001
+hardened,10.44.20.13,10.44.20.12,8443,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.20.13,10.44.20.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.20.13,10.44.20.12,5353,udp,open,,0.0001
+hardened,10.44.20.13,10.44.30.11,22,tcp,timeout,,1.0051
+hardened,10.44.20.13,10.44.30.11,8080,tcp,timeout,,1.0015
+hardened,10.44.20.13,10.44.30.11,8443,tcp,open,,0.0002
+hardened,10.44.20.13,10.44.30.11,5432,tcp,timeout,,1.0061
+hardened,10.44.20.13,10.44.30.11,5353,udp,timeout,,1.0015
+hardened,10.44.20.13,10.44.30.12,22,tcp,timeout,,1.0014
+hardened,10.44.20.13,10.44.30.12,8080,tcp,timeout,,1.0012
+hardened,10.44.20.13,10.44.30.12,8443,tcp,open,,0.0035
+hardened,10.44.20.13,10.44.30.12,5432,tcp,timeout,,1.004
+hardened,10.44.20.13,10.44.30.12,5353,udp,timeout,,1.0014
+hardened,10.44.20.13,10.44.30.13,22,tcp,timeout,,1.004
+hardened,10.44.20.13,10.44.30.13,8080,tcp,timeout,,1.0012
+hardened,10.44.20.13,10.44.30.13,8443,tcp,open,,0.0002
+hardened,10.44.20.13,10.44.30.13,5432,tcp,timeout,,1.0018
+hardened,10.44.20.13,10.44.30.13,5353,udp,timeout,,1.0012
+hardened,10.44.20.13,10.44.40.11,22,tcp,timeout,,1.0162
+hardened,10.44.20.13,10.44.40.11,8080,tcp,timeout,,1.0012
+hardened,10.44.20.13,10.44.40.11,8443,tcp,timeout,,1.0012
+hardened,10.44.20.13,10.44.40.11,5432,tcp,timeout,,1.0012
+hardened,10.44.20.13,10.44.40.11,5353,udp,timeout,,1.0016
+hardened,10.44.20.13,10.44.40.12,22,tcp,timeout,,1.0012
+hardened,10.44.20.13,10.44.40.12,8080,tcp,timeout,,1.0012
+hardened,10.44.20.13,10.44.40.12,8443,tcp,timeout,,1.0011
+hardened,10.44.20.13,10.44.40.12,5432,tcp,timeout,,1.0012
+hardened,10.44.20.13,10.44.40.12,5353,udp,timeout,,1.0011
+hardened,10.44.20.13,10.44.40.13,22,tcp,timeout,,1.0012
+hardened,10.44.20.13,10.44.40.13,8080,tcp,timeout,,1.0015
+hardened,10.44.20.13,10.44.40.13,8443,tcp,timeout,,1.0012
+hardened,10.44.20.13,10.44.40.13,5432,tcp,timeout,,1.0087
+hardened,10.44.20.13,10.44.40.13,5353,udp,timeout,,1.0078
+hardened,10.44.30.11,10.44.10.11,22,tcp,timeout,,1.0029
+hardened,10.44.30.11,10.44.10.11,8080,tcp,timeout,,1.0012
+hardened,10.44.30.11,10.44.10.11,8443,tcp,timeout,,1.0012
+hardened,10.44.30.11,10.44.10.11,5432,tcp,timeout,,1.0013
+hardened,10.44.30.11,10.44.10.11,5353,udp,timeout,,1.0039
+hardened,10.44.30.11,10.44.10.12,22,tcp,timeout,,1.0063
+hardened,10.44.30.11,10.44.10.12,8080,tcp,timeout,,1.0091
+hardened,10.44.30.11,10.44.10.12,8443,tcp,timeout,,1.0068
+hardened,10.44.30.11,10.44.10.12,5432,tcp,timeout,,1.0066
+hardened,10.44.30.11,10.44.10.12,5353,udp,timeout,,1.0041
+hardened,10.44.30.11,10.44.10.13,22,tcp,timeout,,1.0014
+hardened,10.44.30.11,10.44.10.13,8080,tcp,timeout,,1.0015
+hardened,10.44.30.11,10.44.10.13,8443,tcp,timeout,,1.0014
+hardened,10.44.30.11,10.44.10.13,5432,tcp,timeout,,1.0015
+hardened,10.44.30.11,10.44.10.13,5353,udp,timeout,,1.0016
+hardened,10.44.30.11,10.44.20.11,22,tcp,timeout,,1.0045
+hardened,10.44.30.11,10.44.20.11,8080,tcp,timeout,,1.0012
+hardened,10.44.30.11,10.44.20.11,8443,tcp,timeout,,1.0041
+hardened,10.44.30.11,10.44.20.11,5432,tcp,timeout,,1.0012
+hardened,10.44.30.11,10.44.20.11,5353,udp,timeout,,1.0012
+hardened,10.44.30.11,10.44.20.12,22,tcp,timeout,,1.0042
+hardened,10.44.30.11,10.44.20.12,8080,tcp,timeout,,1.0043
+hardened,10.44.30.11,10.44.20.12,8443,tcp,timeout,,1.0022
+hardened,10.44.30.11,10.44.20.12,5432,tcp,timeout,,1.0019
+hardened,10.44.30.11,10.44.20.12,5353,udp,timeout,,1.0013
+hardened,10.44.30.11,10.44.20.13,22,tcp,timeout,,1.0029
+hardened,10.44.30.11,10.44.20.13,8080,tcp,timeout,,1.0012
+hardened,10.44.30.11,10.44.20.13,8443,tcp,timeout,,1.0064
+hardened,10.44.30.11,10.44.20.13,5432,tcp,timeout,,1.007
+hardened,10.44.30.11,10.44.20.13,5353,udp,timeout,,1.0014
+hardened,10.44.30.11,10.44.30.12,22,tcp,open,,0.0002
+hardened,10.44.30.11,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.30.11,10.44.30.12,8443,tcp,open,,0.0001
+hardened,10.44.30.11,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.30.11,10.44.30.12,5353,udp,open,,0.0002
+hardened,10.44.30.11,10.44.30.13,22,tcp,open,,0.0001
+hardened,10.44.30.11,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.30.11,10.44.30.13,8443,tcp,open,,0.0001
+hardened,10.44.30.11,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.30.11,10.44.30.13,5353,udp,open,,0.0001
+hardened,10.44.30.11,10.44.40.11,22,tcp,timeout,,1.0008
+hardened,10.44.30.11,10.44.40.11,8080,tcp,timeout,,1.0012
+hardened,10.44.30.11,10.44.40.11,8443,tcp,timeout,,1.0108
+hardened,10.44.30.11,10.44.40.11,5432,tcp,open,,0.0003
+hardened,10.44.30.11,10.44.40.11,5353,udp,open,,0.0002
+hardened,10.44.30.11,10.44.40.12,22,tcp,timeout,,1.002
+hardened,10.44.30.11,10.44.40.12,8080,tcp,timeout,,1.0055
+hardened,10.44.30.11,10.44.40.12,8443,tcp,timeout,,1.0043
+hardened,10.44.30.11,10.44.40.12,5432,tcp,open,,0.0003
+hardened,10.44.30.11,10.44.40.12,5353,udp,open,,0.0002
+hardened,10.44.30.11,10.44.40.13,22,tcp,timeout,,1.0011
+hardened,10.44.30.11,10.44.40.13,8080,tcp,timeout,,1.0023
+hardened,10.44.30.11,10.44.40.13,8443,tcp,timeout,,1.0013
+hardened,10.44.30.11,10.44.40.13,5432,tcp,open,,0.0001
+hardened,10.44.30.11,10.44.40.13,5353,udp,open,,0.0003
+hardened,10.44.30.12,10.44.10.11,22,tcp,timeout,,1.0058
+hardened,10.44.30.12,10.44.10.11,8080,tcp,timeout,,1.0291
+hardened,10.44.30.12,10.44.10.11,8443,tcp,timeout,,1.0019
+hardened,10.44.30.12,10.44.10.11,5432,tcp,timeout,,1.0132
+hardened,10.44.30.12,10.44.10.11,5353,udp,timeout,,1.0014
+hardened,10.44.30.12,10.44.10.12,22,tcp,timeout,,1.0012
+hardened,10.44.30.12,10.44.10.12,8080,tcp,timeout,,1.0108
+hardened,10.44.30.12,10.44.10.12,8443,tcp,timeout,,1.0008
+hardened,10.44.30.12,10.44.10.12,5432,tcp,timeout,,1.0014
+hardened,10.44.30.12,10.44.10.12,5353,udp,timeout,,1.0015
+hardened,10.44.30.12,10.44.10.13,22,tcp,timeout,,1.0113
+hardened,10.44.30.12,10.44.10.13,8080,tcp,timeout,,1.0012
+hardened,10.44.30.12,10.44.10.13,8443,tcp,timeout,,1.0051
+hardened,10.44.30.12,10.44.10.13,5432,tcp,timeout,,1.0017
+hardened,10.44.30.12,10.44.10.13,5353,udp,timeout,,1.0076
+hardened,10.44.30.12,10.44.20.11,22,tcp,timeout,,1.0069
+hardened,10.44.30.12,10.44.20.11,8080,tcp,timeout,,1.0012
+hardened,10.44.30.12,10.44.20.11,8443,tcp,timeout,,1.0023
+hardened,10.44.30.12,10.44.20.11,5432,tcp,timeout,,1.0008
+hardened,10.44.30.12,10.44.20.11,5353,udp,timeout,,1.0012
+hardened,10.44.30.12,10.44.20.12,22,tcp,timeout,,1.0012
+hardened,10.44.30.12,10.44.20.12,8080,tcp,timeout,,1.0012
+hardened,10.44.30.12,10.44.20.12,8443,tcp,timeout,,1.0012
+hardened,10.44.30.12,10.44.20.12,5432,tcp,timeout,,1.0024
+hardened,10.44.30.12,10.44.20.12,5353,udp,timeout,,1.0115
+hardened,10.44.30.12,10.44.20.13,22,tcp,timeout,,1.0099
+hardened,10.44.30.12,10.44.20.13,8080,tcp,timeout,,1.007
+hardened,10.44.30.12,10.44.20.13,8443,tcp,timeout,,1.0012
+hardened,10.44.30.12,10.44.20.13,5432,tcp,timeout,,1.0012
+hardened,10.44.30.12,10.44.20.13,5353,udp,timeout,,1.0012
+hardened,10.44.30.12,10.44.30.11,22,tcp,open,,0.0056
+hardened,10.44.30.12,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0002
+hardened,10.44.30.12,10.44.30.11,8443,tcp,open,,0.0001
+hardened,10.44.30.12,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0115
+hardened,10.44.30.12,10.44.30.11,5353,udp,open,,0.0002
+hardened,10.44.30.12,10.44.30.13,22,tcp,open,,0.0001
+hardened,10.44.30.12,10.44.30.13,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.30.12,10.44.30.13,8443,tcp,open,,0.0001
+hardened,10.44.30.12,10.44.30.13,5432,tcp,refused,[Errno 111] Connection refused,0.0
+hardened,10.44.30.12,10.44.30.13,5353,udp,open,,0.0002
+hardened,10.44.30.12,10.44.40.11,22,tcp,timeout,,1.0011
+hardened,10.44.30.12,10.44.40.11,8080,tcp,timeout,,1.0012
+hardened,10.44.30.12,10.44.40.11,8443,tcp,timeout,,1.0109
+hardened,10.44.30.12,10.44.40.11,5432,tcp,open,,0.0016
+hardened,10.44.30.12,10.44.40.11,5353,udp,open,,0.0001
+hardened,10.44.30.12,10.44.40.12,22,tcp,timeout,,1.0057
+hardened,10.44.30.12,10.44.40.12,8080,tcp,timeout,,1.0012
+hardened,10.44.30.12,10.44.40.12,8443,tcp,timeout,,1.0042
+hardened,10.44.30.12,10.44.40.12,5432,tcp,open,,0.0001
+hardened,10.44.30.12,10.44.40.12,5353,udp,open,,0.0002
+hardened,10.44.30.12,10.44.40.13,22,tcp,timeout,,1.001
+hardened,10.44.30.12,10.44.40.13,8080,tcp,timeout,,1.0012
+hardened,10.44.30.12,10.44.40.13,8443,tcp,timeout,,1.0012
+hardened,10.44.30.12,10.44.40.13,5432,tcp,open,,0.0002
+hardened,10.44.30.12,10.44.40.13,5353,udp,open,,0.0003
+hardened,10.44.30.13,10.44.10.11,22,tcp,timeout,,1.0013
+hardened,10.44.30.13,10.44.10.11,8080,tcp,timeout,,1.0008
+hardened,10.44.30.13,10.44.10.11,8443,tcp,timeout,,1.005
+hardened,10.44.30.13,10.44.10.11,5432,tcp,timeout,,1.005
+hardened,10.44.30.13,10.44.10.11,5353,udp,timeout,,1.0089
+hardened,10.44.30.13,10.44.10.12,22,tcp,timeout,,1.0036
+hardened,10.44.30.13,10.44.10.12,8080,tcp,timeout,,1.0013
+hardened,10.44.30.13,10.44.10.12,8443,tcp,timeout,,1.0079
+hardened,10.44.30.13,10.44.10.12,5432,tcp,timeout,,1.0048
+hardened,10.44.30.13,10.44.10.12,5353,udp,timeout,,1.004
+hardened,10.44.30.13,10.44.10.13,22,tcp,timeout,,1.0036
+hardened,10.44.30.13,10.44.10.13,8080,tcp,timeout,,1.0043
+hardened,10.44.30.13,10.44.10.13,8443,tcp,timeout,,1.0024
+hardened,10.44.30.13,10.44.10.13,5432,tcp,timeout,,1.0014
+hardened,10.44.30.13,10.44.10.13,5353,udp,timeout,,1.0077
+hardened,10.44.30.13,10.44.20.11,22,tcp,timeout,,1.0012
+hardened,10.44.30.13,10.44.20.11,8080,tcp,timeout,,1.006
+hardened,10.44.30.13,10.44.20.11,8443,tcp,timeout,,1.0047
+hardened,10.44.30.13,10.44.20.11,5432,tcp,timeout,,1.0011
+hardened,10.44.30.13,10.44.20.11,5353,udp,timeout,,1.0012
+hardened,10.44.30.13,10.44.20.12,22,tcp,timeout,,1.0015
+hardened,10.44.30.13,10.44.20.12,8080,tcp,timeout,,1.0012
+hardened,10.44.30.13,10.44.20.12,8443,tcp,timeout,,1.0309
+hardened,10.44.30.13,10.44.20.12,5432,tcp,timeout,,1.0012
+hardened,10.44.30.13,10.44.20.12,5353,udp,timeout,,1.0012
+hardened,10.44.30.13,10.44.20.13,22,tcp,timeout,,1.0012
+hardened,10.44.30.13,10.44.20.13,8080,tcp,timeout,,1.0012
+hardened,10.44.30.13,10.44.20.13,8443,tcp,timeout,,1.0025
+hardened,10.44.30.13,10.44.20.13,5432,tcp,timeout,,1.0055
+hardened,10.44.30.13,10.44.20.13,5353,udp,timeout,,1.0013
+hardened,10.44.30.13,10.44.30.11,22,tcp,open,,0.0004
+hardened,10.44.30.13,10.44.30.11,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.30.13,10.44.30.11,8443,tcp,open,,0.0001
+hardened,10.44.30.13,10.44.30.11,5432,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.30.13,10.44.30.11,5353,udp,open,,0.0002
+hardened,10.44.30.13,10.44.30.12,22,tcp,open,,0.0001
+hardened,10.44.30.13,10.44.30.12,8080,tcp,refused,[Errno 111] Connection refused,0.0001
+hardened,10.44.30.13,10.44.30.12,8443,tcp,open,,0.0001
+hardened,10.44.30.13,10.44.30.12,5432,tcp,refused,[Errno 111] Connection refused,0.0
+hardened,10.44.30.13,10.44.30.12,5353,udp,open,,0.0001
+hardened,10.44.30.13,10.44.40.11,22,tcp,timeout,,1.0011
+hardened,10.44.30.13,10.44.40.11,8080,tcp,timeout,,1.0019
+hardened,10.44.30.13,10.44.40.11,8443,tcp,timeout,,1.0039
+hardened,10.44.30.13,10.44.40.11,5432,tcp,open,,0.0003
+hardened,10.44.30.13,10.44.40.11,5353,udp,open,,0.0003
+hardened,10.44.30.13,10.44.40.12,22,tcp,timeout,,1.0011
+hardened,10.44.30.13,10.44.40.12,8080,tcp,timeout,,1.0012
+hardened,10.44.30.13,10.44.40.12,8443,tcp,timeout,,1.0012
+hardened,10.44.30.13,10.44.40.12,5432,tcp,open,,0.0003
+hardened,10.44.30.13,10.44.40.12,5353,udp,open,,0.001
+hardened,10.44.30.13,10.44.40.13,22,tcp,timeout,,1.0061
+hardened,10.44.30.13,10.44.40.13,8080,tcp,timeout,,1.0013
+hardened,10.44.30.13,10.44.40.13,8443,tcp,timeout,,1.0012
+hardened,10.44.30.13,10.44.40.13,5432,tcp,open,,0.0002
+hardened,10.44.30.13,10.44.40.13,5353,udp,open,,0.0038
+hardened,10.44.40.11,10.44.10.11,22,tcp,timeout,,1.0013
+hardened,10.44.40.11,10.44.10.11,8080,tcp,timeout,,1.0081
+hardened,10.44.40.11,10.44.10.11,8443,tcp,timeout,,1.0012
+hardened,10.44.40.11,10.44.10.11,5432,tcp,timeout,,1.0014
+hardened,10.44.40.11,10.44.10.11,5353,udp,timeout,,1.0014
+hardened,10.44.40.11,10.44.10.12,22,tcp,timeout,,1.0025
+hardened,10.44.40.11,10.44.10.12,8080,tcp,timeout,,1.0042
+hardened,10.44.40.11,10.44.10.12,8443,tcp,timeout,,1.0017
+hardened,10.44.40.11,10.44.10.12,5432,tcp,timeout,,1.0041
+hardened,10.44.40.11,10.44.10.12,5353,udp,timeout,,1.0032
+hardened,10.44.40.11,10.44.10.13,22,tcp,timeout,,1.006
+hardened,10.44.40.11,10.44.10.13,8080,tcp,timeout,,1.0012
+hardened,10.44.40.11,10.44.10.13,8443,tcp,timeout,,1.0058
+hardened,10.44.40.11,10.44.10.13,5432,tcp,timeout,,1.0009
+hardened,10.44.40.11,10.44.10.13,5353,udp,timeout,,1.0041
+hardened,10.44.40.11,10.44.20.11,22,tcp,timeout,,1.0122
+hardened,10.44.40.11,10.44.20.11,8080,tcp,timeout,,1.0066
+hardened,10.44.40.11,10.44.20.11,8443,tcp,timeout,,1.0038
+hardened,10.44.40.11,10.44.20.11,5432,tcp,timeout,,1.0044
+hardened,10.44.40.11,10.44.20.11,5353,udp,timeout,,1.0013
+hardened,10.44.40.11,10.44.20.12,22,tcp,timeout,,1.0012
+hardened,10.44.40.11,10.44.20.12,8080,tcp,timeout,,1.0091
+hardened,10.44.40.11,10.44.20.12,8443,tcp,timeout,,1.007
+hardened,10.44.40.11,10.44.20.12,5432,tcp,timeout,,1.0046
+hardened,10.44.40.11,10.44.20.12,5353,udp,timeout,,1.0013
+hardened,10.44.40.11,10.44.20.13,22,tcp,timeout,,1.0037
+hardened,10.44.40.11,10.44.20.13,8080,tcp,timeout,,1.0012
+hardened,10.44.40.11,10.44.20.13,8443,tcp,timeout,,1.0074
+hardened,10.44.40.11,10.44.20.13,5432,tcp,timeout,,1.0006
+hardened,10.44.40.11,10.44.20.13,5353,udp,timeout,,1.0019
+hardened,10.44.40.11,10.44.30.11,22,tcp,timeout,,1.0012
+hardened,10.44.40.11,10.44.30.11,8080,tcp,timeout,,1.0012
+hardened,10.44.40.11,10.44.30.11,8443,tcp,timeout,,1.0039
+hardened,10.44.40.11,10.44.30.11,5432,tcp,timeout,,1.0012
+hardened,10.44.40.11,10.44.30.11,5353,udp,timeout,,1.0007
+hardened,10.44.40.11,10.44.30.12,22,tcp,timeout,,1.004
+hardened,10.44.40.11,10.44.30.12,8080,tcp,timeout,,1.0066
+hardened,10.44.40.11,10.44.30.12,8443,tcp,timeout,,1.0002
+hardened,10.44.40.11,10.44.30.12,5432,tcp,timeout,,1.0012
+hardened,10.44.40.11,10.44.30.12,5353,udp,timeout,,1.0012
+hardened,10.44.40.11,10.44.30.13,22,tcp,timeout,,1.0012
+hardened,10.44.40.11,10.44.30.13,8080,tcp,timeout,,1.0013
+hardened,10.44.40.11,10.44.30.13,8443,tcp,timeout,,1.0013
+hardened,10.44.40.11,10.44.30.13,5432,tcp,timeout,,1.016
+hardened,10.44.40.11,10.44.30.13,5353,udp,timeout,,1.0012
+hardened,10.44.40.11,10.44.40.12,22,tcp,timeout,,1.0047
+hardened,10.44.40.11,10.44.40.12,8080,tcp,timeout,,1.0014
+hardened,10.44.40.11,10.44.40.12,8443,tcp,timeout,,1.0012
+hardened,10.44.40.11,10.44.40.12,5432,tcp,timeout,,1.0012
+hardened,10.44.40.11,10.44.40.12,5353,udp,timeout,,1.0012
+hardened,10.44.40.11,10.44.40.13,22,tcp,timeout,,1.0013
+hardened,10.44.40.11,10.44.40.13,8080,tcp,timeout,,1.0012
+hardened,10.44.40.11,10.44.40.13,8443,tcp,timeout,,1.0078
+hardened,10.44.40.11,10.44.40.13,5432,tcp,timeout,,1.0019
+hardened,10.44.40.11,10.44.40.13,5353,udp,timeout,,1.0012
+hardened,10.44.40.12,10.44.10.11,22,tcp,timeout,,1.0013
+hardened,10.44.40.12,10.44.10.11,8080,tcp,timeout,,1.0056
+hardened,10.44.40.12,10.44.10.11,8443,tcp,timeout,,1.0051
+hardened,10.44.40.12,10.44.10.11,5432,tcp,timeout,,1.0077
+hardened,10.44.40.12,10.44.10.11,5353,udp,timeout,,1.0012
+hardened,10.44.40.12,10.44.10.12,22,tcp,timeout,,1.0072
+hardened,10.44.40.12,10.44.10.12,8080,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.10.12,8443,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.10.12,5432,tcp,timeout,,1.0005
+hardened,10.44.40.12,10.44.10.12,5353,udp,timeout,,1.0012
+hardened,10.44.40.12,10.44.10.13,22,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.10.13,8080,tcp,timeout,,1.0037
+hardened,10.44.40.12,10.44.10.13,8443,tcp,timeout,,1.0033
+hardened,10.44.40.12,10.44.10.13,5432,tcp,timeout,,1.0013
+hardened,10.44.40.12,10.44.10.13,5353,udp,timeout,,1.0012
+hardened,10.44.40.12,10.44.20.11,22,tcp,timeout,,1.0081
+hardened,10.44.40.12,10.44.20.11,8080,tcp,timeout,,1.0102
+hardened,10.44.40.12,10.44.20.11,8443,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.20.11,5432,tcp,timeout,,1.0047
+hardened,10.44.40.12,10.44.20.11,5353,udp,timeout,,1.0012
+hardened,10.44.40.12,10.44.20.12,22,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.20.12,8080,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.20.12,8443,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.20.12,5432,tcp,timeout,,1.0005
+hardened,10.44.40.12,10.44.20.12,5353,udp,timeout,,1.0012
+hardened,10.44.40.12,10.44.20.13,22,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.20.13,8080,tcp,timeout,,1.0025
+hardened,10.44.40.12,10.44.20.13,8443,tcp,timeout,,1.0014
+hardened,10.44.40.12,10.44.20.13,5432,tcp,timeout,,1.001
+hardened,10.44.40.12,10.44.20.13,5353,udp,timeout,,1.0056
+hardened,10.44.40.12,10.44.30.11,22,tcp,timeout,,1.0013
+hardened,10.44.40.12,10.44.30.11,8080,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.30.11,8443,tcp,timeout,,1.0067
+hardened,10.44.40.12,10.44.30.11,5432,tcp,timeout,,1.0114
+hardened,10.44.40.12,10.44.30.11,5353,udp,timeout,,1.01
+hardened,10.44.40.12,10.44.30.12,22,tcp,timeout,,1.0084
+hardened,10.44.40.12,10.44.30.12,8080,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.30.12,8443,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.30.12,5432,tcp,timeout,,1.0011
+hardened,10.44.40.12,10.44.30.12,5353,udp,timeout,,1.0012
+hardened,10.44.40.12,10.44.30.13,22,tcp,timeout,,1.0011
+hardened,10.44.40.12,10.44.30.13,8080,tcp,timeout,,1.0052
+hardened,10.44.40.12,10.44.30.13,8443,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.30.13,5432,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.30.13,5353,udp,timeout,,1.001
+hardened,10.44.40.12,10.44.40.11,22,tcp,timeout,,1.0005
+hardened,10.44.40.12,10.44.40.11,8080,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.40.11,8443,tcp,timeout,,1.0041
+hardened,10.44.40.12,10.44.40.11,5432,tcp,timeout,,1.0004
+hardened,10.44.40.12,10.44.40.11,5353,udp,timeout,,1.0012
+hardened,10.44.40.12,10.44.40.13,22,tcp,timeout,,1.0012
+hardened,10.44.40.12,10.44.40.13,8080,tcp,timeout,,1.001
+hardened,10.44.40.12,10.44.40.13,8443,tcp,timeout,,1.001
+hardened,10.44.40.12,10.44.40.13,5432,tcp,timeout,,1.0049
+hardened,10.44.40.12,10.44.40.13,5353,udp,timeout,,1.0004
+hardened,10.44.40.13,10.44.10.11,22,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.10.11,8080,tcp,timeout,,1.0021
+hardened,10.44.40.13,10.44.10.11,8443,tcp,timeout,,1.002
+hardened,10.44.40.13,10.44.10.11,5432,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.10.11,5353,udp,timeout,,1.0014
+hardened,10.44.40.13,10.44.10.12,22,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.10.12,8080,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.10.12,8443,tcp,timeout,,1.0087
+hardened,10.44.40.13,10.44.10.12,5432,tcp,timeout,,1.0083
+hardened,10.44.40.13,10.44.10.12,5353,udp,timeout,,1.0071
+hardened,10.44.40.13,10.44.10.13,22,tcp,timeout,,1.0058
+hardened,10.44.40.13,10.44.10.13,8080,tcp,timeout,,1.008
+hardened,10.44.40.13,10.44.10.13,8443,tcp,timeout,,1.0013
+hardened,10.44.40.13,10.44.10.13,5432,tcp,timeout,,1.0033
+hardened,10.44.40.13,10.44.10.13,5353,udp,timeout,,1.0009
+hardened,10.44.40.13,10.44.20.11,22,tcp,timeout,,1.0018
+hardened,10.44.40.13,10.44.20.11,8080,tcp,timeout,,1.0028
+hardened,10.44.40.13,10.44.20.11,8443,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.20.11,5432,tcp,timeout,,1.0014
+hardened,10.44.40.13,10.44.20.11,5353,udp,timeout,,1.0046
+hardened,10.44.40.13,10.44.20.12,22,tcp,timeout,,1.0026
+hardened,10.44.40.13,10.44.20.12,8080,tcp,timeout,,1.0026
+hardened,10.44.40.13,10.44.20.12,8443,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.20.12,5432,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.20.12,5353,udp,timeout,,1.0043
+hardened,10.44.40.13,10.44.20.13,22,tcp,timeout,,1.001
+hardened,10.44.40.13,10.44.20.13,8080,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.20.13,8443,tcp,timeout,,1.001
+hardened,10.44.40.13,10.44.20.13,5432,tcp,timeout,,1.0063
+hardened,10.44.40.13,10.44.20.13,5353,udp,timeout,,1.0005
+hardened,10.44.40.13,10.44.30.11,22,tcp,timeout,,1.004
+hardened,10.44.40.13,10.44.30.11,8080,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.30.11,8443,tcp,timeout,,1.0067
+hardened,10.44.40.13,10.44.30.11,5432,tcp,timeout,,1.0046
+hardened,10.44.40.13,10.44.30.11,5353,udp,timeout,,1.0005
+hardened,10.44.40.13,10.44.30.12,22,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.30.12,8080,tcp,timeout,,1.0039
+hardened,10.44.40.13,10.44.30.12,8443,tcp,timeout,,1.004
+hardened,10.44.40.13,10.44.30.12,5432,tcp,timeout,,1.0053
+hardened,10.44.40.13,10.44.30.12,5353,udp,timeout,,1.0044
+hardened,10.44.40.13,10.44.30.13,22,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.30.13,8080,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.30.13,8443,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.30.13,5432,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.30.13,5353,udp,timeout,,1.0012
+hardened,10.44.40.13,10.44.40.11,22,tcp,timeout,,1.0106
+hardened,10.44.40.13,10.44.40.11,8080,tcp,timeout,,1.0014
+hardened,10.44.40.13,10.44.40.11,8443,tcp,timeout,,1.0117
+hardened,10.44.40.13,10.44.40.11,5432,tcp,timeout,,1.0047
+hardened,10.44.40.13,10.44.40.11,5353,udp,timeout,,1.0012
+hardened,10.44.40.13,10.44.40.12,22,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.40.12,8080,tcp,timeout,,1.0032
+hardened,10.44.40.13,10.44.40.12,8443,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.40.12,5432,tcp,timeout,,1.0012
+hardened,10.44.40.13,10.44.40.12,5353,udp,timeout,,1.0019

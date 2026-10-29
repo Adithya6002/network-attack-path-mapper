@@ -6,7 +6,12 @@ import xml.etree.ElementTree as ET
 
 def parse_nmap_xml(xml_text):
     """Return a list of host dicts: ip, hostname, os, ports."""
-    root = ET.fromstring(xml_text)
+    try:
+        root = ET.fromstring(xml_text)
+    except ET.ParseError as exc:
+        raise ValueError(f"Invalid Nmap XML: {exc}") from exc
+    if root.tag != "nmaprun":
+        raise ValueError("Expected an Nmap XML document with an nmaprun root.")
     hosts = []
     for host in root.findall("host"):
         status = host.find("status")
@@ -62,4 +67,8 @@ def build_network(hosts, subnets, routes=""):
         "hosts": hosts,
         "firewall": {"default": "allow", "rules": []},
         "routes": routes,
+        "model_warnings": [
+            "Scanned inventory uses an assumed default-allow firewall; configure the real policy before drawing conclusions.",
+            "A scan observes services from one vantage point; unobserved services may still exist."
+        ],
     }

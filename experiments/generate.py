@@ -29,10 +29,26 @@ def generate_network(n_hosts, subnets_per_zone=1, seed=0, separate_fileservers=F
     separate_fileservers=True puts databases in the first data subnet and file
     servers in the others (needs subnets_per_zone >= 2); otherwise they are mixed.
     """
+    if type(n_hosts) is not int or n_hosts < 10:
+        raise ValueError("At least 10 hosts are needed for five zones with two hosts each.")
+    if type(subnets_per_zone) is not int or not 1 <= subnets_per_zone <= 16:
+        raise ValueError("subnets_per_zone must be between 1 and 16 to avoid overlapping zone addresses.")
+    if separate_fileservers and subnets_per_zone < 2:
+        raise ValueError("Separating file servers requires at least two subnets per zone.")
+    # Keep historical allocations when they sum correctly; adjust rounding for
+    # other sizes so a requested host count is always the actual host count.
+    counts = {zone: max(2, round(n_hosts * ZONE_SHARE[zone])) for zone in ZONES}
+    while sum(counts.values()) != n_hosts:
+        excess = sum(counts.values()) > n_hosts
+        eligible = [zone for zone in ZONES if not excess or counts[zone] > 2]
+        zone = max(eligible, key=lambda z: (counts[z] - n_hosts * ZONE_SHARE[z]) * (1 if excess else -1))
+        counts[zone] += -1 if excess else 1
+    if max(counts.values()) > subnets_per_zone * 240:
+        raise ValueError("Requested hosts exceed subnet capacity; increase subnets_per_zone.")
     rng = random.Random(seed)
     subnets, hosts = [], []
     for z, zone in enumerate(ZONES):
-        zone_hosts = max(2, round(n_hosts * ZONE_SHARE[zone]))
+        zone_hosts = counts[zone]
         per_subnet = -(-zone_hosts // subnets_per_zone)
         for s in range(subnets_per_zone):
             third = z * 16 + s
